@@ -14,4 +14,5 @@ Public Class Form2
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
     End Sub
+
 End Class

@@ -23,16 +23,16 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,72 +53,14 @@ Partial Class Form2
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'Button2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(301, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Create Account"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(24, 73)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(250, 22)
-        Me.TextBox1.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(24, 132)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(250, 22)
-        Me.TextBox2.TabIndex = 1
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(24, 193)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(250, 22)
-        Me.TextBox3.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 17)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Name"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 112)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 17)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Email"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 173)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 17)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Password"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(24, 241)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(250, 31)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Sign up"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(24, 295)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(250, 31)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "Log in"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -129,14 +71,72 @@ Partial Class Form2
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Or"
         '
-        'Button2
+        'Button1
         '
-        Me.Button2.Location = New System.Drawing.Point(24, 295)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(250, 31)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Log in"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(24, 241)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(250, 31)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Sign up"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(21, 173)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(69, 17)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Password"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(21, 112)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(42, 17)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Email"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(21, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 17)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Name"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(24, 193)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(250, 22)
+        Me.TextBox3.TabIndex = 2
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(24, 132)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(250, 22)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(24, 73)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(250, 22)
+        Me.TextBox1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(301, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(162, 25)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Create Account"
         '
         'Form2
         '
