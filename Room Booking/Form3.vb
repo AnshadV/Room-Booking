@@ -102,4 +102,8 @@ Public Class Form3
             If Conn.State = ConnectionState.Open Then Conn.Close()
         End Try
     End Sub
+
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -28,18 +28,23 @@ Public Class roomAdder
             Dim cmd1 As New SqlCommand(sqlgetid, Conn)
             cmd1.Parameters.AddWithValue("@name", TextBox1.Text)
             Dim id = cmd1.ExecuteScalar() 'retrieving id from roomType
+
+
             Dim sqlpop As String = "insert into amenitiesbin values(@id,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)"
             Dim cmd2 As New SqlCommand(sqlpop, Conn)
             cmd2.Parameters.AddWithValue("@id", id)
             cmd2.ExecuteNonQuery()
 
+
+
+
             For Each item In CheckedListBox1.CheckedItems
                 Dim checkeditem As String = item.ToString()
-                Dim sqlchecked As String = "update amenitiesbin set @item=@num where Id =@id"
+                Dim sqlchecked As String = "update amenitiesbin set @checkeditem=1 where id=@id"
                 Dim cmd3 As New SqlCommand(sqlchecked, Conn)
-                cmd3.Parameters.AddWithValue("@item", checkeditem)
+                cmd3.Parameters.AddWithValue("@checkeditem", checkeditem)
                 cmd3.Parameters.AddWithValue("@id", id)
-                cmd3.Parameters.AddWithValue("@num", 1)
+
                 cmd3.ExecuteNonQuery()
             Next
 
@@ -63,6 +68,10 @@ Public Class roomAdder
     End Sub
 
     Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
 End Class

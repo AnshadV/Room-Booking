@@ -96,7 +96,6 @@ Partial Class adminDash
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -125,7 +124,6 @@ Partial Class adminDash
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -142,14 +140,40 @@ Partial Class adminDash
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.GroupBox27 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.GroupBox26 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.GroupBox24 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.GroupBox25 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label73 = New System.Windows.Forms.Label()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.DotNetBarTabcontrol1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -186,9 +210,15 @@ Partial Class adminDash
         Me.GroupBox10.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
+        Me.GroupBox27.SuspendLayout()
+        Me.GroupBox26.SuspendLayout()
+        Me.GroupBox24.SuspendLayout()
+        Me.GroupBox25.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
         Me.SuspendLayout()
         '
         'DotNetBarTabcontrol1
@@ -836,7 +866,6 @@ Partial Class adminDash
         Me.GroupBox17.Controls.Add(Me.Label34)
         Me.GroupBox17.Controls.Add(Me.Label35)
         Me.GroupBox17.Controls.Add(Me.Label36)
-        Me.GroupBox17.Controls.Add(Me.Label37)
         Me.GroupBox17.Controls.Add(Me.Label38)
         Me.GroupBox17.Controls.Add(Me.Label39)
         Me.GroupBox17.Controls.Add(Me.Label40)
@@ -915,15 +944,6 @@ Partial Class adminDash
         Me.Label36.TabIndex = 8
         Me.Label36.Text = "Label36"
         '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(249, 22)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(59, 17)
-        Me.Label37.TabIndex = 7
-        Me.Label37.Text = "Label37"
-        '
         'Label38
         '
         Me.Label38.AutoSize = True
@@ -990,7 +1010,6 @@ Partial Class adminDash
         '
         Me.GroupBox15.Controls.Add(Me.GroupBox19)
         Me.GroupBox15.Controls.Add(Me.GroupBox16)
-        Me.GroupBox15.Controls.Add(Me.Label29)
         Me.GroupBox15.Controls.Add(Me.Label28)
         Me.GroupBox15.Controls.Add(Me.Label27)
         Me.GroupBox15.Controls.Add(Me.Label26)
@@ -1201,19 +1220,10 @@ Partial Class adminDash
         Me.Label30.TabIndex = 0
         Me.Label30.Text = "Label30"
         '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(249, 101)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(59, 17)
-        Me.Label29.TabIndex = 10
-        Me.Label29.Text = "Label29"
-        '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(249, 74)
+        Me.Label28.Location = New System.Drawing.Point(230, 97)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(59, 17)
         Me.Label28.TabIndex = 9
@@ -1222,7 +1232,7 @@ Partial Class adminDash
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(249, 48)
+        Me.Label27.Location = New System.Drawing.Point(270, 71)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(59, 17)
         Me.Label27.TabIndex = 8
@@ -1231,7 +1241,7 @@ Partial Class adminDash
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(249, 22)
+        Me.Label26.Location = New System.Drawing.Point(314, 45)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(59, 17)
         Me.Label26.TabIndex = 7
@@ -1240,7 +1250,7 @@ Partial Class adminDash
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(180, 101)
+        Me.Label25.Location = New System.Drawing.Point(184, 22)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(59, 17)
         Me.Label25.TabIndex = 6
@@ -1249,29 +1259,29 @@ Partial Class adminDash
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(180, 74)
+        Me.Label24.Location = New System.Drawing.Point(184, 97)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(59, 17)
+        Me.Label24.Size = New System.Drawing.Size(44, 17)
         Me.Label24.TabIndex = 5
-        Me.Label24.Text = "Label24"
+        Me.Label24.Text = "Price:"
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(180, 48)
+        Me.Label23.Location = New System.Drawing.Point(184, 71)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(59, 17)
+        Me.Label23.Size = New System.Drawing.Size(84, 17)
         Me.Label23.TabIndex = 4
-        Me.Label23.Text = "Label23"
+        Me.Label23.Text = "Object type:"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(180, 22)
+        Me.Label22.Location = New System.Drawing.Point(184, 45)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(59, 17)
+        Me.Label22.Size = New System.Drawing.Size(124, 17)
         Me.Label22.TabIndex = 3
-        Me.Label22.Text = "Label22"
+        Me.Label22.Text = "Number of guests:"
         '
         'Button7
         '
@@ -1350,6 +1360,11 @@ Partial Class adminDash
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.White
+        Me.TabPage4.Controls.Add(Me.GroupBox27)
+        Me.TabPage4.Controls.Add(Me.GroupBox26)
+        Me.TabPage4.Controls.Add(Me.GroupBox24)
+        Me.TabPage4.Controls.Add(Me.GroupBox25)
+        Me.TabPage4.Controls.Add(Me.GroupBox23)
         Me.TabPage4.Controls.Add(Me.GroupBox12)
         Me.TabPage4.Controls.Add(Me.GroupBox11)
         Me.TabPage4.Location = New System.Drawing.Point(140, 4)
@@ -1358,21 +1373,227 @@ Partial Class adminDash
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Service Requests"
         '
+        'GroupBox27
+        '
+        Me.GroupBox27.Controls.Add(Me.ComboBox7)
+        Me.GroupBox27.Controls.Add(Me.Label71)
+        Me.GroupBox27.Controls.Add(Me.Label72)
+        Me.GroupBox27.Location = New System.Drawing.Point(530, 170)
+        Me.GroupBox27.Name = "GroupBox27"
+        Me.GroupBox27.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox27.TabIndex = 3
+        Me.GroupBox27.TabStop = False
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox7.TabIndex = 2
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Location = New System.Drawing.Point(141, 22)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(59, 17)
+        Me.Label71.TabIndex = 1
+        Me.Label71.Text = "Label71"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Location = New System.Drawing.Point(10, 22)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(59, 17)
+        Me.Label72.TabIndex = 0
+        Me.Label72.Text = "Label72"
+        '
+        'GroupBox26
+        '
+        Me.GroupBox26.Controls.Add(Me.ComboBox6)
+        Me.GroupBox26.Controls.Add(Me.Label69)
+        Me.GroupBox26.Controls.Add(Me.Label70)
+        Me.GroupBox26.Location = New System.Drawing.Point(530, 232)
+        Me.GroupBox26.Name = "GroupBox26"
+        Me.GroupBox26.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox26.TabIndex = 4
+        Me.GroupBox26.TabStop = False
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox6.TabIndex = 2
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Location = New System.Drawing.Point(141, 22)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(59, 17)
+        Me.Label69.TabIndex = 1
+        Me.Label69.Text = "Label69"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Location = New System.Drawing.Point(10, 22)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(59, 17)
+        Me.Label70.TabIndex = 0
+        Me.Label70.Text = "Label70"
+        '
+        'GroupBox24
+        '
+        Me.GroupBox24.Controls.Add(Me.ComboBox4)
+        Me.GroupBox24.Controls.Add(Me.Label65)
+        Me.GroupBox24.Controls.Add(Me.Label66)
+        Me.GroupBox24.Location = New System.Drawing.Point(29, 232)
+        Me.GroupBox24.Name = "GroupBox24"
+        Me.GroupBox24.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox24.TabIndex = 3
+        Me.GroupBox24.TabStop = False
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox4.TabIndex = 2
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Location = New System.Drawing.Point(141, 22)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(59, 17)
+        Me.Label65.TabIndex = 1
+        Me.Label65.Text = "Label65"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Location = New System.Drawing.Point(10, 22)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(59, 17)
+        Me.Label66.TabIndex = 0
+        Me.Label66.Text = "Label66"
+        '
+        'GroupBox25
+        '
+        Me.GroupBox25.Controls.Add(Me.ComboBox5)
+        Me.GroupBox25.Controls.Add(Me.Label67)
+        Me.GroupBox25.Controls.Add(Me.Label68)
+        Me.GroupBox25.Location = New System.Drawing.Point(29, 170)
+        Me.GroupBox25.Name = "GroupBox25"
+        Me.GroupBox25.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox25.TabIndex = 3
+        Me.GroupBox25.TabStop = False
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox5.TabIndex = 2
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Location = New System.Drawing.Point(141, 22)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(59, 17)
+        Me.Label67.TabIndex = 1
+        Me.Label67.Text = "Label67"
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Location = New System.Drawing.Point(10, 22)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(59, 17)
+        Me.Label68.TabIndex = 0
+        Me.Label68.Text = "Label68"
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.ComboBox3)
+        Me.GroupBox23.Controls.Add(Me.Label63)
+        Me.GroupBox23.Controls.Add(Me.Label64)
+        Me.GroupBox23.Location = New System.Drawing.Point(530, 108)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox23.TabIndex = 2
+        Me.GroupBox23.TabStop = False
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox3.TabIndex = 2
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Location = New System.Drawing.Point(141, 22)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(59, 17)
+        Me.Label63.TabIndex = 1
+        Me.Label63.Text = "Label63"
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Location = New System.Drawing.Point(10, 22)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(59, 17)
+        Me.Label64.TabIndex = 0
+        Me.Label64.Text = "Label64"
+        '
         'GroupBox12
         '
-        Me.GroupBox12.Controls.Add(Me.TextBox3)
-        Me.GroupBox12.Location = New System.Drawing.Point(3, 108)
+        Me.GroupBox12.Controls.Add(Me.ComboBox2)
+        Me.GroupBox12.Controls.Add(Me.Label62)
+        Me.GroupBox12.Controls.Add(Me.Label29)
+        Me.GroupBox12.Location = New System.Drawing.Point(29, 108)
         Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(1031, 176)
+        Me.GroupBox12.Size = New System.Drawing.Size(411, 56)
         Me.GroupBox12.TabIndex = 1
         Me.GroupBox12.TabStop = False
         '
-        'TextBox3
+        'ComboBox2
         '
-        Me.TextBox3.Location = New System.Drawing.Point(20, 33)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 0
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox2.TabIndex = 2
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Location = New System.Drawing.Point(141, 22)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(59, 17)
+        Me.Label62.TabIndex = 1
+        Me.Label62.Text = "Label62"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(10, 22)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(59, 17)
+        Me.Label29.TabIndex = 0
+        Me.Label29.Text = "Label29"
         '
         'GroupBox11
         '
@@ -1424,11 +1645,49 @@ Partial Class adminDash
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.White
+        Me.TabPage5.Controls.Add(Me.GroupBox28)
+        Me.TabPage5.Controls.Add(Me.Button18)
+        Me.TabPage5.Controls.Add(Me.TextBox3)
+        Me.TabPage5.Controls.Add(Me.Label73)
         Me.TabPage5.Location = New System.Drawing.Point(140, 4)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Size = New System.Drawing.Size(1049, 695)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Billing"
+        '
+        'GroupBox28
+        '
+        Me.GroupBox28.Location = New System.Drawing.Point(14, 79)
+        Me.GroupBox28.Name = "GroupBox28"
+        Me.GroupBox28.Size = New System.Drawing.Size(952, 279)
+        Me.GroupBox28.TabIndex = 3
+        Me.GroupBox28.TabStop = False
+        Me.GroupBox28.Text = "GroupBox28"
+        '
+        'Button18
+        '
+        Me.Button18.Location = New System.Drawing.Point(267, 25)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(75, 23)
+        Me.Button18.TabIndex = 2
+        Me.Button18.Text = "Button18"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(129, 28)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox3.TabIndex = 1
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Location = New System.Drawing.Point(50, 31)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(59, 17)
+        Me.Label73.TabIndex = 0
+        Me.Label73.Text = "Label73"
         '
         'TabPage6
         '
@@ -1444,7 +1703,7 @@ Partial Class adminDash
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1218, 553)
+        Me.ClientSize = New System.Drawing.Size(1470, 553)
         Me.Controls.Add(Me.DotNetBarTabcontrol1)
         Me.Name = "adminDash"
         Me.Text = "Form1"
@@ -1500,11 +1759,23 @@ Partial Class adminDash
         Me.GroupBox10.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
+        Me.GroupBox27.ResumeLayout(False)
+        Me.GroupBox27.PerformLayout()
+        Me.GroupBox26.ResumeLayout(False)
+        Me.GroupBox26.PerformLayout()
+        Me.GroupBox24.ResumeLayout(False)
+        Me.GroupBox24.PerformLayout()
+        Me.GroupBox25.ResumeLayout(False)
+        Me.GroupBox25.PerformLayout()
+        Me.GroupBox23.ResumeLayout(False)
+        Me.GroupBox23.PerformLayout()
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1568,7 +1839,6 @@ Partial Class adminDash
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents Label19 As Label
     Friend WithEvents GroupBox12 As GroupBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label17 As Label
     Friend WithEvents PictureBox7 As PictureBox
@@ -1582,7 +1852,6 @@ Partial Class adminDash
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
@@ -1611,7 +1880,6 @@ Partial Class adminDash
     Friend WithEvents Button8 As Button
     Friend WithEvents Label31 As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents Label29 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
@@ -1638,4 +1906,31 @@ Partial Class adminDash
     Friend WithEvents Button16 As Button
     Friend WithEvents Button17 As Button
     Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents GroupBox25 As GroupBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Label67 As Label
+    Friend WithEvents Label68 As Label
+    Friend WithEvents GroupBox23 As GroupBox
+    Friend WithEvents GroupBox24 As GroupBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label65 As Label
+    Friend WithEvents Label66 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label63 As Label
+    Friend WithEvents Label64 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label62 As Label
+    Friend WithEvents GroupBox27 As GroupBox
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Label72 As Label
+    Friend WithEvents GroupBox26 As GroupBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label69 As Label
+    Friend WithEvents Label70 As Label
+    Friend WithEvents GroupBox28 As GroupBox
+    Friend WithEvents Button18 As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label73 As Label
 End Class

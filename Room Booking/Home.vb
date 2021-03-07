@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class userHome
+Public Class Home
     Private Sub MonthCalendar1_DateChanged(ByVal sender As Object,
            ByVal e As System.Windows.Forms.DateRangeEventArgs)
         TextBox1.Text = e.Start.ToShortDateString()
@@ -34,24 +34,25 @@ Public Class userHome
         Select Case count
             Case 1
                 Label1.Visible = True
-                Label3.Visible = True
+                Label2.Visible = True
                 Label4.Visible = False
-                Label2.Visible = False
+                Label3.Visible = False
                 Label6.Visible = False
                 Label5.Visible = False
-                Label11.Visible = False
+                Label8.Visible = False
+                Label7.Visible = False
                 Label10.Visible = False
-                Label13.Visible = False
+                Label9.Visible = False
                 Label12.Visible = False
-                Label15.Visible = False
-                Label14.Visible = False
+                Label11.Visible = False
 
-                Button2.Visible = True
+                Button1.Visible = True
+                Button2.Visible = False
                 Button3.Visible = False
                 Button4.Visible = False
                 Button5.Visible = False
                 Button6.Visible = False
-                Button7.Visible = False
+
 
                 Try
                     Dim updatesql As String = "Select name, price From (Select Row_Number() Over (Order By id) As RowNum, *From services) t2 Where RowNum = 1"
@@ -67,20 +68,21 @@ Public Class userHome
 
             Case 2
                 Label1.Visible = True
-                Label3.Visible = True
-                Label4.Visible = True
                 Label2.Visible = True
+                Label4.Visible = True
+                Label3.Visible = True
                 Label6.Visible = False
                 Label5.Visible = False
-                Label11.Visible = False
+                Label8.Visible = False
+                Label7.Visible = False
                 Label10.Visible = False
-                Label13.Visible = False
+                Label9.Visible = False
                 Label12.Visible = False
-                Label15.Visible = False
-                Label14.Visible = False
+                Label11.Visible = False
 
+                Button1.Visible = True
                 Button2.Visible = True
-                Button3.Visible = True
+                Button3.Visible = False
                 Button4.Visible = False
                 Button5.Visible = False
                 Button6.Visible = False
@@ -391,9 +393,5 @@ Public Class userHome
         str(1) = Label5.Text
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
-    End Sub
-
-    Private Sub DotNetBarTabcontrol1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DotNetBarTabcontrol1.SelectedIndexChanged
-
     End Sub
 End Class
