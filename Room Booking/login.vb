@@ -22,7 +22,7 @@ Public Class login
                 Dim value = cmd.ExecuteScalar()
                 If value > 0 Then
                     MessageBox.Show("Login sucessfully!")
-                    userHome.Show()
+                    Home.Show()
                     Me.Hide()
                 Else
                     MessageBox.Show("The username Or password incorrect")

@@ -234,10 +234,11 @@ Partial Class adminDash
         Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage6)
         Me.DotNetBarTabcontrol1.ItemSize = New System.Drawing.Size(44, 136)
         Me.DotNetBarTabcontrol1.Location = New System.Drawing.Point(2, 1)
+        Me.DotNetBarTabcontrol1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DotNetBarTabcontrol1.Multiline = True
         Me.DotNetBarTabcontrol1.Name = "DotNetBarTabcontrol1"
         Me.DotNetBarTabcontrol1.SelectedIndex = 0
-        Me.DotNetBarTabcontrol1.Size = New System.Drawing.Size(1193, 703)
+        Me.DotNetBarTabcontrol1.Size = New System.Drawing.Size(895, 571)
         Me.DotNetBarTabcontrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.DotNetBarTabcontrol1.TabIndex = 0
         '
@@ -251,17 +252,20 @@ Partial Class adminDash
         Me.TabPage1.Controls.Add(Me.GroupBox4)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Size = New System.Drawing.Size(751, 563)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Home"
         '
         'GroupBox9
         '
-        Me.GroupBox9.Location = New System.Drawing.Point(21, 146)
+        Me.GroupBox9.Location = New System.Drawing.Point(16, 119)
+        Me.GroupBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(1014, 357)
+        Me.GroupBox9.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox9.Size = New System.Drawing.Size(760, 290)
         Me.GroupBox9.TabIndex = 9
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Search booking"
@@ -271,35 +275,40 @@ Partial Class adminDash
         Me.GroupBox8.Controls.Add(Me.Label12)
         Me.GroupBox8.Controls.Add(Me.Label13)
         Me.GroupBox8.Controls.Add(Me.PictureBox5)
-        Me.GroupBox8.Location = New System.Drawing.Point(637, 18)
+        Me.GroupBox8.Location = New System.Drawing.Point(478, 15)
+        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(180, 100)
+        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox8.Size = New System.Drawing.Size(135, 81)
         Me.GroupBox8.TabIndex = 8
         Me.GroupBox8.TabStop = False
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(57, 54)
+        Me.Label12.Location = New System.Drawing.Point(43, 44)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(59, 17)
+        Me.Label12.Size = New System.Drawing.Size(45, 13)
         Me.Label12.TabIndex = 7
         Me.Label12.Text = "Label12"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(57, 22)
+        Me.Label13.Location = New System.Drawing.Point(43, 18)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(79, 17)
+        Me.Label13.Size = New System.Drawing.Size(62, 13)
         Me.Label13.TabIndex = 4
         Me.Label13.Text = "Occupancy"
         '
         'PictureBox5
         '
-        Me.PictureBox5.Location = New System.Drawing.Point(6, 21)
+        Me.PictureBox5.Location = New System.Drawing.Point(4, 17)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(44, 50)
+        Me.PictureBox5.Size = New System.Drawing.Size(33, 41)
         Me.PictureBox5.TabIndex = 3
         Me.PictureBox5.TabStop = False
         '
@@ -308,35 +317,40 @@ Partial Class adminDash
         Me.GroupBox7.Controls.Add(Me.Label10)
         Me.GroupBox7.Controls.Add(Me.Label11)
         Me.GroupBox7.Controls.Add(Me.PictureBox4)
-        Me.GroupBox7.Location = New System.Drawing.Point(855, 18)
+        Me.GroupBox7.Location = New System.Drawing.Point(641, 15)
+        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(180, 100)
+        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox7.Size = New System.Drawing.Size(135, 81)
         Me.GroupBox7.TabIndex = 6
         Me.GroupBox7.TabStop = False
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(57, 54)
+        Me.Label10.Location = New System.Drawing.Point(43, 44)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(59, 17)
+        Me.Label10.Size = New System.Drawing.Size(45, 13)
         Me.Label10.TabIndex = 7
         Me.Label10.Text = "Label10"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(57, 22)
+        Me.Label11.Location = New System.Drawing.Point(43, 18)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(101, 17)
+        Me.Label11.Size = New System.Drawing.Size(77, 13)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Units Available"
         '
         'PictureBox4
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(6, 21)
+        Me.PictureBox4.Location = New System.Drawing.Point(4, 17)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(44, 50)
+        Me.PictureBox4.Size = New System.Drawing.Size(33, 41)
         Me.PictureBox4.TabIndex = 3
         Me.PictureBox4.TabStop = False
         '
@@ -345,35 +359,40 @@ Partial Class adminDash
         Me.GroupBox5.Controls.Add(Me.Label5)
         Me.GroupBox5.Controls.Add(Me.Label3)
         Me.GroupBox5.Controls.Add(Me.PictureBox3)
-        Me.GroupBox5.Location = New System.Drawing.Point(427, 18)
+        Me.GroupBox5.Location = New System.Drawing.Point(320, 15)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(180, 100)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Size = New System.Drawing.Size(135, 81)
         Me.GroupBox5.TabIndex = 5
         Me.GroupBox5.TabStop = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(57, 54)
+        Me.Label5.Location = New System.Drawing.Point(43, 44)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 17)
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Label5"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(57, 22)
+        Me.Label3.Location = New System.Drawing.Point(43, 18)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 17)
+        Me.Label3.Size = New System.Drawing.Size(90, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Check-outs today"
         '
         'PictureBox3
         '
-        Me.PictureBox3.Location = New System.Drawing.Point(6, 21)
+        Me.PictureBox3.Location = New System.Drawing.Point(4, 17)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(44, 50)
+        Me.PictureBox3.Size = New System.Drawing.Size(33, 41)
         Me.PictureBox3.TabIndex = 3
         Me.PictureBox3.TabStop = False
         '
@@ -382,35 +401,40 @@ Partial Class adminDash
         Me.GroupBox4.Controls.Add(Me.Label6)
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Controls.Add(Me.PictureBox2)
-        Me.GroupBox4.Location = New System.Drawing.Point(218, 18)
+        Me.GroupBox4.Location = New System.Drawing.Point(164, 15)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(171, 100)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Size = New System.Drawing.Size(128, 81)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(57, 54)
+        Me.Label6.Location = New System.Drawing.Point(43, 44)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 17)
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Label6"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(57, 22)
+        Me.Label2.Location = New System.Drawing.Point(43, 18)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 17)
+        Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Check-ins today"
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(6, 21)
+        Me.PictureBox2.Location = New System.Drawing.Point(4, 17)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(44, 50)
+        Me.PictureBox2.Size = New System.Drawing.Size(33, 41)
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
@@ -419,35 +443,40 @@ Partial Class adminDash
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(21, 18)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(162, 100)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(122, 81)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(57, 54)
+        Me.Label4.Location = New System.Drawing.Point(43, 44)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 17)
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Label4"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(57, 22)
+        Me.Label1.Location = New System.Drawing.Point(43, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 17)
+        Me.Label1.Size = New System.Drawing.Size(76, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "New Bookings"
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 21)
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 17)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(44, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(33, 41)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
@@ -457,9 +486,10 @@ Partial Class adminDash
         Me.TabPage2.Controls.Add(Me.GroupBox13)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Size = New System.Drawing.Size(751, 563)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Services"
         '
@@ -470,17 +500,20 @@ Partial Class adminDash
         Me.GroupBox13.Controls.Add(Me.Label20)
         Me.GroupBox13.Controls.Add(Me.TextBox5)
         Me.GroupBox13.Controls.Add(Me.TextBox4)
-        Me.GroupBox13.Location = New System.Drawing.Point(6, 111)
+        Me.GroupBox13.Location = New System.Drawing.Point(4, 90)
+        Me.GroupBox13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(220, 157)
+        Me.GroupBox13.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox13.Size = New System.Drawing.Size(165, 128)
         Me.GroupBox13.TabIndex = 2
         Me.GroupBox13.TabStop = False
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(69, 92)
+        Me.Button5.Location = New System.Drawing.Point(52, 75)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(56, 19)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Submit"
         Me.Button5.UseVisualStyleBackColor = True
@@ -488,33 +521,37 @@ Partial Class adminDash
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(17, 55)
+        Me.Label21.Location = New System.Drawing.Point(13, 45)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(40, 17)
+        Me.Label21.Size = New System.Drawing.Size(31, 13)
         Me.Label21.TabIndex = 3
         Me.Label21.Text = "Price"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(17, 27)
+        Me.Label20.Location = New System.Drawing.Point(13, 22)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(45, 17)
+        Me.Label20.Size = New System.Drawing.Size(35, 13)
         Me.Label20.TabIndex = 2
         Me.Label20.Text = "Name"
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(82, 55)
+        Me.TextBox5.Location = New System.Drawing.Point(62, 45)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(76, 20)
         Me.TextBox5.TabIndex = 1
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(82, 27)
+        Me.TextBox4.Location = New System.Drawing.Point(62, 22)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(76, 20)
         Me.TextBox4.TabIndex = 0
         '
         'GroupBox2
@@ -523,17 +560,20 @@ Partial Class adminDash
         Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.PictureBox8)
         Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox2.Location = New System.Drawing.Point(2, 5)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1031, 99)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(773, 80)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(860, 30)
+        Me.Button3.Location = New System.Drawing.Point(645, 24)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 32)
+        Me.Button3.Size = New System.Drawing.Size(98, 26)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "ADD SERVICES"
         Me.Button3.UseVisualStyleBackColor = True
@@ -541,26 +581,29 @@ Partial Class adminDash
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(10, 76)
+        Me.Label18.Location = New System.Drawing.Point(8, 62)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(190, 17)
+        Me.Label18.Size = New System.Drawing.Size(142, 13)
         Me.Label18.TabIndex = 2
         Me.Label18.Text = "Add or update room services"
         '
         'PictureBox8
         '
-        Me.PictureBox8.Location = New System.Drawing.Point(72, 21)
+        Me.PictureBox8.Location = New System.Drawing.Point(54, 17)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(48, 33)
+        Me.PictureBox8.Size = New System.Drawing.Size(36, 27)
         Me.PictureBox8.TabIndex = 1
         Me.PictureBox8.TabStop = False
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(7, 22)
+        Me.Label19.Location = New System.Drawing.Point(5, 18)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(59, 17)
+        Me.Label19.Size = New System.Drawing.Size(45, 13)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Label19"
         '
@@ -570,9 +613,10 @@ Partial Class adminDash
         Me.TabPage8.Controls.Add(Me.GroupBox3)
         Me.TabPage8.Controls.Add(Me.GroupBox6)
         Me.TabPage8.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage8.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage8.Size = New System.Drawing.Size(751, 563)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "New Booking"
         '
@@ -587,29 +631,34 @@ Partial Class adminDash
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 7)
+        Me.GroupBox3.Location = New System.Drawing.Point(4, 6)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(992, 303)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(744, 246)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         '
         'MonthCalendar2
         '
-        Me.MonthCalendar2.Location = New System.Drawing.Point(303, 80)
+        Me.MonthCalendar2.Location = New System.Drawing.Point(227, 65)
+        Me.MonthCalendar2.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
         Me.MonthCalendar2.Name = "MonthCalendar2"
         Me.MonthCalendar2.TabIndex = 8
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(16, 80)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(12, 65)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 7
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(790, 36)
+        Me.Button1.Location = New System.Drawing.Point(592, 29)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 33)
+        Me.Button1.Size = New System.Drawing.Size(74, 27)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
@@ -617,57 +666,65 @@ Partial Class adminDash
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(588, 41)
+        Me.ComboBox1.Location = New System.Drawing.Point(441, 33)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(150, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(114, 21)
         Me.ComboBox1.TabIndex = 5
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(303, 41)
+        Me.TextBox2.Location = New System.Drawing.Point(227, 33)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(262, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(198, 20)
         Me.TextBox2.TabIndex = 4
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(16, 41)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 33)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(262, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(198, 20)
         Me.TextBox1.TabIndex = 3
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(585, 21)
+        Me.Label9.Location = New System.Drawing.Point(439, 17)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(129, 17)
+        Me.Label9.Size = New System.Drawing.Size(96, 13)
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "Number of persons"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(300, 21)
+        Me.Label8.Location = New System.Drawing.Point(225, 17)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(71, 17)
+        Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Check out"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 21)
+        Me.Label7.Location = New System.Drawing.Point(10, 17)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 17)
+        Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Check in"
         '
         'GroupBox6
         '
-        Me.GroupBox6.Location = New System.Drawing.Point(6, 316)
+        Me.GroupBox6.Location = New System.Drawing.Point(4, 257)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(1039, 238)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox6.Size = New System.Drawing.Size(779, 193)
         Me.GroupBox6.TabIndex = 1
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "GroupBox6"
@@ -676,8 +733,9 @@ Partial Class adminDash
         '
         Me.TabPage3.BackColor = System.Drawing.Color.White
         Me.TabPage3.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage3.Size = New System.Drawing.Size(751, 563)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Customer"
         '
@@ -687,8 +745,9 @@ Partial Class adminDash
         Me.TabPage7.Controls.Add(Me.GroupBox14)
         Me.TabPage7.Controls.Add(Me.GroupBox10)
         Me.TabPage7.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage7.Size = New System.Drawing.Size(751, 563)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Rooms"
         '
@@ -697,9 +756,11 @@ Partial Class adminDash
         Me.GroupBox14.Controls.Add(Me.GroupBox21)
         Me.GroupBox14.Controls.Add(Me.GroupBox17)
         Me.GroupBox14.Controls.Add(Me.GroupBox15)
-        Me.GroupBox14.Location = New System.Drawing.Point(22, 136)
+        Me.GroupBox14.Location = New System.Drawing.Point(16, 110)
+        Me.GroupBox14.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox14.Name = "GroupBox14"
-        Me.GroupBox14.Size = New System.Drawing.Size(1010, 552)
+        Me.GroupBox14.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox14.Size = New System.Drawing.Size(758, 448)
         Me.GroupBox14.TabIndex = 4
         Me.GroupBox14.TabStop = False
         Me.GroupBox14.Text = "GroupBox14"
@@ -718,9 +779,11 @@ Partial Class adminDash
         Me.GroupBox21.Controls.Add(Me.Button16)
         Me.GroupBox21.Controls.Add(Me.Button17)
         Me.GroupBox21.Controls.Add(Me.PictureBox12)
-        Me.GroupBox21.Location = New System.Drawing.Point(13, 372)
+        Me.GroupBox21.Location = New System.Drawing.Point(10, 302)
+        Me.GroupBox21.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox21.Name = "GroupBox21"
-        Me.GroupBox21.Size = New System.Drawing.Size(961, 165)
+        Me.GroupBox21.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox21.Size = New System.Drawing.Size(721, 134)
         Me.GroupBox21.TabIndex = 6
         Me.GroupBox21.TabStop = False
         '
@@ -729,17 +792,20 @@ Partial Class adminDash
         Me.GroupBox22.Controls.Add(Me.Button15)
         Me.GroupBox22.Controls.Add(Me.Label52)
         Me.GroupBox22.Controls.Add(Me.Label53)
-        Me.GroupBox22.Location = New System.Drawing.Point(425, 22)
+        Me.GroupBox22.Location = New System.Drawing.Point(319, 18)
+        Me.GroupBox22.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox22.Name = "GroupBox22"
-        Me.GroupBox22.Size = New System.Drawing.Size(530, 129)
+        Me.GroupBox22.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox22.Size = New System.Drawing.Size(398, 105)
         Me.GroupBox22.TabIndex = 11
         Me.GroupBox22.TabStop = False
         '
         'Button15
         '
-        Me.Button15.Location = New System.Drawing.Point(6, 100)
+        Me.Button15.Location = New System.Drawing.Point(4, 81)
+        Me.Button15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(123, 23)
+        Me.Button15.Size = New System.Drawing.Size(92, 19)
         Me.Button15.TabIndex = 2
         Me.Button15.Text = "ADD NEW UNIT"
         Me.Button15.UseVisualStyleBackColor = True
@@ -747,116 +813,129 @@ Partial Class adminDash
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(180, 52)
+        Me.Label52.Location = New System.Drawing.Point(135, 42)
+        Me.Label52.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(59, 17)
+        Me.Label52.Size = New System.Drawing.Size(45, 13)
         Me.Label52.TabIndex = 1
         Me.Label52.Text = "Label52"
         '
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(7, 13)
+        Me.Label53.Location = New System.Drawing.Point(5, 11)
+        Me.Label53.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(59, 17)
+        Me.Label53.Size = New System.Drawing.Size(45, 13)
         Me.Label53.TabIndex = 0
         Me.Label53.Text = "Label53"
         '
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(249, 101)
+        Me.Label54.Location = New System.Drawing.Point(187, 82)
+        Me.Label54.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(59, 17)
+        Me.Label54.Size = New System.Drawing.Size(45, 13)
         Me.Label54.TabIndex = 10
         Me.Label54.Text = "Label54"
         '
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(249, 74)
+        Me.Label55.Location = New System.Drawing.Point(187, 60)
+        Me.Label55.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(59, 17)
+        Me.Label55.Size = New System.Drawing.Size(45, 13)
         Me.Label55.TabIndex = 9
         Me.Label55.Text = "Label55"
         '
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(249, 48)
+        Me.Label56.Location = New System.Drawing.Point(187, 39)
+        Me.Label56.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(59, 17)
+        Me.Label56.Size = New System.Drawing.Size(45, 13)
         Me.Label56.TabIndex = 8
         Me.Label56.Text = "Label56"
         '
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(249, 22)
+        Me.Label57.Location = New System.Drawing.Point(187, 18)
+        Me.Label57.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(59, 17)
+        Me.Label57.Size = New System.Drawing.Size(45, 13)
         Me.Label57.TabIndex = 7
         Me.Label57.Text = "Label57"
         '
         'Label58
         '
         Me.Label58.AutoSize = True
-        Me.Label58.Location = New System.Drawing.Point(180, 101)
+        Me.Label58.Location = New System.Drawing.Point(135, 82)
+        Me.Label58.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(59, 17)
+        Me.Label58.Size = New System.Drawing.Size(45, 13)
         Me.Label58.TabIndex = 6
         Me.Label58.Text = "Label58"
         '
         'Label59
         '
         Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(180, 74)
+        Me.Label59.Location = New System.Drawing.Point(135, 60)
+        Me.Label59.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(59, 17)
+        Me.Label59.Size = New System.Drawing.Size(45, 13)
         Me.Label59.TabIndex = 5
         Me.Label59.Text = "Label59"
         '
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(180, 48)
+        Me.Label60.Location = New System.Drawing.Point(135, 39)
+        Me.Label60.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(59, 17)
+        Me.Label60.Size = New System.Drawing.Size(45, 13)
         Me.Label60.TabIndex = 4
         Me.Label60.Text = "Label60"
         '
         'Label61
         '
         Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(180, 22)
+        Me.Label61.Location = New System.Drawing.Point(135, 18)
+        Me.Label61.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(59, 17)
+        Me.Label61.Size = New System.Drawing.Size(45, 13)
         Me.Label61.TabIndex = 3
         Me.Label61.Text = "Label61"
         '
         'Button16
         '
-        Me.Button16.Location = New System.Drawing.Point(89, 138)
+        Me.Button16.Location = New System.Drawing.Point(67, 112)
+        Me.Button16.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(75, 23)
+        Me.Button16.Size = New System.Drawing.Size(56, 19)
         Me.Button16.TabIndex = 2
         Me.Button16.Text = "Button16"
         Me.Button16.UseVisualStyleBackColor = True
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(7, 138)
+        Me.Button17.Location = New System.Drawing.Point(5, 112)
+        Me.Button17.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(75, 23)
+        Me.Button17.Size = New System.Drawing.Size(56, 19)
         Me.Button17.TabIndex = 1
         Me.Button17.Text = "Button17"
         Me.Button17.UseVisualStyleBackColor = True
         '
         'PictureBox12
         '
-        Me.PictureBox12.Location = New System.Drawing.Point(7, 22)
+        Me.PictureBox12.Location = New System.Drawing.Point(5, 18)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(157, 110)
+        Me.PictureBox12.Size = New System.Drawing.Size(118, 89)
         Me.PictureBox12.TabIndex = 0
         Me.PictureBox12.TabStop = False
         '
@@ -873,9 +952,11 @@ Partial Class adminDash
         Me.GroupBox17.Controls.Add(Me.Button10)
         Me.GroupBox17.Controls.Add(Me.Button11)
         Me.GroupBox17.Controls.Add(Me.PictureBox10)
-        Me.GroupBox17.Location = New System.Drawing.Point(13, 199)
+        Me.GroupBox17.Location = New System.Drawing.Point(10, 162)
+        Me.GroupBox17.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox17.Name = "GroupBox17"
-        Me.GroupBox17.Size = New System.Drawing.Size(981, 167)
+        Me.GroupBox17.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox17.Size = New System.Drawing.Size(736, 136)
         Me.GroupBox17.TabIndex = 5
         Me.GroupBox17.TabStop = False
         '
@@ -884,17 +965,20 @@ Partial Class adminDash
         Me.GroupBox18.Controls.Add(Me.Button9)
         Me.GroupBox18.Controls.Add(Me.Label32)
         Me.GroupBox18.Controls.Add(Me.Label33)
-        Me.GroupBox18.Location = New System.Drawing.Point(425, 22)
+        Me.GroupBox18.Location = New System.Drawing.Point(319, 18)
+        Me.GroupBox18.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox18.Name = "GroupBox18"
-        Me.GroupBox18.Size = New System.Drawing.Size(530, 129)
+        Me.GroupBox18.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox18.Size = New System.Drawing.Size(398, 105)
         Me.GroupBox18.TabIndex = 11
         Me.GroupBox18.TabStop = False
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(6, 100)
+        Me.Button9.Location = New System.Drawing.Point(4, 81)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(123, 23)
+        Me.Button9.Size = New System.Drawing.Size(92, 19)
         Me.Button9.TabIndex = 2
         Me.Button9.Text = "ADD NEW UNIT"
         Me.Button9.UseVisualStyleBackColor = True
@@ -902,107 +986,119 @@ Partial Class adminDash
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(180, 52)
+        Me.Label32.Location = New System.Drawing.Point(135, 42)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(59, 17)
+        Me.Label32.Size = New System.Drawing.Size(45, 13)
         Me.Label32.TabIndex = 1
         Me.Label32.Text = "Label32"
         '
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(7, 13)
+        Me.Label33.Location = New System.Drawing.Point(5, 11)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(59, 17)
+        Me.Label33.Size = New System.Drawing.Size(45, 13)
         Me.Label33.TabIndex = 0
         Me.Label33.Text = "Label33"
         '
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(249, 101)
+        Me.Label34.Location = New System.Drawing.Point(187, 82)
+        Me.Label34.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(59, 17)
+        Me.Label34.Size = New System.Drawing.Size(45, 13)
         Me.Label34.TabIndex = 10
         Me.Label34.Text = "Label34"
         '
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(249, 74)
+        Me.Label35.Location = New System.Drawing.Point(187, 60)
+        Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(59, 17)
+        Me.Label35.Size = New System.Drawing.Size(45, 13)
         Me.Label35.TabIndex = 9
         Me.Label35.Text = "Label35"
         '
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(249, 48)
+        Me.Label36.Location = New System.Drawing.Point(187, 39)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(59, 17)
+        Me.Label36.Size = New System.Drawing.Size(45, 13)
         Me.Label36.TabIndex = 8
         Me.Label36.Text = "Label36"
         '
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(180, 101)
+        Me.Label38.Location = New System.Drawing.Point(135, 82)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(59, 17)
+        Me.Label38.Size = New System.Drawing.Size(45, 13)
         Me.Label38.TabIndex = 6
         Me.Label38.Text = "Label38"
         '
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(180, 74)
+        Me.Label39.Location = New System.Drawing.Point(135, 60)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(59, 17)
+        Me.Label39.Size = New System.Drawing.Size(45, 13)
         Me.Label39.TabIndex = 5
         Me.Label39.Text = "Label39"
         '
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(180, 48)
+        Me.Label40.Location = New System.Drawing.Point(135, 39)
+        Me.Label40.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(59, 17)
+        Me.Label40.Size = New System.Drawing.Size(45, 13)
         Me.Label40.TabIndex = 4
         Me.Label40.Text = "Label40"
         '
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(180, 22)
+        Me.Label41.Location = New System.Drawing.Point(135, 18)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(59, 17)
+        Me.Label41.Size = New System.Drawing.Size(45, 13)
         Me.Label41.TabIndex = 3
         Me.Label41.Text = "Label41"
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(89, 138)
+        Me.Button10.Location = New System.Drawing.Point(67, 112)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.Size = New System.Drawing.Size(56, 19)
         Me.Button10.TabIndex = 2
         Me.Button10.Text = "Button10"
         Me.Button10.UseVisualStyleBackColor = True
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(7, 138)
+        Me.Button11.Location = New System.Drawing.Point(5, 112)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 23)
+        Me.Button11.Size = New System.Drawing.Size(56, 19)
         Me.Button11.TabIndex = 1
         Me.Button11.Text = "Button11"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'PictureBox10
         '
-        Me.PictureBox10.Location = New System.Drawing.Point(7, 22)
+        Me.PictureBox10.Location = New System.Drawing.Point(5, 18)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(157, 110)
+        Me.PictureBox10.Size = New System.Drawing.Size(118, 89)
         Me.PictureBox10.TabIndex = 0
         Me.PictureBox10.TabStop = False
         '
@@ -1020,9 +1116,11 @@ Partial Class adminDash
         Me.GroupBox15.Controls.Add(Me.Button7)
         Me.GroupBox15.Controls.Add(Me.Button6)
         Me.GroupBox15.Controls.Add(Me.PictureBox9)
-        Me.GroupBox15.Location = New System.Drawing.Point(13, 21)
+        Me.GroupBox15.Location = New System.Drawing.Point(10, 17)
+        Me.GroupBox15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox15.Name = "GroupBox15"
-        Me.GroupBox15.Size = New System.Drawing.Size(981, 167)
+        Me.GroupBox15.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox15.Size = New System.Drawing.Size(736, 136)
         Me.GroupBox15.TabIndex = 4
         Me.GroupBox15.TabStop = False
         '
@@ -1040,9 +1138,11 @@ Partial Class adminDash
         Me.GroupBox19.Controls.Add(Me.Button13)
         Me.GroupBox19.Controls.Add(Me.Button14)
         Me.GroupBox19.Controls.Add(Me.PictureBox11)
-        Me.GroupBox19.Location = New System.Drawing.Point(136, 157)
+        Me.GroupBox19.Location = New System.Drawing.Point(102, 128)
+        Me.GroupBox19.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox19.Name = "GroupBox19"
-        Me.GroupBox19.Size = New System.Drawing.Size(961, 167)
+        Me.GroupBox19.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox19.Size = New System.Drawing.Size(721, 136)
         Me.GroupBox19.TabIndex = 6
         Me.GroupBox19.TabStop = False
         '
@@ -1051,17 +1151,20 @@ Partial Class adminDash
         Me.GroupBox20.Controls.Add(Me.Button12)
         Me.GroupBox20.Controls.Add(Me.Label42)
         Me.GroupBox20.Controls.Add(Me.Label43)
-        Me.GroupBox20.Location = New System.Drawing.Point(425, 22)
+        Me.GroupBox20.Location = New System.Drawing.Point(319, 18)
+        Me.GroupBox20.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(530, 129)
+        Me.GroupBox20.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox20.Size = New System.Drawing.Size(398, 105)
         Me.GroupBox20.TabIndex = 11
         Me.GroupBox20.TabStop = False
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(6, 100)
+        Me.Button12.Location = New System.Drawing.Point(4, 81)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(123, 23)
+        Me.Button12.Size = New System.Drawing.Size(92, 19)
         Me.Button12.TabIndex = 2
         Me.Button12.Text = "ADD NEW UNIT"
         Me.Button12.UseVisualStyleBackColor = True
@@ -1069,116 +1172,129 @@ Partial Class adminDash
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(180, 52)
+        Me.Label42.Location = New System.Drawing.Point(135, 42)
+        Me.Label42.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(59, 17)
+        Me.Label42.Size = New System.Drawing.Size(45, 13)
         Me.Label42.TabIndex = 1
         Me.Label42.Text = "Label42"
         '
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(7, 13)
+        Me.Label43.Location = New System.Drawing.Point(5, 11)
+        Me.Label43.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(59, 17)
+        Me.Label43.Size = New System.Drawing.Size(45, 13)
         Me.Label43.TabIndex = 0
         Me.Label43.Text = "Label43"
         '
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(249, 101)
+        Me.Label44.Location = New System.Drawing.Point(187, 82)
+        Me.Label44.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(59, 17)
+        Me.Label44.Size = New System.Drawing.Size(45, 13)
         Me.Label44.TabIndex = 10
         Me.Label44.Text = "Label44"
         '
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(249, 74)
+        Me.Label45.Location = New System.Drawing.Point(187, 60)
+        Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(59, 17)
+        Me.Label45.Size = New System.Drawing.Size(45, 13)
         Me.Label45.TabIndex = 9
         Me.Label45.Text = "Label45"
         '
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(249, 48)
+        Me.Label46.Location = New System.Drawing.Point(187, 39)
+        Me.Label46.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(59, 17)
+        Me.Label46.Size = New System.Drawing.Size(45, 13)
         Me.Label46.TabIndex = 8
         Me.Label46.Text = "Label46"
         '
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(249, 22)
+        Me.Label47.Location = New System.Drawing.Point(187, 18)
+        Me.Label47.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(59, 17)
+        Me.Label47.Size = New System.Drawing.Size(45, 13)
         Me.Label47.TabIndex = 7
         Me.Label47.Text = "Label47"
         '
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(180, 101)
+        Me.Label48.Location = New System.Drawing.Point(135, 82)
+        Me.Label48.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(59, 17)
+        Me.Label48.Size = New System.Drawing.Size(45, 13)
         Me.Label48.TabIndex = 6
         Me.Label48.Text = "Label48"
         '
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(180, 74)
+        Me.Label49.Location = New System.Drawing.Point(135, 60)
+        Me.Label49.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(59, 17)
+        Me.Label49.Size = New System.Drawing.Size(45, 13)
         Me.Label49.TabIndex = 5
         Me.Label49.Text = "Label49"
         '
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(180, 48)
+        Me.Label50.Location = New System.Drawing.Point(135, 39)
+        Me.Label50.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(59, 17)
+        Me.Label50.Size = New System.Drawing.Size(45, 13)
         Me.Label50.TabIndex = 4
         Me.Label50.Text = "Label50"
         '
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(180, 22)
+        Me.Label51.Location = New System.Drawing.Point(135, 18)
+        Me.Label51.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(59, 17)
+        Me.Label51.Size = New System.Drawing.Size(45, 13)
         Me.Label51.TabIndex = 3
         Me.Label51.Text = "Label51"
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(89, 138)
+        Me.Button13.Location = New System.Drawing.Point(67, 112)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 23)
+        Me.Button13.Size = New System.Drawing.Size(56, 19)
         Me.Button13.TabIndex = 2
         Me.Button13.Text = "Button13"
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(7, 138)
+        Me.Button14.Location = New System.Drawing.Point(5, 112)
+        Me.Button14.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(75, 23)
+        Me.Button14.Size = New System.Drawing.Size(56, 19)
         Me.Button14.TabIndex = 1
         Me.Button14.Text = "Button14"
         Me.Button14.UseVisualStyleBackColor = True
         '
         'PictureBox11
         '
-        Me.PictureBox11.Location = New System.Drawing.Point(7, 22)
+        Me.PictureBox11.Location = New System.Drawing.Point(5, 18)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(157, 110)
+        Me.PictureBox11.Size = New System.Drawing.Size(118, 89)
         Me.PictureBox11.TabIndex = 0
         Me.PictureBox11.TabStop = False
         '
@@ -1187,17 +1303,20 @@ Partial Class adminDash
         Me.GroupBox16.Controls.Add(Me.Button8)
         Me.GroupBox16.Controls.Add(Me.Label31)
         Me.GroupBox16.Controls.Add(Me.Label30)
-        Me.GroupBox16.Location = New System.Drawing.Point(425, 22)
+        Me.GroupBox16.Location = New System.Drawing.Point(319, 18)
+        Me.GroupBox16.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.Size = New System.Drawing.Size(530, 129)
+        Me.GroupBox16.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox16.Size = New System.Drawing.Size(398, 105)
         Me.GroupBox16.TabIndex = 11
         Me.GroupBox16.TabStop = False
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(6, 100)
+        Me.Button8.Location = New System.Drawing.Point(4, 81)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(123, 23)
+        Me.Button8.Size = New System.Drawing.Size(92, 19)
         Me.Button8.TabIndex = 2
         Me.Button8.Text = "ADD NEW UNIT"
         Me.Button8.UseVisualStyleBackColor = True
@@ -1205,107 +1324,119 @@ Partial Class adminDash
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(180, 52)
+        Me.Label31.Location = New System.Drawing.Point(135, 42)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(59, 17)
+        Me.Label31.Size = New System.Drawing.Size(45, 13)
         Me.Label31.TabIndex = 1
         Me.Label31.Text = "Label31"
         '
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(7, 13)
+        Me.Label30.Location = New System.Drawing.Point(5, 11)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(59, 17)
+        Me.Label30.Size = New System.Drawing.Size(45, 13)
         Me.Label30.TabIndex = 0
         Me.Label30.Text = "Label30"
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(230, 97)
+        Me.Label28.Location = New System.Drawing.Point(172, 79)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(59, 17)
+        Me.Label28.Size = New System.Drawing.Size(45, 13)
         Me.Label28.TabIndex = 9
         Me.Label28.Text = "Label28"
         '
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(270, 71)
+        Me.Label27.Location = New System.Drawing.Point(202, 58)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(59, 17)
+        Me.Label27.Size = New System.Drawing.Size(45, 13)
         Me.Label27.TabIndex = 8
         Me.Label27.Text = "Label27"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(314, 45)
+        Me.Label26.Location = New System.Drawing.Point(236, 37)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(59, 17)
+        Me.Label26.Size = New System.Drawing.Size(45, 13)
         Me.Label26.TabIndex = 7
         Me.Label26.Text = "Label26"
         '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(184, 22)
+        Me.Label25.Location = New System.Drawing.Point(138, 18)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(59, 17)
+        Me.Label25.Size = New System.Drawing.Size(45, 13)
         Me.Label25.TabIndex = 6
         Me.Label25.Text = "Label25"
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(184, 97)
+        Me.Label24.Location = New System.Drawing.Point(138, 79)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(44, 17)
+        Me.Label24.Size = New System.Drawing.Size(34, 13)
         Me.Label24.TabIndex = 5
         Me.Label24.Text = "Price:"
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(184, 71)
+        Me.Label23.Location = New System.Drawing.Point(138, 58)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(84, 17)
+        Me.Label23.Size = New System.Drawing.Size(64, 13)
         Me.Label23.TabIndex = 4
         Me.Label23.Text = "Object type:"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(184, 45)
+        Me.Label22.Location = New System.Drawing.Point(138, 37)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(124, 17)
+        Me.Label22.Size = New System.Drawing.Size(93, 13)
         Me.Label22.TabIndex = 3
         Me.Label22.Text = "Number of guests:"
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(89, 138)
+        Me.Button7.Location = New System.Drawing.Point(67, 112)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.Size = New System.Drawing.Size(56, 19)
         Me.Button7.TabIndex = 2
         Me.Button7.Text = "Button7"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(7, 138)
+        Me.Button6.Location = New System.Drawing.Point(5, 112)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.Size = New System.Drawing.Size(56, 19)
         Me.Button6.TabIndex = 1
         Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'PictureBox9
         '
-        Me.PictureBox9.Location = New System.Drawing.Point(7, 22)
+        Me.PictureBox9.Location = New System.Drawing.Point(5, 18)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(157, 110)
+        Me.PictureBox9.Size = New System.Drawing.Size(118, 89)
         Me.PictureBox9.TabIndex = 0
         Me.PictureBox9.TabStop = False
         '
@@ -1315,17 +1446,20 @@ Partial Class adminDash
         Me.GroupBox10.Controls.Add(Me.Label15)
         Me.GroupBox10.Controls.Add(Me.PictureBox6)
         Me.GroupBox10.Controls.Add(Me.Label14)
-        Me.GroupBox10.Location = New System.Drawing.Point(22, 18)
+        Me.GroupBox10.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(1010, 112)
+        Me.GroupBox10.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox10.Size = New System.Drawing.Size(758, 91)
         Me.GroupBox10.TabIndex = 2
         Me.GroupBox10.TabStop = False
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(893, 23)
+        Me.Button4.Location = New System.Drawing.Point(670, 19)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(101, 30)
+        Me.Button4.Size = New System.Drawing.Size(76, 24)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "ADD NEW"
         Me.Button4.UseVisualStyleBackColor = True
@@ -1333,27 +1467,30 @@ Partial Class adminDash
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(13, 62)
+        Me.Label15.Location = New System.Drawing.Point(10, 50)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(835, 17)
+        Me.Label15.Size = New System.Drawing.Size(619, 13)
         Me.Label15.TabIndex = 4
         Me.Label15.Text = "The room type includes information as to the number of beds, price and more. One " &
     "or more units can be added for each room type."
         '
         'PictureBox6
         '
-        Me.PictureBox6.Location = New System.Drawing.Point(100, 18)
+        Me.PictureBox6.Location = New System.Drawing.Point(75, 15)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(42, 28)
+        Me.PictureBox6.Size = New System.Drawing.Size(32, 23)
         Me.PictureBox6.TabIndex = 3
         Me.PictureBox6.TabStop = False
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(10, 18)
+        Me.Label14.Location = New System.Drawing.Point(8, 15)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(83, 17)
+        Me.Label14.Size = New System.Drawing.Size(63, 13)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Room types"
         '
@@ -1368,8 +1505,9 @@ Partial Class adminDash
         Me.TabPage4.Controls.Add(Me.GroupBox12)
         Me.TabPage4.Controls.Add(Me.GroupBox11)
         Me.TabPage4.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage4.Size = New System.Drawing.Size(751, 563)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Service Requests"
         '
@@ -1378,35 +1516,40 @@ Partial Class adminDash
         Me.GroupBox27.Controls.Add(Me.ComboBox7)
         Me.GroupBox27.Controls.Add(Me.Label71)
         Me.GroupBox27.Controls.Add(Me.Label72)
-        Me.GroupBox27.Location = New System.Drawing.Point(530, 170)
+        Me.GroupBox27.Location = New System.Drawing.Point(398, 138)
+        Me.GroupBox27.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox27.Name = "GroupBox27"
-        Me.GroupBox27.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox27.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox27.Size = New System.Drawing.Size(308, 46)
         Me.GroupBox27.TabIndex = 3
         Me.GroupBox27.TabStop = False
         '
         'ComboBox7
         '
         Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox7.Location = New System.Drawing.Point(200, 12)
+        Me.ComboBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox7.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox7.TabIndex = 2
         '
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(141, 22)
+        Me.Label71.Location = New System.Drawing.Point(106, 18)
+        Me.Label71.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(59, 17)
+        Me.Label71.Size = New System.Drawing.Size(45, 13)
         Me.Label71.TabIndex = 1
         Me.Label71.Text = "Label71"
         '
         'Label72
         '
         Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(10, 22)
+        Me.Label72.Location = New System.Drawing.Point(8, 18)
+        Me.Label72.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(59, 17)
+        Me.Label72.Size = New System.Drawing.Size(45, 13)
         Me.Label72.TabIndex = 0
         Me.Label72.Text = "Label72"
         '
@@ -1415,35 +1558,40 @@ Partial Class adminDash
         Me.GroupBox26.Controls.Add(Me.ComboBox6)
         Me.GroupBox26.Controls.Add(Me.Label69)
         Me.GroupBox26.Controls.Add(Me.Label70)
-        Me.GroupBox26.Location = New System.Drawing.Point(530, 232)
+        Me.GroupBox26.Location = New System.Drawing.Point(398, 188)
+        Me.GroupBox26.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox26.Name = "GroupBox26"
-        Me.GroupBox26.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox26.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox26.Size = New System.Drawing.Size(308, 46)
         Me.GroupBox26.TabIndex = 4
         Me.GroupBox26.TabStop = False
         '
         'ComboBox6
         '
         Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox6.Location = New System.Drawing.Point(200, 12)
+        Me.ComboBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox6.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox6.TabIndex = 2
         '
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(141, 22)
+        Me.Label69.Location = New System.Drawing.Point(106, 18)
+        Me.Label69.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(59, 17)
+        Me.Label69.Size = New System.Drawing.Size(45, 13)
         Me.Label69.TabIndex = 1
         Me.Label69.Text = "Label69"
         '
         'Label70
         '
         Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(10, 22)
+        Me.Label70.Location = New System.Drawing.Point(8, 18)
+        Me.Label70.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(59, 17)
+        Me.Label70.Size = New System.Drawing.Size(45, 13)
         Me.Label70.TabIndex = 0
         Me.Label70.Text = "Label70"
         '
@@ -1452,35 +1600,40 @@ Partial Class adminDash
         Me.GroupBox24.Controls.Add(Me.ComboBox4)
         Me.GroupBox24.Controls.Add(Me.Label65)
         Me.GroupBox24.Controls.Add(Me.Label66)
-        Me.GroupBox24.Location = New System.Drawing.Point(29, 232)
+        Me.GroupBox24.Location = New System.Drawing.Point(22, 188)
+        Me.GroupBox24.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox24.Name = "GroupBox24"
-        Me.GroupBox24.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox24.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox24.Size = New System.Drawing.Size(308, 46)
         Me.GroupBox24.TabIndex = 3
         Me.GroupBox24.TabStop = False
         '
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox4.Location = New System.Drawing.Point(200, 12)
+        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox4.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox4.TabIndex = 2
         '
         'Label65
         '
         Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(141, 22)
+        Me.Label65.Location = New System.Drawing.Point(106, 18)
+        Me.Label65.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(59, 17)
+        Me.Label65.Size = New System.Drawing.Size(45, 13)
         Me.Label65.TabIndex = 1
         Me.Label65.Text = "Label65"
         '
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(10, 22)
+        Me.Label66.Location = New System.Drawing.Point(8, 18)
+        Me.Label66.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(59, 17)
+        Me.Label66.Size = New System.Drawing.Size(45, 13)
         Me.Label66.TabIndex = 0
         Me.Label66.Text = "Label66"
         '
@@ -1489,35 +1642,40 @@ Partial Class adminDash
         Me.GroupBox25.Controls.Add(Me.ComboBox5)
         Me.GroupBox25.Controls.Add(Me.Label67)
         Me.GroupBox25.Controls.Add(Me.Label68)
-        Me.GroupBox25.Location = New System.Drawing.Point(29, 170)
+        Me.GroupBox25.Location = New System.Drawing.Point(22, 138)
+        Me.GroupBox25.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox25.Name = "GroupBox25"
-        Me.GroupBox25.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox25.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox25.Size = New System.Drawing.Size(308, 46)
         Me.GroupBox25.TabIndex = 3
         Me.GroupBox25.TabStop = False
         '
         'ComboBox5
         '
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox5.Location = New System.Drawing.Point(200, 12)
+        Me.ComboBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox5.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox5.TabIndex = 2
         '
         'Label67
         '
         Me.Label67.AutoSize = True
-        Me.Label67.Location = New System.Drawing.Point(141, 22)
+        Me.Label67.Location = New System.Drawing.Point(106, 18)
+        Me.Label67.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(59, 17)
+        Me.Label67.Size = New System.Drawing.Size(45, 13)
         Me.Label67.TabIndex = 1
         Me.Label67.Text = "Label67"
         '
         'Label68
         '
         Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(10, 22)
+        Me.Label68.Location = New System.Drawing.Point(8, 18)
+        Me.Label68.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(59, 17)
+        Me.Label68.Size = New System.Drawing.Size(45, 13)
         Me.Label68.TabIndex = 0
         Me.Label68.Text = "Label68"
         '
@@ -1526,35 +1684,40 @@ Partial Class adminDash
         Me.GroupBox23.Controls.Add(Me.ComboBox3)
         Me.GroupBox23.Controls.Add(Me.Label63)
         Me.GroupBox23.Controls.Add(Me.Label64)
-        Me.GroupBox23.Location = New System.Drawing.Point(530, 108)
+        Me.GroupBox23.Location = New System.Drawing.Point(398, 88)
+        Me.GroupBox23.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox23.Name = "GroupBox23"
-        Me.GroupBox23.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox23.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox23.Size = New System.Drawing.Size(308, 46)
         Me.GroupBox23.TabIndex = 2
         Me.GroupBox23.TabStop = False
         '
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox3.Location = New System.Drawing.Point(200, 12)
+        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox3.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox3.TabIndex = 2
         '
         'Label63
         '
         Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(141, 22)
+        Me.Label63.Location = New System.Drawing.Point(106, 18)
+        Me.Label63.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(59, 17)
+        Me.Label63.Size = New System.Drawing.Size(45, 13)
         Me.Label63.TabIndex = 1
         Me.Label63.Text = "Label63"
         '
         'Label64
         '
         Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(10, 22)
+        Me.Label64.Location = New System.Drawing.Point(8, 18)
+        Me.Label64.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(59, 17)
+        Me.Label64.Size = New System.Drawing.Size(45, 13)
         Me.Label64.TabIndex = 0
         Me.Label64.Text = "Label64"
         '
@@ -1563,35 +1726,40 @@ Partial Class adminDash
         Me.GroupBox12.Controls.Add(Me.ComboBox2)
         Me.GroupBox12.Controls.Add(Me.Label62)
         Me.GroupBox12.Controls.Add(Me.Label29)
-        Me.GroupBox12.Location = New System.Drawing.Point(29, 108)
+        Me.GroupBox12.Location = New System.Drawing.Point(22, 88)
+        Me.GroupBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(411, 56)
+        Me.GroupBox12.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox12.Size = New System.Drawing.Size(308, 46)
         Me.GroupBox12.TabIndex = 1
         Me.GroupBox12.TabStop = False
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(267, 15)
+        Me.ComboBox2.Location = New System.Drawing.Point(200, 12)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
         Me.ComboBox2.TabIndex = 2
         '
         'Label62
         '
         Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(141, 22)
+        Me.Label62.Location = New System.Drawing.Point(106, 18)
+        Me.Label62.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(59, 17)
+        Me.Label62.Size = New System.Drawing.Size(45, 13)
         Me.Label62.TabIndex = 1
         Me.Label62.Text = "Label62"
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(10, 22)
+        Me.Label29.Location = New System.Drawing.Point(8, 18)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(59, 17)
+        Me.Label29.Size = New System.Drawing.Size(45, 13)
         Me.Label29.TabIndex = 0
         Me.Label29.Text = "Label29"
         '
@@ -1601,17 +1769,20 @@ Partial Class adminDash
         Me.GroupBox11.Controls.Add(Me.Label17)
         Me.GroupBox11.Controls.Add(Me.PictureBox7)
         Me.GroupBox11.Controls.Add(Me.Label16)
-        Me.GroupBox11.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox11.Location = New System.Drawing.Point(2, 2)
+        Me.GroupBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(1031, 99)
+        Me.GroupBox11.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox11.Size = New System.Drawing.Size(773, 80)
         Me.GroupBox11.TabIndex = 0
         Me.GroupBox11.TabStop = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(860, 30)
+        Me.Button2.Location = New System.Drawing.Point(645, 24)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(131, 32)
+        Me.Button2.Size = New System.Drawing.Size(98, 26)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "ADD SERVICES"
         Me.Button2.UseVisualStyleBackColor = True
@@ -1619,26 +1790,29 @@ Partial Class adminDash
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(10, 76)
+        Me.Label17.Location = New System.Drawing.Point(8, 62)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(190, 17)
+        Me.Label17.Size = New System.Drawing.Size(142, 13)
         Me.Label17.TabIndex = 2
         Me.Label17.Text = "Add or update room services"
         '
         'PictureBox7
         '
-        Me.PictureBox7.Location = New System.Drawing.Point(72, 21)
+        Me.PictureBox7.Location = New System.Drawing.Point(54, 17)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(48, 33)
+        Me.PictureBox7.Size = New System.Drawing.Size(36, 27)
         Me.PictureBox7.TabIndex = 1
         Me.PictureBox7.TabStop = False
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(7, 22)
+        Me.Label16.Location = New System.Drawing.Point(5, 18)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(59, 17)
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "Label16"
         '
@@ -1650,42 +1824,48 @@ Partial Class adminDash
         Me.TabPage5.Controls.Add(Me.TextBox3)
         Me.TabPage5.Controls.Add(Me.Label73)
         Me.TabPage5.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage5.Size = New System.Drawing.Size(751, 563)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Billing"
         '
         'GroupBox28
         '
-        Me.GroupBox28.Location = New System.Drawing.Point(14, 79)
+        Me.GroupBox28.Location = New System.Drawing.Point(10, 64)
+        Me.GroupBox28.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox28.Name = "GroupBox28"
-        Me.GroupBox28.Size = New System.Drawing.Size(952, 279)
+        Me.GroupBox28.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox28.Size = New System.Drawing.Size(714, 227)
         Me.GroupBox28.TabIndex = 3
         Me.GroupBox28.TabStop = False
         Me.GroupBox28.Text = "GroupBox28"
         '
         'Button18
         '
-        Me.Button18.Location = New System.Drawing.Point(267, 25)
+        Me.Button18.Location = New System.Drawing.Point(200, 20)
+        Me.Button18.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(75, 23)
+        Me.Button18.Size = New System.Drawing.Size(56, 19)
         Me.Button18.TabIndex = 2
         Me.Button18.Text = "Button18"
         Me.Button18.UseVisualStyleBackColor = True
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(129, 28)
+        Me.TextBox3.Location = New System.Drawing.Point(97, 23)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(76, 20)
         Me.TextBox3.TabIndex = 1
         '
         'Label73
         '
         Me.Label73.AutoSize = True
-        Me.Label73.Location = New System.Drawing.Point(50, 31)
+        Me.Label73.Location = New System.Drawing.Point(38, 25)
+        Me.Label73.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(59, 17)
+        Me.Label73.Size = New System.Drawing.Size(45, 13)
         Me.Label73.TabIndex = 0
         Me.Label73.Text = "Label73"
         '
@@ -1693,18 +1873,20 @@ Partial Class adminDash
         '
         Me.TabPage6.BackColor = System.Drawing.Color.White
         Me.TabPage6.Location = New System.Drawing.Point(140, 4)
+        Me.TabPage6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(1049, 695)
+        Me.TabPage6.Size = New System.Drawing.Size(751, 563)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Reports"
         '
         'adminDash
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1470, 553)
+        Me.ClientSize = New System.Drawing.Size(1102, 449)
         Me.Controls.Add(Me.DotNetBarTabcontrol1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "adminDash"
         Me.Text = "Form1"
         Me.DotNetBarTabcontrol1.ResumeLayout(False)
