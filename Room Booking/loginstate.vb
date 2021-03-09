@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Module loginstate
-    Public loginstate As Boolean
+    Public loginstatus As Boolean
     Public login_userid As Integer
     Public Email As String
     Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
@@ -12,7 +12,7 @@ Module loginstate
         Dim cmd As New SqlCommand(sql, Conn)
         cmd.Parameters.AddWithValue("@email", Email)
         login_userid = cmd.ExecuteScalar()
-        loginstate = True
+        loginstatus = True
     End Sub
 
 End Module

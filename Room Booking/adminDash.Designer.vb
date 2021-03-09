@@ -59,8 +59,10 @@ Partial Class adminDash
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -69,6 +71,28 @@ Partial Class adminDash
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox30 = New System.Windows.Forms.GroupBox()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox29 = New System.Windows.Forms.GroupBox()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
@@ -193,6 +217,11 @@ Partial Class adminDash
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox30.SuspendLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox29.SuspendLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage7.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox21.SuspendLayout()
@@ -233,12 +262,12 @@ Partial Class adminDash
         Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage5)
         Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage6)
         Me.DotNetBarTabcontrol1.ItemSize = New System.Drawing.Size(44, 136)
-        Me.DotNetBarTabcontrol1.Location = New System.Drawing.Point(2, 1)
+        Me.DotNetBarTabcontrol1.Location = New System.Drawing.Point(1, 87)
         Me.DotNetBarTabcontrol1.Margin = New System.Windows.Forms.Padding(2)
         Me.DotNetBarTabcontrol1.Multiline = True
         Me.DotNetBarTabcontrol1.Name = "DotNetBarTabcontrol1"
         Me.DotNetBarTabcontrol1.SelectedIndex = 0
-        Me.DotNetBarTabcontrol1.Size = New System.Drawing.Size(895, 571)
+        Me.DotNetBarTabcontrol1.Size = New System.Drawing.Size(962, 642)
         Me.DotNetBarTabcontrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.DotNetBarTabcontrol1.TabIndex = 0
         '
@@ -255,7 +284,7 @@ Partial Class adminDash
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage1.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage1.Size = New System.Drawing.Size(818, 634)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Home"
         '
@@ -489,7 +518,7 @@ Partial Class adminDash
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage2.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage2.Size = New System.Drawing.Size(818, 634)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Services"
         '
@@ -616,14 +645,16 @@ Partial Class adminDash
         Me.TabPage8.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage8.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage8.Size = New System.Drawing.Size(818, 634)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "New Booking"
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.MonthCalendar2)
-        Me.GroupBox3.Controls.Add(Me.MonthCalendar1)
+        Me.GroupBox3.Controls.Add(Me.DateTimePicker4)
+        Me.GroupBox3.Controls.Add(Me.DateTimePicker3)
+        Me.GroupBox3.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Controls.Add(Me.ComboBox1)
         Me.GroupBox3.Controls.Add(Me.TextBox2)
@@ -635,27 +666,41 @@ Partial Class adminDash
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox3.Size = New System.Drawing.Size(744, 246)
+        Me.GroupBox3.Size = New System.Drawing.Size(744, 185)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         '
-        'MonthCalendar2
+        'DateTimePicker4
         '
-        Me.MonthCalendar2.Location = New System.Drawing.Point(227, 65)
-        Me.MonthCalendar2.Margin = New System.Windows.Forms.Padding(7)
-        Me.MonthCalendar2.Name = "MonthCalendar2"
-        Me.MonthCalendar2.TabIndex = 8
+        Me.DateTimePicker4.Location = New System.Drawing.Point(445, 92)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker4.TabIndex = 12
         '
-        'MonthCalendar1
+        'DateTimePicker3
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(12, 65)
-        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(7)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 7
+        Me.DateTimePicker3.Location = New System.Drawing.Point(227, 92)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker3.TabIndex = 11
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(445, 30)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker2.TabIndex = 10
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(227, 30)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(592, 29)
+        Me.Button1.Location = New System.Drawing.Point(571, 136)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(74, 27)
@@ -666,7 +711,8 @@ Partial Class adminDash
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(441, 33)
+        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.ComboBox1.Location = New System.Drawing.Point(12, 136)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(114, 21)
@@ -674,7 +720,7 @@ Partial Class adminDash
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(227, 33)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 92)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(198, 20)
@@ -691,7 +737,7 @@ Partial Class adminDash
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(439, 17)
+        Me.Label9.Location = New System.Drawing.Point(10, 121)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(96, 13)
@@ -701,7 +747,7 @@ Partial Class adminDash
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(225, 17)
+        Me.Label8.Location = New System.Drawing.Point(10, 77)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 13)
@@ -720,14 +766,233 @@ Partial Class adminDash
         '
         'GroupBox6
         '
-        Me.GroupBox6.Location = New System.Drawing.Point(4, 257)
+        Me.GroupBox6.Controls.Add(Me.GroupBox30)
+        Me.GroupBox6.Controls.Add(Me.GroupBox29)
+        Me.GroupBox6.Location = New System.Drawing.Point(4, 195)
         Me.GroupBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox6.Size = New System.Drawing.Size(779, 193)
+        Me.GroupBox6.Size = New System.Drawing.Size(743, 460)
         Me.GroupBox6.TabIndex = 1
         Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "GroupBox6"
+        '
+        'GroupBox30
+        '
+        Me.GroupBox30.Controls.Add(Me.Label81)
+        Me.GroupBox30.Controls.Add(Me.Label82)
+        Me.GroupBox30.Controls.Add(Me.Label83)
+        Me.GroupBox30.Controls.Add(Me.Label84)
+        Me.GroupBox30.Controls.Add(Me.Label85)
+        Me.GroupBox30.Controls.Add(Me.Label86)
+        Me.GroupBox30.Controls.Add(Me.Button20)
+        Me.GroupBox30.Controls.Add(Me.Label87)
+        Me.GroupBox30.Controls.Add(Me.Label88)
+        Me.GroupBox30.Controls.Add(Me.PictureBox14)
+        Me.GroupBox30.Location = New System.Drawing.Point(5, 166)
+        Me.GroupBox30.Name = "GroupBox30"
+        Me.GroupBox30.Size = New System.Drawing.Size(509, 148)
+        Me.GroupBox30.TabIndex = 1
+        Me.GroupBox30.TabStop = False
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Location = New System.Drawing.Point(428, 74)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(45, 13)
+        Me.Label81.TabIndex = 9
+        Me.Label81.Text = "Label81"
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Location = New System.Drawing.Point(340, 75)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(45, 13)
+        Me.Label82.TabIndex = 8
+        Me.Label82.Text = "Label82"
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(254, 75)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(45, 13)
+        Me.Label83.TabIndex = 7
+        Me.Label83.Text = "Label83"
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(428, 48)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(45, 13)
+        Me.Label84.TabIndex = 6
+        Me.Label84.Text = "Label84"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(340, 48)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(45, 13)
+        Me.Label85.TabIndex = 5
+        Me.Label85.Text = "Label85"
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Location = New System.Drawing.Point(254, 48)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(45, 13)
+        Me.Label86.TabIndex = 4
+        Me.Label86.Text = "Label86"
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(428, 117)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(75, 23)
+        Me.Button20.TabIndex = 3
+        Me.Button20.Text = "Button20"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label87.Location = New System.Drawing.Point(248, 123)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(59, 17)
+        Me.Label87.TabIndex = 2
+        Me.Label87.Text = "Label87"
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label88.Location = New System.Drawing.Point(246, 19)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(82, 25)
+        Me.Label88.TabIndex = 1
+        Me.Label88.Text = "Label88"
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Location = New System.Drawing.Point(7, 19)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(198, 123)
+        Me.PictureBox14.TabIndex = 0
+        Me.PictureBox14.TabStop = False
+        '
+        'GroupBox29
+        '
+        Me.GroupBox29.Controls.Add(Me.Label80)
+        Me.GroupBox29.Controls.Add(Me.Label79)
+        Me.GroupBox29.Controls.Add(Me.Label78)
+        Me.GroupBox29.Controls.Add(Me.Label77)
+        Me.GroupBox29.Controls.Add(Me.Label76)
+        Me.GroupBox29.Controls.Add(Me.Label75)
+        Me.GroupBox29.Controls.Add(Me.Button19)
+        Me.GroupBox29.Controls.Add(Me.Label74)
+        Me.GroupBox29.Controls.Add(Me.Label37)
+        Me.GroupBox29.Controls.Add(Me.PictureBox13)
+        Me.GroupBox29.Location = New System.Drawing.Point(5, 12)
+        Me.GroupBox29.Name = "GroupBox29"
+        Me.GroupBox29.Size = New System.Drawing.Size(509, 148)
+        Me.GroupBox29.TabIndex = 0
+        Me.GroupBox29.TabStop = False
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Location = New System.Drawing.Point(428, 74)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(45, 13)
+        Me.Label80.TabIndex = 9
+        Me.Label80.Text = "Label80"
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(340, 75)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(45, 13)
+        Me.Label79.TabIndex = 8
+        Me.Label79.Text = "Label79"
+        '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Location = New System.Drawing.Point(254, 75)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(45, 13)
+        Me.Label78.TabIndex = 7
+        Me.Label78.Text = "Label78"
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Location = New System.Drawing.Point(428, 48)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(45, 13)
+        Me.Label77.TabIndex = 6
+        Me.Label77.Text = "Label77"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Location = New System.Drawing.Point(340, 48)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(45, 13)
+        Me.Label76.TabIndex = 5
+        Me.Label76.Text = "Label76"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Location = New System.Drawing.Point(254, 48)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(45, 13)
+        Me.Label75.TabIndex = 4
+        Me.Label75.Text = "Label75"
+        '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(428, 117)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(75, 23)
+        Me.Button19.TabIndex = 3
+        Me.Button19.Text = "Button19"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.Location = New System.Drawing.Point(248, 123)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(59, 17)
+        Me.Label74.TabIndex = 2
+        Me.Label74.Text = "Label74"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(246, 19)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(82, 25)
+        Me.Label37.TabIndex = 1
+        Me.Label37.Text = "Label37"
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Location = New System.Drawing.Point(7, 19)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(198, 123)
+        Me.PictureBox13.TabIndex = 0
+        Me.PictureBox13.TabStop = False
         '
         'TabPage3
         '
@@ -735,7 +1000,7 @@ Partial Class adminDash
         Me.TabPage3.Location = New System.Drawing.Point(140, 4)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage3.Size = New System.Drawing.Size(818, 634)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Customer"
         '
@@ -747,7 +1012,7 @@ Partial Class adminDash
         Me.TabPage7.Location = New System.Drawing.Point(140, 4)
         Me.TabPage7.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage7.Size = New System.Drawing.Size(818, 634)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Rooms"
         '
@@ -1507,7 +1772,7 @@ Partial Class adminDash
         Me.TabPage4.Location = New System.Drawing.Point(140, 4)
         Me.TabPage4.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage4.Size = New System.Drawing.Size(818, 634)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Service Requests"
         '
@@ -1737,6 +2002,7 @@ Partial Class adminDash
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Request Recieved", "Processed", "Fulfilled"})
         Me.ComboBox2.Location = New System.Drawing.Point(200, 12)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox2.Name = "ComboBox2"
@@ -1826,7 +2092,7 @@ Partial Class adminDash
         Me.TabPage5.Location = New System.Drawing.Point(140, 4)
         Me.TabPage5.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage5.Size = New System.Drawing.Size(818, 634)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Billing"
         '
@@ -1875,7 +2141,7 @@ Partial Class adminDash
         Me.TabPage6.Location = New System.Drawing.Point(140, 4)
         Me.TabPage6.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(751, 563)
+        Me.TabPage6.Size = New System.Drawing.Size(818, 634)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Reports"
         '
@@ -1884,7 +2150,7 @@ Partial Class adminDash
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1119, 449)
+        Me.ClientSize = New System.Drawing.Size(1016, 449)
         Me.Controls.Add(Me.DotNetBarTabcontrol1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "adminDash"
@@ -1915,6 +2181,13 @@ Partial Class adminDash
         Me.TabPage8.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox30.ResumeLayout(False)
+        Me.GroupBox30.PerformLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox29.ResumeLayout(False)
+        Me.GroupBox29.PerformLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage7.ResumeLayout(False)
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox21.ResumeLayout(False)
@@ -2000,8 +2273,6 @@ Partial Class adminDash
     Friend WithEvents Label14 As Label
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents MonthCalendar2 As MonthCalendar
-    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox2 As TextBox
@@ -2115,4 +2386,30 @@ Partial Class adminDash
     Friend WithEvents Button18 As Button
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label73 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker4 As DateTimePicker
+    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents GroupBox29 As GroupBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents GroupBox30 As GroupBox
+    Friend WithEvents Label81 As Label
+    Friend WithEvents Label82 As Label
+    Friend WithEvents Label83 As Label
+    Friend WithEvents Label84 As Label
+    Friend WithEvents Label85 As Label
+    Friend WithEvents Label86 As Label
+    Friend WithEvents Button20 As Button
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label88 As Label
+    Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents Label80 As Label
+    Friend WithEvents Label79 As Label
+    Friend WithEvents Label78 As Label
+    Friend WithEvents Label77 As Label
+    Friend WithEvents Label76 As Label
+    Friend WithEvents Label75 As Label
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Label74 As Label
 End Class

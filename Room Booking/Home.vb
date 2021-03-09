@@ -488,10 +488,10 @@ Public Class Home
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try
             Try
-                Dim sql As String = "insert into service_order(status, price, service_id, name) values('" & status & " ', '" & total(i) & "','" & id & "','" & names(i) & "')"
+                Dim sql As String = "insert into service_order(status, price, service_id, name, roomno) values('" & status & " ', '" & total(i) & "','" & id & "','" & names(i) & "',(select roomno from reservation where userid = @userid)"
                 Dim cmd As New SqlCommand(sql, Conn)
-
                 cmd.ExecuteNonQuery()
+                cmd.Parameters.AddWithValue("@userid", login_userid)
             Catch ex As Exception
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try

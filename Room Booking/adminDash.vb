@@ -3,6 +3,7 @@ Imports System.IO
 
 Public Class adminDash
     Public count As Integer
+    Public myDate As New DateTime
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         roomAdder.Show()
 
@@ -225,7 +226,7 @@ Where RowNum = 3"
         End Try
 
         Select Case count
-            Case 1
+            Case 10
                 GroupBox12.Visible = True
                 GroupBox23.Visible = False
                 GroupBox25.Visible = False
@@ -234,13 +235,13 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select services.name, services.price, service_order.status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1 inner join services on service_order.services_Id= services.id"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
-                    Label29.Text = reader("name")
-                    Label62.Text = reader("price")
+                    Label29.Text = reader("roomno")
+                    Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
@@ -300,5 +301,99 @@ Where RowNum = 3"
         Catch ex As Exception
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
+    End Sub
+    Private Sub cbUpdate()
+
+    End Sub
+    Dim citem As String
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        citem = ComboBox2.SelectedItem
+
+    End Sub
+
+
+    Private Sub TabPage8_Enter(sender As Object, e As EventArgs) Handles TabPage8.Enter
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.ShowUpDown = True
+        DateTimePicker4.Format = DateTimePickerFormat.Time
+        DateTimePicker4.ShowUpDown = True
+    End Sub
+
+
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox1.Text = myDate
+    End Sub
+
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox1.Text = myDate
+    End Sub
+
+    Private Sub DateTimePicker3_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker3.ValueChanged
+        DateTimePicker4.Format = DateTimePickerFormat.Time
+        DateTimePicker4.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox2.Text = myDate
+    End Sub
+
+    Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
+        DateTimePicker4.Format = DateTimePickerFormat.Time
+        DateTimePicker4.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox2.Text = myDate
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim sql As String = "select count(*) from units where date > @mydate or date = NULL"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmdreq As New SqlCommand(sql, Conn)
+            count = cmdreq.ExecuteScalar()
+            cmdreq.Parameters.AddWithValue("@mydate", myDate)
+            MessageBox.Show(count)
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+
+        Select Case count
+            Case 1
+                GroupBox29.Visible = True
+                GroupBox30.Visible = False
+            Case 2
+                GroupBox29.Visible = True
+                GroupBox30.Visible = True
+        End Select
+    End Sub
+
+    Private Sub GroupBox30_Enter(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim sql As String = "insert into units(roomtype)values((select Id from roomType where name = '" & Label25.Text & "'))"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmdreq As New SqlCommand(sql, Conn)
+            cmdreq.ExecuteNonQuery()
+            'cmdreq.Parameters.AddWithValue("@type", Label25.Text)
+            MessageBox.Show("Done")
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+
     End Sub
 End Class
