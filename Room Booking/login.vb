@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports Room_Booking.loginstate
 Public Class login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox1.Text.Length <= 0 Then
@@ -24,6 +25,9 @@ Public Class login
                     MessageBox.Show("Login sucessfully!")
                     Home.Show()
                     Me.Hide()
+                    Email = TextBox1.Text
+                    setuserid()
+                    MessageBox.Show(login_userid)
                 Else
                     MessageBox.Show("The username Or password incorrect")
                 End If

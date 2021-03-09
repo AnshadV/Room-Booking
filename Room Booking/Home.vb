@@ -362,7 +362,6 @@ Public Class Home
 
     End Sub
 
-
     Dim total(7) As Integer
     Dim names(7) As String
     Public sum As Integer

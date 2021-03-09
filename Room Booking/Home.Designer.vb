@@ -441,12 +441,12 @@ Partial Class Home
         '
         'TabPage3
         '
+        Me.TabPage3.BackColor = System.Drawing.Color.White
         Me.TabPage3.Location = New System.Drawing.Point(140, 4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(736, 440)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Billing"
-        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Home
         '

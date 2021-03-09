@@ -117,6 +117,7 @@
     <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="loginstate.vb" />
     <Compile Include="signup.vb">
       <SubType>Form</SubType>
     </Compile>
