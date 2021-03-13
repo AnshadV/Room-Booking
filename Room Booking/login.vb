@@ -22,12 +22,14 @@ Public Class login
                 cmd.Parameters.AddWithValue("@Password", TextBox2.Text)
                 Dim value = cmd.ExecuteScalar()
                 If value > 0 Then
+                    Email = TextBox1.Text
+                    setuserid()
                     MessageBox.Show("Login sucessfully!")
                     Home.Show()
                     Me.Hide()
-                    Email = TextBox1.Text
-                    setuserid()
-                    MessageBox.Show(login_userid)
+
+
+
                 Else
                     MessageBox.Show("The username Or password incorrect")
                 End If
@@ -37,7 +39,7 @@ Public Class login
         End If
     End Sub
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        Form3.Show()
+        SignUp.Show()
         Me.Hide()
     End Sub
 

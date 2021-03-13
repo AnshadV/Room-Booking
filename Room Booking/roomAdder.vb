@@ -27,24 +27,23 @@ Public Class roomAdder
             Dim sqlgetid As String = "select id from roomType where name = @name"
             Dim cmd1 As New SqlCommand(sqlgetid, Conn)
             cmd1.Parameters.AddWithValue("@name", TextBox1.Text)
-            Dim id = cmd1.ExecuteScalar() 'retrieving id from roomType
+            Dim id = cmd1.ExecuteScalar() 'retrieving id from roomType 
 
 
-            Dim sqlpop As String = "insert into amenitiesbin values(@id,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)"
+            Dim sqlpop As String = "insert into amenitiesbin values(@Id,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)"
             Dim cmd2 As New SqlCommand(sqlpop, Conn)
             cmd2.Parameters.AddWithValue("@id", id)
             cmd2.ExecuteNonQuery()
 
 
 
-
+            Console.WriteLine("Default values: {0}", "Done")
             For Each item In CheckedListBox1.CheckedItems
                 Dim checkeditem As String = item.ToString()
-                Dim sqlchecked As String = "update amenitiesbin set @checkeditem=1 where id=@id"
+                Dim sqlchecked As String = "update amenitiesbin set " & checkeditem & "=1 where Id='" & id & "'"
                 Dim cmd3 As New SqlCommand(sqlchecked, Conn)
-                cmd3.Parameters.AddWithValue("@checkeditem", checkeditem)
                 cmd3.Parameters.AddWithValue("@id", id)
-
+                Console.WriteLine("loop: {0}", checkeditem)
                 cmd3.ExecuteNonQuery()
             Next
 

@@ -1,5 +1,10 @@
 ﻿Imports System.Data.SqlClient
+Imports Room_Booking.loginstate
 Public Class Home
+    Public myDate As New DateTime
+    Dim da As SqlDataAdapter
+    Dim ds As DataSet
+    Dim itemcoll(100) As String
     Private Sub MonthCalendar1_DateChanged(ByVal sender As Object,
            ByVal e As System.Windows.Forms.DateRangeEventArgs)
         TextBox1.Text = e.Start.ToShortDateString()
@@ -496,6 +501,131 @@ Public Class Home
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try
         Next
+
+    End Sub
+
+    Private Sub TabPage1_Enter(sender As Object, e As EventArgs) Handles TabPage1.Enter
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.ShowUpDown = True
+        DateTimePicker4.Format = DateTimePickerFormat.Time
+        DateTimePicker4.ShowUpDown = True
+        ListView1.View = View.Details
+        ListView1.GridLines = True
+    End Sub
+
+
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox1.Text = myDate
+    End Sub
+
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        DateTimePicker2.Format = DateTimePickerFormat.Time
+        DateTimePicker2.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox1.Text = myDate
+    End Sub
+
+    Private Sub DateTimePicker3_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker3.ValueChanged
+        DateTimePicker4.Format = DateTimePickerFormat.Time
+        DateTimePicker4.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox2.Text = myDate
+    End Sub
+
+    Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
+        DateTimePicker4.Format = DateTimePickerFormat.Time
+        DateTimePicker4.ShowUpDown = True
+        myDate = DateTimePicker1.Value.Date +
+                    DateTimePicker2.Value.TimeOfDay
+        TextBox2.Text = myDate
+    End Sub
+
+    'Private Sub Button7_Click(sender As Object, e As EventArgs)
+    '    Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+    '    Dim sql As String = "select roomno from units where (date > '" & myDate & "' or date is null) and minguest > '" & ComboBox1.SelectedItem & "'"
+    '    Dim Conn As New SqlConnection(str)
+    '    Dim cmd As New SqlCommand(sql, Conn)
+    '    Dim adapter As New SqlDataAdapter(cmd)
+
+    '    Dim table As New DataTable
+
+    '    adapter.Fill(table)
+
+    '    DataGridView1.DataSource = table
+    '    Try
+    '        Dim sqlb As String = "select
+    '        CASE 
+    '            when Wifi = 1 then 'Wifi'
+    '        end, 
+    '        CASE 
+    '            when refrigerator = 1 then 'referigerator'
+    '        end,
+    '        CASE
+    '            when Shower = 1 then 'Shower'
+    '        end,
+    '        CASE        
+    '            when Pool = 1 then 'Pool'
+    '        end
+    '    from amenitiesbin where Id = 1044;"
+    '        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+
+    '        Dim Conn As New SqlConnection(str)
+    '        Dim cmd7 As New SqlCommand(sqlb, Conn)
+    '        da = New SqlDataAdapter(cmd7)
+    '        ds = New DataSet
+    '        da.Fill(ds, "Table")
+    '        Dim i As Integer = 0
+    '        Dim j As Integer = 0
+    '        ' adding the columns in ListView    
+    '        For i = 0 To ds.Tables(0).Columns.Count - 1
+    '            Me.ListView2.Columns.Add(ds.Tables(0).Columns(i).ColumnName.ToString())
+    '        Next
+    '        'Now adding the Items in Listview
+    '        For i = 0 To ds.Tables(0).Rows.Count - 1
+    '            For j = 0 To ds.Tables(0).Columns.Count - 1
+    '                itemcoll(j) = ds.Tables(0).Rows(i)(j).ToString()
+    '            Next
+    '            Dim lvi As New ListViewItem(itemcoll)
+    '            Me.ListView2.Items.Add(lvi)
+    '            Me.ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+    '        Next
+    '    Catch ex As Exception
+    '        MessageBox.Show(String.Format("Error: {0}", ex.Message))
+    '    End Try
+
+
+    'End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        roomno = TextBox6.Text
+
+        Booking.Show()
+    End Sub
+
+    Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
+        Try
+
+            Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+            Dim sql As String = "select roomno from units where (date > '" & myDate & "' or date is null) and minguest > '" & ComboBox1.SelectedItem & "'"
+            Dim Conn As New SqlConnection(str)
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim adapter As New SqlDataAdapter(cmd)
+
+            Dim table As New DataTable
+
+            adapter.Fill(table)
+
+            DataGridView1.DataSource = table
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
 
     End Sub
 End Class

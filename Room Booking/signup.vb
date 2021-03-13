@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
-Public Class Form2
+Public Class SignUp
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
-        Dim sql As String = "insert into Users(Name, Email, Password) values('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "')"
+        Dim sql As String = "insert into Users(Name, Email, Phone, Password) values('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox4.Text & "','" & TextBox3.Text & "')"
         Dim Conn As New SqlConnection(str)
         Try
             Conn.Open()

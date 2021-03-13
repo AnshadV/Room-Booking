@@ -94,6 +94,12 @@
     <Compile Include="adminDash.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Booking.Designer.vb">
+      <DependentUpon>Booking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="controlModule.vb" />
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -102,7 +108,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.vb">
-      <DependentUpon>signup.vb</DependentUpon>
+      <DependentUpon>SignUp.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form3.Designer.vb">
@@ -118,7 +124,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="loginstate.vb" />
-    <Compile Include="signup.vb">
+    <Compile Include="SignUp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="adminDash.resx">
       <DependentUpon>adminDash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Booking.resx">
+      <DependentUpon>Booking.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -192,8 +201,8 @@
     <EmbeddedResource Include="roomAdder.resx">
       <DependentUpon>roomAdder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="signup.resx">
-      <DependentUpon>signup.vb</DependentUpon>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.vb</DependentUpon>
@@ -234,6 +243,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
