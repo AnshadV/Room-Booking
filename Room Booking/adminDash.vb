@@ -6,6 +6,9 @@ Public Class adminDash
     Public myDate As New DateTime
     Public roomno As Integer
     Public userId As Integer
+    Dim dailyrent As Integer
+    Dim price As Integer
+    Public selectedmethod As String
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         roomAdder.Show()
@@ -761,11 +764,12 @@ Where RowNum = 3"
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
-        Dim sql As String = "insert into units(roomtype,minguest, maxguest)values((select Id from roomType where name = '" & Label25.Text & "'),(select minguest from roomType where name='" & Label25.Text & "'),(select maxguest from roomType where name='" & Label25.Text & "'))"
+        Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label25.Text & "'),(select minguest from roomType where name='" & Label25.Text & "'),(select maxguest from roomType where name='" & Label25.Text & "'),@false)"
         Dim Conn As New SqlConnection(str)
         Try
             Conn.Open()
             Dim cmdreq As New SqlCommand(sql, Conn)
+            cmdreq.Parameters.AddWithValue("false", False)
             cmdreq.ExecuteNonQuery()
             'cmdreq.Parameters.AddWithValue("@type", Label25.Text)
             MessageBox.Show("Done")
@@ -886,17 +890,31 @@ Where RowNum = 3"
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
+
+        Try
+            Dim sql2 As String = "insert into billing(userid, item, price) values(@userid, @services, @price)"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            cmd1.Parameters.AddWithValue("@userid", userId)
+            cmd1.Parameters.AddWithValue("@services", "Services")
+            cmd1.Parameters.AddWithValue("@price", 0)
+            cmd1.ExecuteNonQuery()
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
     End Sub
 #End Region
 #Region "Checkout"
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
+        Dim checkin As DateTime
+        Dim currenttime As DateTime = System.DateTime.Now
+
         Try
             If (Conn.State.Equals(ConnectionState.Closed)) Then
                 Conn.Open()
             End If
-            Dim sql1 As String = "select userid from reservation where roomno = @roomno"
+            Dim sql1 As String = "select userid from reservation where roomno = @roomno and checkout is null"
             Dim cmd As New SqlCommand(sql1, Conn)
             Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@roomno", TextBox8.Text)
@@ -928,6 +946,7 @@ Where RowNum = 3"
         End Try
 
 
+
         Try
             Dim sql1 As String = "select price from roomType where Id = (select roomtype from units where roomno = @roomno)"
             Dim cmd As New SqlCommand(sql1, Conn)
@@ -935,11 +954,32 @@ Where RowNum = 3"
             cmd.Parameters.AddWithValue("roomno", roomno)
             reader = cmd.ExecuteReader
             reader.Read()
-            Label101.Text = reader("price")
+            dailyrent = reader("price")
+            Label101.Text = dailyrent
 
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
+
+        Try
+            Dim sql1 As String = "select checkin from reservation where userid = @userid"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@userid", userId)
+            checkin = cmd.ExecuteScalar
+
+            If (currenttime > checkin.AddHours(26)) Then
+                price = price + dailyrent
+                Label101.Text = price
+            ElseIf (currenttime > checkin.AddHours(49)) Then
+                price = price + dailyrent + dailyrent
+                Label101.Text = price
+            ElseIf (currenttime < checkin.AddHours(24)) Then
+                price = dailyrent
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
 
 
 
@@ -949,6 +989,8 @@ Where RowNum = 3"
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim theDate As DateTime = System.DateTime.Now
+        Dim checkin As DateTime
+        Dim price As Integer
         Try
             If (Conn.State.Equals(ConnectionState.Closed)) Then
                 Conn.Open()
@@ -958,11 +1000,225 @@ Where RowNum = 3"
             cmd.Parameters.AddWithValue("@time", DateTime.Parse(theDate))
             cmd.Parameters.AddWithValue("@userid", userId)
             cmd.ExecuteNonQuery()
-
             MessageBox.Show(String.Format("Checked-Out Successfully"))
         Catch ex As Exception
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
+
+        Try
+            Dim sql1 As String = "select checkin from reservation where userid = @userid"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@userid", userId)
+            checkin = cmd.ExecuteScalar
+
+            If (theDate > checkin.AddHours(26)) Then
+                price = price + dailyrent
+                Console.WriteLine("checkin.AddHours(26)): {0}", checkin.AddHours(26))
+            ElseIf (theDate > checkin.AddHours(48)) Then
+                price = price + dailyrent + dailyrent
+                Console.WriteLine("checkin.AddHours(48)): {0}", checkin.AddHours(48))
+            ElseIf (theDate < checkin.AddHours(24)) Then
+                price = dailyrent
+                Console.WriteLine("<checkin.AddHours(26)): {0}", checkin.AddHours(26))
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql2 As String = "insert into billing(userid, item, price) values(@userid, @room, @price)"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            cmd1.Parameters.AddWithValue("@userid", userId)
+            cmd1.Parameters.AddWithValue("@room", "Room Charges")
+            cmd1.Parameters.AddWithValue("@price", price)
+            cmd1.ExecuteNonQuery()
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
     End Sub
+
+    Private Sub TabPage1_Enter(sender As Object, e As EventArgs) Handles TabPage1.Enter
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim Conn As New SqlConnection(str)
+        Dim newbookings As Integer
+        Dim theDate As DateTime = System.DateTime.Now
+        Dim totalunits As Integer
+        Dim occupancy As Integer
+        Dim unitsavailable As Integer
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql1 As String = "select count(*) from reservation where ischeckedin = @false"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@false", "false")
+            newbookings = cmd.ExecuteScalar
+            Label4.Text = newbookings
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql1 As String = "select count(*) from reservation where checkin < DATEADD(HOUR,-24,@time)"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@time", DateTime.Parse(theDate))
+            Label6.Text = cmd.ExecuteScalar
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql1 As String = "select count(*) from reservation where checkout < DATEADD(HOUR,-24,@time)"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@time", DateTime.Parse(theDate))
+            Label5.Text = cmd.ExecuteScalar
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql1 As String = "select count(*) from units where isoccuppied != @true"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@true", "true")
+            Label10.Text = cmd.ExecuteScalar
+            unitsavailable = Label10.Text
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql1 As String = "select count(*) from units"
+            Dim cmd As New SqlCommand(sql1, Conn)
+            cmd.Parameters.AddWithValue("@true", "true")
+            totalunits = cmd.ExecuteScalar
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        If (totalunits <> 0) Then
+            occupancy = (unitsavailable / totalunits) * 100
+        Else
+            Label12.Text = 0
+        End If
+
+
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim Conn As New SqlConnection(str)
+        Dim roomcharge As Integer
+        Dim services As Integer
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql As String = "select userid from reservation where roomno = @roomno and ispaid is not null"
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim reader As SqlDataReader
+            cmd.Parameters.AddWithValue("@roomno", TextBox3.Text)
+            userId = cmd.ExecuteScalar
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql As String = "select price from billing where userid =@userid and item=@roomcharges"
+
+
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim reader As SqlDataReader
+            cmd.Parameters.AddWithValue("@userid", userId)
+            cmd.Parameters.AddWithValue("@roomcharges", "Room charges")
+            reader = cmd.ExecuteReader
+            reader.Read()
+            Label114.Text = reader("price")
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql As String = "select price from billing where userid =@userid and item=@services"
+
+
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim reader As SqlDataReader
+            cmd.Parameters.AddWithValue("@userid", userId)
+            cmd.Parameters.AddWithValue("@services", "Services")
+            reader = cmd.ExecuteReader
+            reader.Read()
+            Label115.Text = reader("price")
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Dim total As Integer = roomcharge + services
+        Dim tax As Integer = (6 * total) / 100
+        Label116.Text = tax
+        Dim grandtotal As Integer = total + tax
+        Label117.Text = grandtotal
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim Conn As New SqlConnection(str)
+        Dim theDate As DateTime = System.DateTime.Now
+        Try
+            Dim sql As String = "insert into payment(userid, date, method, amount) values(@userid,@date,@method,@amount)"
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim reader As SqlDataReader
+            cmd.Parameters.AddWithValue("@userid", userId)
+            cmd.Parameters.AddWithValue("@date", DateTime.Parse(theDate))
+            cmd.Parameters.AddWithValue("@method", selectedmethod)
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        selectedmethod = RadioButton1.Text
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        selectedmethod = RadioButton2.Text
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        selectedmethod = RadioButton3.Text
+    End Sub
+
+    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
+        selectedmethod = RadioButton4.Text
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        TextBox9.Text = Label117.Text
+        Label120.Text = Label117.Text
+        Label122.Text = Label117.Text
+        GroupBox35.Visible = True
+
+    End Sub
+
+
 #End Region
 End Class

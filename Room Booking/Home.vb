@@ -5,6 +5,7 @@ Public Class Home
     Dim da As SqlDataAdapter
     Dim ds As DataSet
     Dim itemcoll(100) As String
+    Dim totalprice As Integer
     Private Sub MonthCalendar1_DateChanged(ByVal sender As Object,
            ByVal e As System.Windows.Forms.DateRangeEventArgs)
         TextBox1.Text = e.Start.ToShortDateString()
@@ -466,6 +467,7 @@ Public Class Home
             sum += total(ctr)
         Next
         Label17.Text = sum
+        totalprice = sum
     End Sub
 
 
@@ -493,14 +495,29 @@ Public Class Home
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try
             Try
-                Dim sql As String = "insert into service_order(status, price, service_id, name, roomno) values('" & status & " ', '" & total(i) & "','" & id & "','" & names(i) & "',(select roomno from reservation where userid = @userid)"
+                Dim sql As String = "insert into service_order(status, price, service_id, name, roomno) values('" & status & " ', '" & total(i) & "','" & id & "','" & names(i) & "',(select roomno from reservation where userid = @userid))"
                 Dim cmd As New SqlCommand(sql, Conn)
-                cmd.ExecuteNonQuery()
                 cmd.Parameters.AddWithValue("@userid", login_userid)
+                cmd.ExecuteNonQuery()
+
             Catch ex As Exception
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try
         Next
+
+        Try
+            Dim sql2 As String = "update billing set price = price+@price where userid= @userid and item = @services"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            cmd1.Parameters.AddWithValue("@userid", login_userid)
+            cmd1.Parameters.AddWithValue("@services", "Services")
+            cmd1.Parameters.AddWithValue("@price", totalprice)
+            cmd1.ExecuteNonQuery()
+            MessageBox.Show(String.Format("Order Places Successfully"))
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+
 
     End Sub
 
@@ -613,9 +630,10 @@ Public Class Home
         Try
 
             Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
-            Dim sql As String = "select roomno from units where (date > '" & myDate & "' or date is null) and minguest > '" & ComboBox1.SelectedItem & "'"
+            Dim sql As String = "select roomno from units where (date > @time or date is null) and minguest > '" & ComboBox1.SelectedItem & "'"
             Dim Conn As New SqlConnection(str)
             Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@time", DateTime.Parse(myDate))
             Dim adapter As New SqlDataAdapter(cmd)
 
             Dim table As New DataTable
@@ -627,5 +645,54 @@ Public Class Home
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
 
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        GroupBox4.Visible = True
+    End Sub
+
+    Private Sub TabPage3_Enter(sender As Object, e As EventArgs) Handles TabPage3.Enter
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim Conn As New SqlConnection(str)
+        Dim roomcharge As Integer
+        Dim services As Integer
+        Try
+            Dim sql As String = "select price from billing where userid =@userid and item=@roomcharges"
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim reader As SqlDataReader
+            cmd.Parameters.AddWithValue("@userid", login_userid)
+            cmd.Parameters.AddWithValue("@roomcharges", "Room charges")
+            reader = cmd.ExecuteReader
+            reader.Read()
+            roomcharge = reader("price")
+            Label114.Text = roomcharge
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql As String = "select price from billing where userid =@userid and item=@services"
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim reader As SqlDataReader
+            cmd.Parameters.AddWithValue("@userid", login_userid)
+            cmd.Parameters.AddWithValue("@services", "Services")
+            reader = cmd.ExecuteReader
+            reader.Read()
+            services = reader("price")
+            Label115.Text = services
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+        Dim total As Integer = roomcharge + services
+        Dim tax As Integer = (6 * total) / 100
+        Dim grandtotal As Integer = total + tax
     End Sub
 End Class

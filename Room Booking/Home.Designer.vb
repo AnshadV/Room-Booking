@@ -29,6 +29,7 @@ Partial Class Home
         Me.Label89 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -65,7 +66,33 @@ Partial Class Home
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label118 = New System.Windows.Forms.Label()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.Label115 = New System.Windows.Forms.Label()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.Label112 = New System.Windows.Forms.Label()
+        Me.Label111 = New System.Windows.Forms.Label()
+        Me.Label110 = New System.Windows.Forms.Label()
+        Me.Label109 = New System.Windows.Forms.Label()
         Me.DotNetBarTabcontrol1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +100,12 @@ Partial Class Home
         Me.TabPage2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.GroupBox28.SuspendLayout()
         Me.SuspendLayout()
         '
         'DotNetBarTabcontrol1
@@ -168,6 +201,15 @@ Partial Class Home
         Me.GroupBox3.Size = New System.Drawing.Size(992, 228)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(775, 167)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 13
+        Me.Button7.Text = "Search"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'DateTimePicker4
         '
@@ -532,6 +574,8 @@ Partial Class Home
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.White
+        Me.TabPage3.Controls.Add(Me.GroupBox4)
+        Me.TabPage3.Controls.Add(Me.GroupBox28)
         Me.TabPage3.Location = New System.Drawing.Point(140, 4)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
@@ -539,14 +583,266 @@ Partial Class Home
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Billing"
         '
-        'Button7
+        'GroupBox4
         '
-        Me.Button7.Location = New System.Drawing.Point(775, 167)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 13
-        Me.Button7.Text = "Search"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.GroupBox4.Controls.Add(Me.TabControl1)
+        Me.GroupBox4.Location = New System.Drawing.Point(326, 18)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(712, 279)
+        Me.GroupBox4.TabIndex = 5
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Payment Mode"
+        Me.GroupBox4.Visible = False
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Location = New System.Drawing.Point(7, 22)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(705, 251)
+        Me.TabControl1.TabIndex = 0
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Button10)
+        Me.TabPage4.Controls.Add(Me.TextBox7)
+        Me.TabPage4.Controls.Add(Me.TextBox5)
+        Me.TabPage4.Controls.Add(Me.TextBox4)
+        Me.TabPage4.Controls.Add(Me.TextBox3)
+        Me.TabPage4.Controls.Add(Me.Label21)
+        Me.TabPage4.Controls.Add(Me.Label20)
+        Me.TabPage4.Controls.Add(Me.Label19)
+        Me.TabPage4.Controls.Add(Me.Label18)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(697, 222)
+        Me.TabPage4.TabIndex = 0
+        Me.TabPage4.Text = " "
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(21, 149)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(187, 33)
+        Me.Button10.TabIndex = 8
+        Me.Button10.Text = "Pay"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(154, 107)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox7.TabIndex = 7
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(21, 107)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox5.TabIndex = 6
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(334, 46)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(216, 22)
+        Me.TextBox4.TabIndex = 5
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(21, 46)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(279, 22)
+        Me.TextBox3.TabIndex = 4
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(151, 87)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(35, 17)
+        Me.Label21.TabIndex = 3
+        Me.Label21.Text = "CVV"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(18, 87)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(80, 17)
+        Me.Label20.TabIndex = 2
+        Me.Label20.Text = "Expiry Date"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(331, 22)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(95, 17)
+        Me.Label19.TabIndex = 1
+        Me.Label19.Text = "Name of Card"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(18, 21)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(92, 17)
+        Me.Label18.TabIndex = 0
+        Me.Label18.Text = "Card Number"
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.Button11)
+        Me.TabPage5.Controls.Add(Me.Label22)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(697, 222)
+        Me.TabPage5.TabIndex = 1
+        Me.TabPage5.Text = "Pay at the Counter"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(238, 52)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(192, 25)
+        Me.Button11.TabIndex = 1
+        Me.Button11.Text = "Confirm"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(305, 17)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(58, 17)
+        Me.Label22.TabIndex = 0
+        Me.Label22.Text = "Counter"
+        '
+        'GroupBox28
+        '
+        Me.GroupBox28.Controls.Add(Me.Button9)
+        Me.GroupBox28.Controls.Add(Me.Label118)
+        Me.GroupBox28.Controls.Add(Me.Label117)
+        Me.GroupBox28.Controls.Add(Me.Label116)
+        Me.GroupBox28.Controls.Add(Me.Label115)
+        Me.GroupBox28.Controls.Add(Me.Label114)
+        Me.GroupBox28.Controls.Add(Me.Label113)
+        Me.GroupBox28.Controls.Add(Me.Label112)
+        Me.GroupBox28.Controls.Add(Me.Label111)
+        Me.GroupBox28.Controls.Add(Me.Label110)
+        Me.GroupBox28.Controls.Add(Me.Label109)
+        Me.GroupBox28.Location = New System.Drawing.Point(13, 18)
+        Me.GroupBox28.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox28.Name = "GroupBox28"
+        Me.GroupBox28.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox28.Size = New System.Drawing.Size(306, 279)
+        Me.GroupBox28.TabIndex = 4
+        Me.GroupBox28.TabStop = False
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(22, 192)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(252, 28)
+        Me.Button9.TabIndex = 10
+        Me.Button9.Text = "Proceed to Payment Options"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Label118
+        '
+        Me.Label118.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label118.Location = New System.Drawing.Point(19, 134)
+        Me.Label118.Name = "Label118"
+        Me.Label118.Size = New System.Drawing.Size(256, 2)
+        Me.Label118.TabIndex = 9
+        '
+        'Label117
+        '
+        Me.Label117.AutoSize = True
+        Me.Label117.Location = New System.Drawing.Point(205, 151)
+        Me.Label117.Name = "Label117"
+        Me.Label117.Size = New System.Drawing.Size(67, 17)
+        Me.Label117.TabIndex = 8
+        Me.Label117.Text = "Label117"
+        '
+        'Label116
+        '
+        Me.Label116.AutoSize = True
+        Me.Label116.Location = New System.Drawing.Point(205, 99)
+        Me.Label116.Name = "Label116"
+        Me.Label116.Size = New System.Drawing.Size(67, 17)
+        Me.Label116.TabIndex = 7
+        Me.Label116.Text = "Label116"
+        '
+        'Label115
+        '
+        Me.Label115.AutoSize = True
+        Me.Label115.Location = New System.Drawing.Point(205, 64)
+        Me.Label115.Name = "Label115"
+        Me.Label115.Size = New System.Drawing.Size(67, 17)
+        Me.Label115.TabIndex = 6
+        Me.Label115.Text = "Label115"
+        '
+        'Label114
+        '
+        Me.Label114.AutoSize = True
+        Me.Label114.Location = New System.Drawing.Point(205, 38)
+        Me.Label114.Name = "Label114"
+        Me.Label114.Size = New System.Drawing.Size(67, 17)
+        Me.Label114.TabIndex = 5
+        Me.Label114.Text = "Label114"
+        '
+        'Label113
+        '
+        Me.Label113.AutoSize = True
+        Me.Label113.Location = New System.Drawing.Point(19, 151)
+        Me.Label113.Name = "Label113"
+        Me.Label113.Size = New System.Drawing.Size(63, 17)
+        Me.Label113.TabIndex = 4
+        Me.Label113.Text = "Pay Now"
+        '
+        'Label112
+        '
+        Me.Label112.AutoSize = True
+        Me.Label112.Location = New System.Drawing.Point(19, 99)
+        Me.Label112.Name = "Label112"
+        Me.Label112.Size = New System.Drawing.Size(85, 17)
+        Me.Label112.TabIndex = 3
+        Me.Label112.Text = "Taxes & Fees"
+        '
+        'Label111
+        '
+        Me.Label111.AutoSize = True
+        Me.Label111.Location = New System.Drawing.Point(19, 64)
+        Me.Label111.Name = "Label111"
+        Me.Label111.Size = New System.Drawing.Size(138, 17)
+        Me.Label111.TabIndex = 2
+        Me.Label111.Text = "Services and Orders"
+        '
+        'Label110
+        '
+        Me.Label110.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label110.Location = New System.Drawing.Point(19, 84)
+        Me.Label110.Name = "Label110"
+        Me.Label110.Size = New System.Drawing.Size(255, 2)
+        Me.Label110.TabIndex = 1
+        '
+        'Label109
+        '
+        Me.Label109.AutoSize = True
+        Me.Label109.Location = New System.Drawing.Point(19, 38)
+        Me.Label109.Name = "Label109"
+        Me.Label109.Size = New System.Drawing.Size(102, 17)
+        Me.Label109.TabIndex = 0
+        Me.Label109.Text = "Room Charges"
         '
         'Home
         '
@@ -568,6 +864,15 @@ Partial Class Home
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        Me.GroupBox28.ResumeLayout(False)
+        Me.GroupBox28.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -616,4 +921,31 @@ Partial Class Home
     Friend WithEvents Label89 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button7 As Button
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents Button10 As Button
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Label22 As Label
+    Friend WithEvents GroupBox28 As GroupBox
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Label118 As Label
+    Friend WithEvents Label117 As Label
+    Friend WithEvents Label116 As Label
+    Friend WithEvents Label115 As Label
+    Friend WithEvents Label114 As Label
+    Friend WithEvents Label113 As Label
+    Friend WithEvents Label112 As Label
+    Friend WithEvents Label111 As Label
+    Friend WithEvents Label110 As Label
+    Friend WithEvents Label109 As Label
 End Class

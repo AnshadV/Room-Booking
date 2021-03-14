@@ -26,9 +26,10 @@ Public Class Booking
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sql As String = "insert into reservation(userid, roomno, ischeckedin) values(@userid,'" & roomno & "',@checkedin)"
+        Dim sql As String = "insert into reservation(userid, roomno, ischeckedin, bookingtime) values(@userid,'" & roomno & "',@checkedin,@bookingtime)"
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
+        Dim theDate As DateTime = System.DateTime.Now
         Try
             If (Conn.State.Equals(ConnectionState.Closed)) Then
                 Conn.Open()
@@ -36,9 +37,9 @@ Public Class Booking
             MessageBox.Show(String.Format("Error: {0}", login_userid))
             Dim cmd As New SqlCommand(sql, Conn)
             cmd.Parameters.AddWithValue("@userid", login_userid)
-            cmd.Parameters.AddWithValue("@checkedin", "False")
+            cmd.Parameters.AddWithValue("@checkedin", "false")
+            cmd.Parameters.AddWithValue("@bookingtime", DateTime.Parse(theDate))
             cmd.ExecuteNonQuery()
-            cmd.Parameters.AddWithValue("@checkedin", "False")
             Me.Close()
             Home.Show()
         Catch ex As Exception

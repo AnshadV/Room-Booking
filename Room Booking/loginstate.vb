@@ -1,11 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Module loginstate
     Public loginstatus As Boolean
+    Public checkinstatus As Boolean
     Public login_userid As Integer
     Public Email As String
     Public roomno As Integer
     Public roomtype As Integer
     Public phone As Long
+
     Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
 
     Dim Conn As New SqlConnection(str)
