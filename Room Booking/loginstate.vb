@@ -23,7 +23,6 @@ Module loginstate
 
         reader.Read()
         login_userid = reader("Id")
-        MessageBox.Show(String.Format("set userid: {0}", login_userid))
         phone = reader("Phone")
         loginstatus = True
     End Sub

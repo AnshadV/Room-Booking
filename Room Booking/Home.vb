@@ -25,17 +25,68 @@ Public Class Home
         Dim sql As String = "select count(*) from services"
         Dim Conn As New SqlConnection(str)
         Dim count
+        Dim count1 As Integer
         Try
             Conn.Open()
             Dim cmdreq As New SqlCommand(sql, Conn)
             count = cmdreq.ExecuteScalar()
-            MessageBox.Show(count)
         Catch ex As Exception
-            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+            Console.WriteLine("Exception caught: {0}", ex)
         End Try
+
+        Try
+            Dim sql1 As String = "select count(*) from service_order where roomno=@roomno"
+            Dim cmdreq As New SqlCommand(sql1, Conn)
+            cmdreq.Parameters.AddWithValue("@roomno", roomno)
+            count1 = cmdreq.ExecuteScalar()
+            Console.WriteLine("room no: {0}", roomno)
+            Console.WriteLine("count: {0}", count1)
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        If (count1 > 0) Then
+            Try
+
+
+                Dim sql1 As String = "select name, status from service_order where roomno=@roomno"
+                Dim cmd As New SqlCommand(sql, Conn)
+                cmd.Parameters.AddWithValue("@roomno", roomno)
+                Dim adapter As New SqlDataAdapter(cmd)
+
+                Dim table As New DataTable
+
+                adapter.Fill(table)
+
+                DataGridView2.DataSource = table
+            Catch ex As Exception
+                MessageBox.Show(String.Format("Error: {0}", ex.Message))
+            End Try
+        End If
+
 
 #Region "Services List"
         Select Case count
+            Case 0
+                Label1.Visible = False
+                Label2.Visible = False
+                Label4.Visible = False
+                Label3.Visible = False
+                Label6.Visible = False
+                Label5.Visible = False
+                Label8.Visible = False
+                Label7.Visible = False
+                Label10.Visible = False
+                Label9.Visible = False
+                Label12.Visible = False
+                Label11.Visible = False
+
+                Button1.Visible = False
+                Button2.Visible = False
+                Button3.Visible = False
+                Button4.Visible = False
+                Button5.Visible = False
+                Button6.Visible = False
             Case 1
                 Label1.Visible = True
                 Label2.Visible = True
@@ -67,7 +118,7 @@ Public Class Home
                     Label1.Text = reader("name")
                     Label2.Text = reader("price")
                 Catch ex As Exception
-                    MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 
             Case 2
@@ -110,7 +161,7 @@ Public Class Home
                     Label3.Text = reader("price")
 
                 Catch ex As Exception
-                    MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 
             Case 3
@@ -160,7 +211,7 @@ Public Class Home
                     Label5.Text = reader("price")
                     reader.Close()
                 Catch ex As Exception
-                    MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 
             Case 4
@@ -219,7 +270,7 @@ Public Class Home
                     reader.Close()
 
                 Catch ex As Exception
-                    MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 
             Case 5
@@ -285,7 +336,7 @@ Public Class Home
                     reader.Close()
 
                 Catch ex As Exception
-                    MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 
             Case 6
@@ -361,7 +412,7 @@ Public Class Home
                     reader.Close()
 
                 Catch ex As Exception
-                    MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
         End Select
 #End Region
@@ -501,7 +552,7 @@ Public Class Home
                 cmd.ExecuteNonQuery()
 
             Catch ex As Exception
-                MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                Console.WriteLine("Exception caught: {0}", ex)
             End Try
         Next
 
@@ -512,7 +563,9 @@ Public Class Home
             cmd1.Parameters.AddWithValue("@services", "Services")
             cmd1.Parameters.AddWithValue("@price", totalprice)
             cmd1.ExecuteNonQuery()
-            MessageBox.Show(String.Format("Order Places Successfully"))
+            MessageBox.Show(String.Format("Order Placed Successfully"))
+            ListView1.Clear()
+            Label17.Text = ""
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -693,6 +746,35 @@ Public Class Home
         End Try
         Dim total As Integer = roomcharge + services
         Dim tax As Integer = (6 * total) / 100
+        Label116.Text = tax
+
         Dim grandtotal As Integer = total + tax
+        Label117.Text = grandtotal
     End Sub
+
+    Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim Conn As New SqlConnection(str)
+        Dim isbooked As String
+        Try
+            Dim sql As String = "select isbooked from Users where Id=@userid"
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@userid", login_userid)
+            isbooked = cmd.ExecuteScalar
+            If isbooked.Equals("false") Then
+                Panel1.Visible = True
+                Panel2.Visible = True
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+
+
+    End Sub
+
+
 End Class

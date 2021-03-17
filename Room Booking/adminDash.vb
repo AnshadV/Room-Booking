@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
+Imports Excel = Microsoft.Office.Interop.Excel
 
 Public Class adminDash
     Public count As Integer
@@ -14,15 +15,7 @@ Public Class adminDash
         roomAdder.Show()
 
     End Sub
-    Private Sub MonthCalendar1_DateChanged(ByVal sender As Object,
-           ByVal e As System.Windows.Forms.DateRangeEventArgs)
-        TextBox1.Text = e.Start.ToShortDateString()
-    End Sub
 
-    Private Sub MonthCalendar2_DateChanged(ByVal sender As Object,
-           ByVal e As System.Windows.Forms.DateRangeEventArgs)
-        TextBox2.Text = e.Start.ToShortDateString()
-    End Sub
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
@@ -87,7 +80,28 @@ Where RowNum = 1"
                 End Try
 
                 Try
-                    Dim sql1 As String = "select roomno, minguest, maxguest from units where roomtype=(select Id from roomType where name = '" & Label25.Text & "')"
+                    Dim sql1 As String = "Select rimage
+From 
+(
+    Select 
+      Row_Number() Over (Order By id) As RowNum
+    , *
+    From roomType
+) t2
+Where RowNum = 1"
+                    Dim cmd4 As New SqlCommand(sql1, Conn)
+                    Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
+                    PictureBox9.Image = Image.FromStream(ImgStream)
+
+                    ImgStream.Dispose()
+
+
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
+                End Try
+
+                Try
+                    Dim sql1 As String = "Select roomno, minguest, maxguest from units where roomtype=(Select Id from roomType where name = '" & Label25.Text & "')"
 
                     Dim cmd As New SqlCommand(sql1, Conn)
                     Dim adapter As New SqlDataAdapter(cmd)
@@ -146,6 +160,27 @@ Where RowNum = 1"
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
 
+                Try
+                    Dim sql1 As String = "Select rimage
+From 
+(
+    Select 
+      Row_Number() Over (Order By id) As RowNum
+    , *
+    From roomType
+) t2
+Where RowNum = 1"
+                    Dim cmd4 As New SqlCommand(sql1, Conn)
+                    Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
+                    PictureBox9.Image = Image.FromStream(ImgStream)
+
+                    ImgStream.Dispose()
+
+
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
+                End Try
+
                 Try   'block 2
                     Dim updatesql As String = "Select name,maxguest,price,objtype
 From 
@@ -181,6 +216,27 @@ Where RowNum = 2"
                     DataGridView3.DataSource = table
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                End Try
+
+                Try
+                    Dim sql1 As String = "Select rimage
+From 
+(
+    Select 
+      Row_Number() Over (Order By id) As RowNum
+    , *
+    From roomType
+) t2
+Where RowNum = 2"
+                    Dim cmd4 As New SqlCommand(sql1, Conn)
+                    Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
+                    PictureBox9.Image = Image.FromStream(ImgStream)
+
+                    ImgStream.Dispose()
+
+
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 #End Region
 #Region "Case 3 of roomtype"
@@ -226,6 +282,27 @@ Where RowNum = 1"
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
 
+                Try
+                    Dim sql1 As String = "Select rimage
+From 
+(
+    Select 
+      Row_Number() Over (Order By id) As RowNum
+    , *
+    From roomType
+) t2
+Where RowNum = 1"
+                    Dim cmd4 As New SqlCommand(sql1, Conn)
+                    Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
+                    PictureBox9.Image = Image.FromStream(ImgStream)
+
+                    ImgStream.Dispose()
+
+
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
+                End Try
+
                 Try   'block 2
                     Dim updatesql As String = "Select name,maxguest,price,objtype
 From 
@@ -261,6 +338,27 @@ Where RowNum = 2"
                     DataGridView3.DataSource = table
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
+                End Try
+
+                Try
+                    Dim sql1 As String = "Select rimage
+From 
+(
+    Select 
+      Row_Number() Over (Order By id) As RowNum
+    , *
+    From roomType
+) t2
+Where RowNum = 2"
+                    Dim cmd4 As New SqlCommand(sql1, Conn)
+                    Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
+                    PictureBox9.Image = Image.FromStream(ImgStream)
+
+                    ImgStream.Dispose()
+
+
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
                 End Try
 
                 Try   'block 3
@@ -299,6 +397,27 @@ Where RowNum = 3"
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
+
+                Try
+                    Dim sql1 As String = "Select rimage
+From 
+(
+    Select 
+      Row_Number() Over (Order By id) As RowNum
+    , *
+    From roomType
+) t2
+Where RowNum = 3"
+                    Dim cmd4 As New SqlCommand(sql1, Conn)
+                    Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
+                    PictureBox9.Image = Image.FromStream(ImgStream)
+
+                    ImgStream.Dispose()
+
+
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
+                End Try
 #End Region
         End Select
 
@@ -329,7 +448,7 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -351,7 +470,7 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -364,7 +483,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -386,7 +505,7 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -399,7 +518,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -412,7 +531,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -434,7 +553,7 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -447,7 +566,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -460,7 +579,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -473,7 +592,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -495,7 +614,7 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -508,7 +627,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -521,7 +640,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -534,7 +653,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -547,7 +666,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -569,7 +688,7 @@ Where RowNum = 3"
                 GroupBox26.Visible = True
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -582,7 +701,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -595,7 +714,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -608,7 +727,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -621,7 +740,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -634,7 +753,7 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From services_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
@@ -671,47 +790,6 @@ Where RowNum = 3"
 
     End Sub
 
-
-    Private Sub TabPage8_Enter(sender As Object, e As EventArgs) Handles TabPage8.Enter
-        DateTimePicker2.Format = DateTimePickerFormat.Time
-        DateTimePicker2.ShowUpDown = True
-        DateTimePicker4.Format = DateTimePickerFormat.Time
-        DateTimePicker4.ShowUpDown = True
-    End Sub
-
-
-
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-        DateTimePicker2.Format = DateTimePickerFormat.Time
-        DateTimePicker2.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
-                    DateTimePicker2.Value.TimeOfDay
-        TextBox1.Text = myDate
-    End Sub
-
-    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
-        DateTimePicker2.Format = DateTimePickerFormat.Time
-        DateTimePicker2.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
-                    DateTimePicker2.Value.TimeOfDay
-        TextBox1.Text = myDate
-    End Sub
-
-    Private Sub DateTimePicker3_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker3.ValueChanged
-        DateTimePicker4.Format = DateTimePickerFormat.Time
-        DateTimePicker4.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
-                    DateTimePicker2.Value.TimeOfDay
-        TextBox2.Text = myDate
-    End Sub
-
-    Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
-        DateTimePicker4.Format = DateTimePickerFormat.Time
-        DateTimePicker4.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
-                    DateTimePicker2.Value.TimeOfDay
-        TextBox2.Text = myDate
-    End Sub
 
     '    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
     '        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
@@ -780,25 +858,7 @@ Where RowNum = 3"
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
-        Dim sql As String = "select roomno from units where (date > '" & myDate & "' or date is null) and minguest > '" & ComboBox1.SelectedItem & "'"
-        Dim Conn As New SqlConnection(str)
-        Dim cmd As New SqlCommand(sql, Conn)
-        Dim adapter As New SqlDataAdapter(cmd)
 
-        Dim table As New DataTable
-
-        adapter.Fill(table)
-
-        DataGridView1.DataSource = table
-    End Sub
-
-    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-        roomno = TextBox6.Text
-        Booking.Show()
-
-    End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
@@ -854,7 +914,7 @@ Where RowNum = 3"
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
-
+        GroupBox34.Visible = True
 
 
     End Sub
@@ -901,6 +961,17 @@ Where RowNum = 3"
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
+
+        Try
+            Dim sql2 As String = "insert into Users(isbooked) values(@true)"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            cmd1.Parameters.AddWithValue("@userid", "true")
+            cmd1.ExecuteNonQuery()
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+
     End Sub
 #End Region
 #Region "Checkout"
@@ -979,7 +1050,7 @@ Where RowNum = 3"
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
-
+        GroupBox33.Visible = True
 
 
 
@@ -1110,6 +1181,7 @@ Where RowNum = 3"
 
         If (totalunits <> 0) Then
             occupancy = (unitsavailable / totalunits) * 100
+            Label12.Text = occupancy
         Else
             Label12.Text = 0
         End If
@@ -1122,11 +1194,12 @@ Where RowNum = 3"
         Dim Conn As New SqlConnection(str)
         Dim roomcharge As Integer
         Dim services As Integer
+
         Try
             If (Conn.State.Equals(ConnectionState.Closed)) Then
                 Conn.Open()
             End If
-            Dim sql As String = "select userid from reservation where roomno = @roomno and ispaid is not null"
+            Dim sql As String = "select userid from reservation where roomno = @roomno and ispaid is null"
             Dim cmd As New SqlCommand(sql, Conn)
             Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@roomno", TextBox3.Text)
@@ -1137,16 +1210,16 @@ Where RowNum = 3"
         End Try
 
         Try
-            Dim sql As String = "select price from billing where userid =@userid and item=@roomcharges"
+            Dim sql As String = "select price from billing where userid =@userid and Item=@roomcharges"
 
 
             Dim cmd As New SqlCommand(sql, Conn)
             Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@userid", userId)
-            cmd.Parameters.AddWithValue("@roomcharges", "Room charges")
-            reader = cmd.ExecuteReader
-            reader.Read()
-            Label114.Text = reader("price")
+            cmd.Parameters.AddWithValue("@roomcharges", "Room Charges")
+            roomcharge = cmd.ExecuteScalar
+            Console.WriteLine("room price: {0}", roomcharge)
+            Label114.Text = roomcharge
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1159,9 +1232,8 @@ Where RowNum = 3"
             Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@userid", userId)
             cmd.Parameters.AddWithValue("@services", "Services")
-            reader = cmd.ExecuteReader
-            reader.Read()
-            Label115.Text = reader("price")
+            services = cmd.ExecuteScalar
+            Label115.Text = services
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1178,14 +1250,32 @@ Where RowNum = 3"
         Dim Conn As New SqlConnection(str)
         Dim theDate As DateTime = System.DateTime.Now
         Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
             Dim sql As String = "insert into payment(userid, date, method, amount) values(@userid,@date,@method,@amount)"
             Dim cmd As New SqlCommand(sql, Conn)
             Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@userid", userId)
             cmd.Parameters.AddWithValue("@date", DateTime.Parse(theDate))
             cmd.Parameters.AddWithValue("@method", selectedmethod)
-            cmd.ExecuteNonQuery()
+            cmd.Parameters.AddWithValue("@amount", Label117.Text)
 
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Payment successfully registred")
+            'Clear values hide payement methods
+            Label120.Text = ""
+            Label122.Text = ""
+            TextBox9.Text = ""
+            Label114.Text = ""
+            Label115.Text = ""
+            Label116.Text = ""
+            Label117.Text = ""
+            GroupBox35.Visible = False
+            GroupBox28.Visible = True
+
+            'success message
+            'update ispaid in reservation
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1216,6 +1306,420 @@ Where RowNum = 3"
         Label120.Text = Label117.Text
         Label122.Text = Label117.Text
         GroupBox35.Visible = True
+
+    End Sub
+
+    Private Sub TabPage5_Enter(sender As Object, e As EventArgs) Handles TabPage5.Enter
+        Label114.Text = ""
+        Label115.Text = ""
+        Label116.Text = ""
+        Label117.Text = ""
+    End Sub
+
+    Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
+        Try
+
+            Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+            Dim sql As String = "select name, price from services"
+            Dim Conn As New SqlConnection(str)
+            Dim cmd As New SqlCommand(sql, Conn)
+            Dim adapter As New SqlDataAdapter(cmd)
+
+            Dim table As New DataTable
+
+            adapter.Fill(table)
+
+            DataGridView5.DataSource = table
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
+
+
+
+    Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
+        Dim dataAdapter As New SqlClient.SqlDataAdapter()
+        Dim dataSet As New DataSet
+        Dim command As New SqlClient.SqlCommand
+        Dim datatableMain As New System.Data.DataTable()
+        Dim connection As New SqlClient.SqlConnection
+
+        'Assign your connection string to connection object
+        connection.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        command.Connection = connection
+        command.CommandType = CommandType.Text
+        'You can use any command select
+        command.CommandText = "Select * from reservation"
+        dataAdapter.SelectCommand = command
+
+
+        Dim f As FolderBrowserDialog = New FolderBrowserDialog
+        Try
+            If f.ShowDialog() = DialogResult.OK Then
+                'This section help you if your language is not English.
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US")
+                Dim oExcel As Excel.Application
+                Dim oBook As Excel.Workbook
+                Dim oSheet As Excel.Worksheet
+                oExcel = CreateObject("Excel.Application")
+                oBook = oExcel.Workbooks.Add(Type.Missing)
+                oSheet = oBook.Worksheets(1)
+
+                Dim misValue As Object = System.Reflection.Missing.Value
+                Dim i As Integer
+                Dim j As Integer
+                Dim dc As System.Data.DataColumn
+                Dim dr As System.Data.DataRow
+                Dim colIndex As Integer = 0
+                Dim rowIndex As Integer = 0
+
+                'Fill data to datatable
+                connection.Open()
+                dataAdapter.Fill(datatableMain)
+                connection.Close()
+
+
+                'Export the Columns to excel file
+                For Each dc In datatableMain.Columns
+                    colIndex = colIndex + 1
+                    oSheet.Cells(1, colIndex) = dc.ColumnName
+                Next
+
+                'Export the rows to excel file
+                For Each dr In datatableMain.Rows
+                    rowIndex = rowIndex + 1
+                    colIndex = 0
+                    For Each dc In datatableMain.Columns
+                        colIndex = colIndex + 1
+                        oSheet.Cells(rowIndex + 1, colIndex) = dr(dc.ColumnName)
+                    Next
+                Next
+
+                'Set final path
+                Dim fileName As String = "\ExportedReservations" + ".xls"
+                Dim finalPath = f.SelectedPath + fileName
+                txtPath.Text = finalPath
+                oSheet.Columns.AutoFit()
+                'Save file in final path
+                oBook.SaveAs(finalPath, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+
+
+
+                'Release the objects
+                ReleaseObject(oSheet)
+                oBook.Close(False, Type.Missing, Type.Missing)
+                ReleaseObject(oBook)
+                oExcel.Quit()
+                ReleaseObject(oExcel)
+                'Some time Office application does not quit after automation: so i am calling GC.Collect method.
+                GC.Collect()
+
+                MessageBox.Show("Export done successfully!")
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK)
+        End Try
+    End Sub
+
+    Private Sub ReleaseObject(ByVal o As Object)
+        Try
+            While (System.Runtime.InteropServices.Marshal.ReleaseComObject(o) > 0)
+            End While
+        Catch
+        Finally
+            o = Nothing
+        End Try
+    End Sub
+
+    Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+        GroupBox41.Visible = True
+        Dim dataAdapter As New SqlClient.SqlDataAdapter()
+        Dim dataSet As New DataSet
+        Dim command As New SqlClient.SqlCommand
+        Dim datatableMain As New System.Data.DataTable()
+        Dim connection As New SqlClient.SqlConnection
+
+        'Assign your connection string to connection object
+        connection.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        command.Connection = connection
+        command.CommandType = CommandType.Text
+        'You can use any command select
+        command.CommandText = "Select * from service_order"
+        dataAdapter.SelectCommand = command
+
+
+        Dim f As FolderBrowserDialog = New FolderBrowserDialog
+        Try
+            If f.ShowDialog() = DialogResult.OK Then
+                'This section help you if your language is not English.
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US")
+                Dim oExcel As Excel.Application
+                Dim oBook As Excel.Workbook
+                Dim oSheet As Excel.Worksheet
+                oExcel = CreateObject("Excel.Application")
+                oBook = oExcel.Workbooks.Add(Type.Missing)
+                oSheet = oBook.Worksheets(1)
+
+                Dim misValue As Object = System.Reflection.Missing.Value
+                Dim i As Integer
+                Dim j As Integer
+                Dim dc As System.Data.DataColumn
+                Dim dr As System.Data.DataRow
+                Dim colIndex As Integer = 0
+                Dim rowIndex As Integer = 0
+
+                'Fill data to datatable
+                connection.Open()
+                dataAdapter.Fill(datatableMain)
+                connection.Close()
+
+
+                'Export the Columns to excel file
+                For Each dc In datatableMain.Columns
+                    colIndex = colIndex + 1
+                    oSheet.Cells(1, colIndex) = dc.ColumnName
+                Next
+
+                'Export the rows to excel file
+                For Each dr In datatableMain.Rows
+                    rowIndex = rowIndex + 1
+                    colIndex = 0
+                    For Each dc In datatableMain.Columns
+                        colIndex = colIndex + 1
+                        oSheet.Cells(rowIndex + 1, colIndex) = dr(dc.ColumnName)
+                    Next
+                Next
+
+                'Set final path
+                Dim fileName As String = "\ExportedServices" + ".xls"
+                Dim finalPath = f.SelectedPath + fileName
+                txtPath.Text = finalPath
+                oSheet.Columns.AutoFit()
+                'Save file in final path
+                oBook.SaveAs(finalPath, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+
+
+
+                'Release the objects
+                ReleaseObject1(oSheet)
+                oBook.Close(False, Type.Missing, Type.Missing)
+                ReleaseObject1(oBook)
+                oExcel.Quit()
+                ReleaseObject1(oExcel)
+                'Some time Office application does not quit after automation: so i am calling GC.Collect method.
+                GC.Collect()
+
+                MessageBox.Show("Export done successfully!")
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK)
+        End Try
+    End Sub
+
+    Private Sub ReleaseObject1(ByVal o As Object)
+        Try
+            While (System.Runtime.InteropServices.Marshal.ReleaseComObject(o) > 0)
+            End While
+        Catch
+        Finally
+            o = Nothing
+        End Try
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+        GroupBox41.Visible = True
+        Dim dataAdapter As New SqlClient.SqlDataAdapter()
+        Dim dataSet As New DataSet
+        Dim command As New SqlClient.SqlCommand
+        Dim datatableMain As New System.Data.DataTable()
+        Dim connection As New SqlClient.SqlConnection
+
+        'Assign your connection string to connection object
+        connection.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        command.Connection = connection
+        command.CommandType = CommandType.Text
+        'You can use any command select
+        command.CommandText = "Select * from payment"
+        dataAdapter.SelectCommand = command
+
+
+        Dim f As FolderBrowserDialog = New FolderBrowserDialog
+        Try
+            If f.ShowDialog() = DialogResult.OK Then
+                'This section help you if your language is not English.
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US")
+                Dim oExcel As Excel.Application
+                Dim oBook As Excel.Workbook
+                Dim oSheet As Excel.Worksheet
+                oExcel = CreateObject("Excel.Application")
+                oBook = oExcel.Workbooks.Add(Type.Missing)
+                oSheet = oBook.Worksheets(1)
+
+                Dim misValue As Object = System.Reflection.Missing.Value
+                Dim i As Integer
+                Dim j As Integer
+                Dim dc As System.Data.DataColumn
+                Dim dr As System.Data.DataRow
+                Dim colIndex As Integer = 0
+                Dim rowIndex As Integer = 0
+
+                'Fill data to datatable
+                connection.Open()
+                dataAdapter.Fill(datatableMain)
+                connection.Close()
+
+
+                'Export the Columns to excel file
+                For Each dc In datatableMain.Columns
+                    colIndex = colIndex + 1
+                    oSheet.Cells(1, colIndex) = dc.ColumnName
+                Next
+
+                'Export the rows to excel file
+                For Each dr In datatableMain.Rows
+                    rowIndex = rowIndex + 1
+                    colIndex = 0
+                    For Each dc In datatableMain.Columns
+                        colIndex = colIndex + 1
+                        oSheet.Cells(rowIndex + 1, colIndex) = dr(dc.ColumnName)
+                    Next
+                Next
+
+                'Set final path
+                Dim fileName As String = "\ExportedPayment" + ".xls"
+                Dim finalPath = f.SelectedPath + fileName
+                txtPath.Text = finalPath
+                oSheet.Columns.AutoFit()
+                'Save file in final path
+                oBook.SaveAs(finalPath, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
+
+
+
+                'Release the objects
+                ReleaseObject2(oSheet)
+                oBook.Close(False, Type.Missing, Type.Missing)
+                ReleaseObject2(oBook)
+                oExcel.Quit()
+                ReleaseObject2(oExcel)
+                'Some time Office application does not quit after automation: so i am calling GC.Collect method.
+                GC.Collect()
+
+                MessageBox.Show("Export done successfully!")
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK)
+        End Try
+    End Sub
+
+    Private Sub ReleaseObject2(ByVal o As Object)
+        Try
+            While (System.Runtime.InteropServices.Marshal.ReleaseComObject(o) > 0)
+            End While
+        Catch
+        Finally
+            o = Nothing
+        End Try
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        GroupBox41.Visible = True
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        GroupBox43.Visible = True
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        GroupBox45.Visible = True
+    End Sub
+
+    Private Sub TabPage6_Enter(sender As Object, e As EventArgs) Handles TabPage6.Enter
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim Conn As New SqlConnection(str)
+        Try
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim sql2 As String = "select sum(amount) from payment"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            Dim total As Integer = cmd1.ExecuteScalar
+            Label124.Text = total
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql2 As String = "select sum(amount) from payment where method=@cash"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            Dim total As Integer
+            cmd1.Parameters.AddWithValue("@cash", "Cash")
+            total = cmd1.ExecuteScalar
+
+            If IsDBNull(cmd1.ExecuteScalar) Then
+                Label128.Text = 0
+            Else
+                Label128.Text = total
+            End If
+
+
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql2 As String = "select sum(amount) from payment where method=@card"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            Dim total As Integer
+            cmd1.Parameters.AddWithValue("@card", "Card")
+            total = cmd1.ExecuteScalar
+            If IsDBNull(cmd1.ExecuteScalar) Then
+                Label131.Text = 0
+            Else
+                Label131.Text = total
+            End If
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql2 As String = "select sum(amount) from payment where method=@check"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            Dim total As Integer
+            cmd1.Parameters.AddWithValue("@check", "Check")
+            total = cmd1.ExecuteScalar
+            If IsDBNull(cmd1.ExecuteScalar) Then
+                Label133.Text = 0
+            Else
+                Label133.Text = total
+            End If
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql2 As String = "select sum(amount) from payment where method=@upi"
+            Dim cmd1 As New SqlCommand(sql2, Conn)
+            Dim total As Integer
+            cmd1.Parameters.AddWithValue("@upi", "UPI")
+            total = cmd1.ExecuteScalar
+            If IsDBNull(cmd1.ExecuteScalar) Then
+                Label135.Text = 0
+            Else
+                Label135.Text = total
+            End If
+
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
 
     End Sub
 
