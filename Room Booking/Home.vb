@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports Room_Booking.loginstate
 Public Class Home
-    Public myDate As New DateTime
+    Public indate As New DateTime
+    Public outdate As New DateTime
     Dim da As SqlDataAdapter
     Dim ds As DataSet
     Dim itemcoll(100) As String
@@ -588,33 +589,33 @@ Public Class Home
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         DateTimePicker2.Format = DateTimePickerFormat.Time
         DateTimePicker2.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
+        indate = DateTimePicker1.Value.Date +
                     DateTimePicker2.Value.TimeOfDay
-        TextBox1.Text = myDate
+        TextBox1.Text = indate
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
         DateTimePicker2.Format = DateTimePickerFormat.Time
         DateTimePicker2.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
+        indate = DateTimePicker1.Value.Date +
                     DateTimePicker2.Value.TimeOfDay
-        TextBox1.Text = myDate
+        TextBox1.Text = indate
     End Sub
 
     Private Sub DateTimePicker3_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker3.ValueChanged
         DateTimePicker4.Format = DateTimePickerFormat.Time
         DateTimePicker4.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
-                    DateTimePicker2.Value.TimeOfDay
-        TextBox2.Text = myDate
+        outdate = DateTimePicker3.Value.Date +
+                    DateTimePicker4.Value.TimeOfDay
+        TextBox2.Text = outdate
     End Sub
 
     Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
         DateTimePicker4.Format = DateTimePickerFormat.Time
         DateTimePicker4.ShowUpDown = True
-        myDate = DateTimePicker1.Value.Date +
-                    DateTimePicker2.Value.TimeOfDay
-        TextBox2.Text = myDate
+        outdate = DateTimePicker3.Value.Date +
+                    DateTimePicker4.Value.TimeOfDay
+        TextBox2.Text = outdate
     End Sub
 
     'Private Sub Button7_Click(sender As Object, e As EventArgs)
@@ -674,19 +675,51 @@ Public Class Home
     'End Sub
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         roomno = TextBox6.Text
+        Dim checkin As DateTime = TextBox1.Text
+        Dim checkout As DateTime = TextBox2.Text
+        Dim price As Integer
+        Dim dailyrent As Integer
 
+        Try
+            Dim Conn As New SqlConnection(str)
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim updatesql As String = "Select price from roomType where Id = (select roomType from units where roomno = '" & roomno & "')"
+            Dim cmd3 As New SqlCommand(updatesql, Conn)
+            Dim reader As SqlDataReader
+            reader = cmd3.ExecuteReader
+            cmd3.Parameters.AddWithValue("@roomno", roomno)
+            reader.Read()
+
+            dailyrent = reader("price")
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+
+        If (checkout >= checkin.AddHours(24)) And (checkout <= checkin.AddHours(26)) Then
+            price = dailyrent
+        ElseIf (checkout >= checkin.AddHours(48)) And (checkout <= checkin.AddHours(50)) Then
+            price = dailyrent + dailyrent
+        ElseIf (checkout <= checkin.AddHours(24)) Then
+            price = dailyrent
+        End If
+        roomprice = price
         Booking.Show()
     End Sub
 
     Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
+
+
         Try
 
             Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
-            Dim sql As String = "select roomno from units where (date > @time or date is null) and minguest > '" & ComboBox1.SelectedItem & "'"
+            Dim sql As String = "select roomno from units where (date > @time or date is null) and minguest >= '" & ComboBox1.SelectedItem & "'"
             Dim Conn As New SqlConnection(str)
             Dim cmd As New SqlCommand(sql, Conn)
-            cmd.Parameters.AddWithValue("@time", DateTime.Parse(myDate))
+            cmd.Parameters.AddWithValue("@time", DateTime.Parse(indate))
             Dim adapter As New SqlDataAdapter(cmd)
 
             Dim table As New DataTable
@@ -697,6 +730,8 @@ Public Class Home
         Catch ex As Exception
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
+
+
 
     End Sub
 
@@ -756,6 +791,8 @@ Public Class Home
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim isbooked As String
+        Dim ispaid As String
+        Button7.Visible = True
         Try
             Dim sql As String = "select isbooked from Users where Id=@userid"
             If (Conn.State.Equals(ConnectionState.Closed)) Then
@@ -767,6 +804,28 @@ Public Class Home
             If isbooked.Equals("false") Then
                 Panel1.Visible = True
                 Panel2.Visible = True
+                GroupBox28.SendToBack()
+                GroupBox1.SendToBack()
+                GroupBox2.SendToBack()
+
+            Else
+                Try
+                    Dim sql1 As String = "select ispaid from reservation where userid =@userid"
+                    If (Conn.State.Equals(ConnectionState.Closed)) Then
+                        Conn.Open()
+                    End If
+                    Dim cmd1 As New SqlCommand(sql1, Conn)
+                    cmd1.Parameters.AddWithValue("@userid", login_userid)
+                    ispaid = cmd.ExecuteScalar
+                    If ispaid.Equals("true") Then
+                        Button9.Visible = False
+                        Label113.Visible = False
+                        Label117.Visible = False
+                        Label27.Visible = True
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine("Exception caught: {0}", ex)
+                End Try
             End If
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
@@ -774,7 +833,11 @@ Public Class Home
 
 
 
+
+
     End Sub
 
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
 
+    End Sub
 End Class

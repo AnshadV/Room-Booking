@@ -40,8 +40,8 @@ Public Class adminDash
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "select count(*) from roomType"
         Dim Conn As New SqlConnection(str)
-        ListView1.View = View.Details
-        ListView1.GridLines = True
+        'ListView1.View = View.Details
+        'ListView1.GridLines = True
         Try
             Conn.Open()
             Dim cmd2 As New SqlCommand(sql, Conn)
@@ -768,7 +768,7 @@ Where RowNum = 3"
         End Select
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "insert into service_order(status) values(@status)"
         Dim Conn As New SqlConnection(str)
@@ -946,7 +946,7 @@ Where RowNum = 3"
             End If
             cmd1.ExecuteNonQuery()
 
-            MessageBox.Show(String.Format("Checked-In Successfully"))
+
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -963,9 +963,10 @@ Where RowNum = 3"
         End Try
 
         Try
-            Dim sql2 As String = "insert into Users(isbooked) values(@true)"
+            Dim sql2 As String = "update Users set isbooked = @true where Id = @userid"
             Dim cmd1 As New SqlCommand(sql2, Conn)
-            cmd1.Parameters.AddWithValue("@userid", "true")
+            cmd1.Parameters.AddWithValue("@true", "true")
+            cmd1.Parameters.AddWithValue("@userid", userId)
             cmd1.ExecuteNonQuery()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
@@ -1272,7 +1273,8 @@ Where RowNum = 3"
             Label116.Text = ""
             Label117.Text = ""
             GroupBox35.Visible = False
-            GroupBox28.Visible = True
+            GroupBox28.Visible = False
+            TextBox3.Text = ""
 
             'success message
             'update ispaid in reservation
@@ -1722,6 +1724,51 @@ Where RowNum = 3"
         End Try
 
     End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim Conn As New SqlConnection(str)
+
+        Try
+            Dim sql As String = "select isoccuppied from units where roomno=@roomno"
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@roomno", TextBox1.Text)
+            Conn.Open()
+            Dim isoccupied = cmd.ExecuteScalar
+            Console.WriteLine("Exception caught: {0}", isoccupied)
+            If (isoccupied.Equals("false")) Then
+                MessageBox.Show("Room is vacant")
+                GroupBox11.Visible = False
+                TextBox1.Text = ""
+            Else
+                GroupBox20.Visible = False
+                GroupBox11.Visible = True
+                Dim sql1 As String = "select userid from reservation where roomno = @roomno"
+                Dim cmd1 As New SqlCommand(sql1, Conn)
+                cmd1.Parameters.AddWithValue("@roomno", TextBox1.Text)
+                Dim userid = cmd1.ExecuteScalar
+
+                Dim sql2 As String = "select Name, Email, Phone from Users where userid = @userid"
+                Dim cmd2 As New SqlCommand(sql2, Conn)
+                cmd2.Parameters.AddWithValue("@userid", userid)
+                Dim reader As SqlDataReader
+                reader = cmd.ExecuteReader
+                reader.Read()
+                Label42.Text = reader("Name")
+                Label43.Text = reader("Phone")
+                Label74.Text = reader("Email")
+
+                Dim sql3 As String = "select price where "
+
+
+            End If
+
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+    End Sub
+
+
 
 
 #End Region

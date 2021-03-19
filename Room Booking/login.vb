@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports Room_Booking.loginstate
+Imports Room_Booking.controlModule
 Public Class login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox1.Text.Length <= 0 Then
@@ -43,7 +44,7 @@ Public Class login
         Me.Hide()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         test.Show()
 
     End Sub

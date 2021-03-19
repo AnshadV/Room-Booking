@@ -7,6 +7,8 @@ Module loginstate
     Public roomno As Integer
     Public roomtype As Integer
     Public phone As Long
+    Public name As String
+    Public roomprice As Integer
 
     Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
 
@@ -15,7 +17,7 @@ Module loginstate
         If (Conn.State.Equals(ConnectionState.Closed)) Then
             Conn.Open()
         End If
-        Dim sql As String = "select Id, Phone from Users where CONVERT(VARCHAR, Email) =@email"
+        Dim sql As String = "select Id, Phone, Name from Users where CONVERT(VARCHAR, Email) =@email"
         Dim cmd As New SqlCommand(sql, Conn)
         Dim reader As SqlDataReader
         cmd.Parameters.AddWithValue("@email", Email)
@@ -24,6 +26,7 @@ Module loginstate
         reader.Read()
         login_userid = reader("Id")
         phone = reader("Phone")
+        name = reader("Name")
         loginstatus = True
     End Sub
 

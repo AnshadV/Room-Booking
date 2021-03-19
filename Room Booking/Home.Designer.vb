@@ -41,9 +41,6 @@ Partial Class Home
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -69,10 +66,10 @@ Partial Class Home
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
@@ -89,6 +86,7 @@ Partial Class Home
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label117 = New System.Windows.Forms.Label()
@@ -100,22 +98,25 @@ Partial Class Home
         Me.Label111 = New System.Windows.Forms.Label()
         Me.Label110 = New System.Windows.Forms.Label()
         Me.Label109 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.DotNetBarTabcontrol1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.GroupBox28.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'DotNetBarTabcontrol1
@@ -182,6 +183,7 @@ Partial Class Home
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(8, 242)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
@@ -309,10 +311,10 @@ Partial Class Home
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.White
-        Me.TabPage2.Controls.Add(Me.Panel1)
         Me.TabPage2.Controls.Add(Me.DataGridView2)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
+        Me.TabPage2.Controls.Add(Me.Panel1)
         Me.TabPage2.Location = New System.Drawing.Point(140, 4)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
@@ -321,39 +323,10 @@ Partial Class Home
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Services"
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Label24)
-        Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Location = New System.Drawing.Point(9, 11)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(988, 496)
-        Me.Panel1.TabIndex = 3
-        Me.Panel1.Visible = False
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(338, 165)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(325, 18)
-        Me.Label24.TabIndex = 1
-        Me.Label24.Text = "Check-in at the Hotel to continue using this page"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(404, 114)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(172, 29)
-        Me.Label23.TabIndex = 0
-        Me.Label23.Text = "Page Disabled"
-        '
         'DataGridView2
         '
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(9, 312)
         Me.DataGridView2.Name = "DataGridView2"
@@ -624,48 +597,48 @@ Partial Class Home
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Label1"
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label24)
+        Me.Panel1.Controls.Add(Me.Label23)
+        Me.Panel1.Location = New System.Drawing.Point(9, 11)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(988, 496)
+        Me.Panel1.TabIndex = 3
+        Me.Panel1.Visible = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(338, 165)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(325, 18)
+        Me.Label24.TabIndex = 1
+        Me.Label24.Text = "Check-in at the Hotel to continue using this page"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(404, 114)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(172, 29)
+        Me.Label23.TabIndex = 0
+        Me.Label23.Text = "Page Disabled"
+        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.White
-        Me.TabPage3.Controls.Add(Me.Panel2)
         Me.TabPage3.Controls.Add(Me.GroupBox4)
         Me.TabPage3.Controls.Add(Me.GroupBox28)
+        Me.TabPage3.Controls.Add(Me.Panel2)
         Me.TabPage3.Location = New System.Drawing.Point(140, 4)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(1022, 543)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Billing"
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Label25)
-        Me.Panel2.Controls.Add(Me.Label26)
-        Me.Panel2.Location = New System.Drawing.Point(13, 18)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1009, 508)
-        Me.Panel2.TabIndex = 6
-        Me.Panel2.Visible = False
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(338, 165)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(325, 18)
-        Me.Label25.TabIndex = 1
-        Me.Label25.Text = "Check-in at the Hotel to continue using this page"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(404, 114)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(172, 29)
-        Me.Label26.TabIndex = 0
-        Me.Label26.Text = "Page Disabled"
         '
         'GroupBox4
         '
@@ -812,6 +785,7 @@ Partial Class Home
         '
         'GroupBox28
         '
+        Me.GroupBox28.Controls.Add(Me.Label27)
         Me.GroupBox28.Controls.Add(Me.Button9)
         Me.GroupBox28.Controls.Add(Me.Label118)
         Me.GroupBox28.Controls.Add(Me.Label117)
@@ -830,6 +804,17 @@ Partial Class Home
         Me.GroupBox28.Size = New System.Drawing.Size(306, 279)
         Me.GroupBox28.TabIndex = 4
         Me.GroupBox28.TabStop = False
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(40, 223)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(203, 24)
+        Me.Label27.TabIndex = 11
+        Me.Label27.Text = "Your bill is already paid"
+        Me.Label27.Visible = False
         '
         'Button9
         '
@@ -928,6 +913,36 @@ Partial Class Home
         Me.Label109.TabIndex = 0
         Me.Label109.Text = "Room Charges"
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Label25)
+        Me.Panel2.Controls.Add(Me.Label26)
+        Me.Panel2.Location = New System.Drawing.Point(13, 18)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1009, 508)
+        Me.Panel2.TabIndex = 6
+        Me.Panel2.Visible = False
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(338, 165)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(325, 18)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Check-in at the Hotel to continue using this page"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(404, 114)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(172, 29)
+        Me.Label26.TabIndex = 0
+        Me.Label26.Text = "Page Disabled"
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -944,16 +959,14 @@ Partial Class Home
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
@@ -962,6 +975,8 @@ Partial Class Home
         Me.TabPage5.PerformLayout()
         Me.GroupBox28.ResumeLayout(False)
         Me.GroupBox28.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1044,4 +1059,5 @@ Partial Class Home
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
 End Class
