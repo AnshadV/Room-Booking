@@ -10,6 +10,12 @@ Public Class adminDash
     Dim dailyrent As Integer
     Dim price As Integer
     Public selectedmethod As String
+    Public c1id As Integer
+    Public c2id As Integer
+    Public c3id As Integer
+    Public c4id As Integer
+    Public c5id As Integer
+    Public c6id As Integer
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         roomAdder.Show()
@@ -46,7 +52,7 @@ Public Class adminDash
             Conn.Open()
             Dim cmd2 As New SqlCommand(sql, Conn)
             count = cmd2.ExecuteScalar()
-            MessageBox.Show(count)
+
         Catch ex As Exception
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
@@ -230,7 +236,7 @@ From
 Where RowNum = 2"
                     Dim cmd4 As New SqlCommand(sql1, Conn)
                     Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
-                    PictureBox9.Image = Image.FromStream(ImgStream)
+                    PictureBox10.Image = Image.FromStream(ImgStream)
 
                     ImgStream.Dispose()
 
@@ -352,7 +358,7 @@ From
 Where RowNum = 2"
                     Dim cmd4 As New SqlCommand(sql1, Conn)
                     Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
-                    PictureBox9.Image = Image.FromStream(ImgStream)
+                    PictureBox10.Image = Image.FromStream(ImgStream)
 
                     ImgStream.Dispose()
 
@@ -410,7 +416,7 @@ From
 Where RowNum = 3"
                     Dim cmd4 As New SqlCommand(sql1, Conn)
                     Dim ImgStream As New IO.MemoryStream(CType(cmd4.ExecuteScalar, Byte()))
-                    PictureBox9.Image = Image.FromStream(ImgStream)
+                    PictureBox12.Image = Image.FromStream(ImgStream)
 
                     ImgStream.Dispose()
 
@@ -426,19 +432,27 @@ Where RowNum = 3"
 
     Private Sub TabPage4_Enter(sender As Object, e As EventArgs) Handles TabPage4.Enter
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
-        Dim sql As String = "select count(*) from service_order"
+        Dim sql As String = "select count(*) from service_order where status <> 'Fulfilled'"
         Dim Conn As New SqlConnection(str)
         Try
             Conn.Open()
             Dim cmdreq As New SqlCommand(sql, Conn)
             count = cmdreq.ExecuteScalar()
-            MessageBox.Show(count)
+
         Catch ex As Exception
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
 
         Select Case count
+
 #Region "Case 1 of Service requests"
+            Case 0
+                GroupBox12.Visible = False
+                GroupBox23.Visible = False
+                GroupBox25.Visible = False
+                GroupBox27.Visible = False
+                GroupBox24.Visible = False
+                GroupBox26.Visible = False
             Case 1
                 GroupBox12.Visible = True
                 GroupBox23.Visible = False
@@ -448,11 +462,12 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select Id, roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c1id = reader("Id")
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
@@ -470,11 +485,12 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c1id = reader("Id")
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
@@ -483,11 +499,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c2id = reader("Id")
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
@@ -505,11 +522,12 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c1id = reader("Id")
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
@@ -518,11 +536,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c2id = reader("Id")
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
@@ -531,11 +550,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 3"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c3id = reader("Id")
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
@@ -553,11 +573,12 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c1id = reader("Id")
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
@@ -566,11 +587,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c2id = reader("Id")
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
@@ -579,11 +601,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 3"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c3id = reader("Id")
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
@@ -592,17 +615,20 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 4"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c4id = reader("Id")
                     Label72.Text = reader("roomno")
                     Label71.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
+
 #End Region
 #Region "Case 5 of Service requests"
             Case 5
@@ -614,11 +640,12 @@ Where RowNum = 3"
                 GroupBox26.Visible = False
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c1id = reader("Id")
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
@@ -627,11 +654,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c2id = reader("Id")
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
@@ -640,11 +668,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 3"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c3id = reader("Id")
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
@@ -653,11 +682,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 4"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c4id = reader("Id")
                     Label72.Text = reader("roomno")
                     Label71.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
@@ -666,11 +696,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 5"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c5id = reader("Id")
                     Label66.Text = reader("roomno")
                     Label65.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
@@ -688,11 +719,12 @@ Where RowNum = 3"
                 GroupBox26.Visible = True
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 1"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 1"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c1id = reader("Id")
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
@@ -701,11 +733,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 2"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c2id = reader("Id")
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
@@ -714,11 +747,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 3"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c3id = reader("Id")
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
@@ -727,11 +761,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 4"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c4id = reader("Id")
                     Label72.Text = reader("roomno")
                     Label71.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
@@ -740,11 +775,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 5"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c5id = reader("Id")
                     Label66.Text = reader("roomno")
                     Label65.Text = reader("name")
                     ComboBox4.SelectedItem = reader("status")
@@ -753,11 +789,12 @@ Where RowNum = 3"
                 End Try
 
                 Try
-                    Dim updatesql As String = "Select roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order) t2 Where RowNum = 2"
+                    Dim updatesql As String = "Select Id,roomno, name, status From (Select Row_Number() Over (Order By id) As RowNum, *From service_order where status <> 'Fulfilled') t2 Where RowNum = 6"
                     Dim cmd3 As New SqlCommand(updatesql, Conn)
                     Dim reader As SqlDataReader
                     reader = cmd3.ExecuteReader
                     reader.Read()
+                    c6id = reader("Id")
                     Label70.Text = reader("roomno")
                     Label69.Text = reader("name")
                     ComboBox6.SelectedItem = reader("status")
@@ -767,6 +804,8 @@ Where RowNum = 3"
 #End Region
         End Select
     End Sub
+
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
@@ -784,9 +823,23 @@ Where RowNum = 3"
     Private Sub cbUpdate()
 
     End Sub
+
     Dim citem As String
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         citem = ComboBox2.SelectedItem
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim sql As String = "update service_order set status=@status where Id= @id"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@status", citem)
+            cmd.Parameters.AddWithValue("@id", c1id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+
 
     End Sub
 
@@ -857,6 +910,60 @@ Where RowNum = 3"
         End Try
 
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label41.Text & "'),(select minguest from roomType where name='" & Label41.Text & "'),(select maxguest from roomType where name='" & Label41.Text & "'),@false)"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmdreq As New SqlCommand(sql, Conn)
+            cmdreq.Parameters.AddWithValue("false", False)
+            cmdreq.ExecuteNonQuery()
+            'cmdreq.Parameters.AddWithValue("@type", Label25.Text)
+            MessageBox.Show("Done")
+            DataGridView2.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label61.Text & "'),(select minguest from roomType where name='" & Label61.Text & "'),(select maxguest from roomType where name='" & Label61.Text & "'),@false)"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmdreq As New SqlCommand(sql, Conn)
+            cmdreq.Parameters.AddWithValue("false", False)
+            cmdreq.ExecuteNonQuery()
+            'cmdreq.Parameters.AddWithValue("@type", Label25.Text)
+            MessageBox.Show("Done")
+            DataGridView2.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
+        Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label51.Text & "'),(select minguest from roomType where name='" & Label51.Text & "'),(select maxguest from roomType where name='" & Label51.Text & "'),@false)"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmdreq As New SqlCommand(sql, Conn)
+            cmdreq.Parameters.AddWithValue("false", False)
+            cmdreq.ExecuteNonQuery()
+            'cmdreq.Parameters.AddWithValue("@type", Label25.Text)
+            MessageBox.Show("Done")
+            DataGridView2.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
 
 
 
@@ -986,6 +1093,7 @@ Where RowNum = 3"
             If (Conn.State.Equals(ConnectionState.Closed)) Then
                 Conn.Open()
             End If
+
             Dim sql1 As String = "select userid from reservation where roomno = @roomno and checkout is null"
             Dim cmd As New SqlCommand(sql1, Conn)
             Dim reader As SqlDataReader
@@ -1629,13 +1737,19 @@ Where RowNum = 3"
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         GroupBox41.Visible = True
+        GroupBox43.Visible = False
+        GroupBox45.Visible = False
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        GroupBox41.Visible = False
         GroupBox43.Visible = True
+        GroupBox45.Visible = False
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        GroupBox41.Visible = False
+        GroupBox43.Visible = False
         GroupBox45.Visible = True
     End Sub
 
@@ -1767,6 +1881,90 @@ Where RowNum = 3"
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
     End Sub
+
+    Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
+        citem = ComboBox5.SelectedItem
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim sql As String = "update service_order set status=@status where Id= @id"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@status", citem)
+            cmd.Parameters.AddWithValue("@id", c3id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
+    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
+        citem = ComboBox3.SelectedItem
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim sql As String = "update service_order set status=@status where Id= @id"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@status", citem)
+            cmd.Parameters.AddWithValue("@id", c2id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
+    Private Sub ComboBox7_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox7.SelectedIndexChanged
+        citem = ComboBox7.SelectedItem
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim sql As String = "update service_order set status=@status where Id= @id"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@status", citem)
+            cmd.Parameters.AddWithValue("@id", c4id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
+        citem = ComboBox4.SelectedItem
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim sql As String = "update service_order set status=@status where Id= @id and "
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@status", citem)
+            cmd.Parameters.AddWithValue("@id", c5id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
+    Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
+        citem = ComboBox6.SelectedItem
+        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
+        Dim sql As String = "update service_order set status=@status where Id= @id"
+        Dim Conn As New SqlConnection(str)
+        Try
+            Conn.Open()
+            Dim cmd As New SqlCommand(sql, Conn)
+            cmd.Parameters.AddWithValue("@status", citem)
+            cmd.Parameters.AddWithValue("@id", c6id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+
+
+
+
 
 
 

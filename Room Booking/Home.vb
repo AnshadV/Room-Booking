@@ -36,9 +36,9 @@ Public Class Home
         End Try
 
         Try
-            Dim sql1 As String = "select count(*) from service_order where roomno=@roomno"
+            Dim sql1 As String = "select count(*) from service_order where roomno=(select roomno from reservation where userid= @userid)"
             Dim cmdreq As New SqlCommand(sql1, Conn)
-            cmdreq.Parameters.AddWithValue("@roomno", roomno)
+            cmdreq.Parameters.AddWithValue("@userid", login_userid)
             count1 = cmdreq.ExecuteScalar()
             Console.WriteLine("room no: {0}", roomno)
             Console.WriteLine("count: {0}", count1)
@@ -46,13 +46,16 @@ Public Class Home
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
 
-        If (count1 > 0) Then
+        If (count1 > 1) Then
+            DataGridView2.BringToFront()
+            DataGridView2.Visible = True
+
             Try
 
 
-                Dim sql1 As String = "select name, status from service_order where roomno=@roomno"
+                Dim sql1 As String = "select name, status from service_order where roomno = (Select roomno from reservation where userid=@userid)"
                 Dim cmd As New SqlCommand(sql, Conn)
-                cmd.Parameters.AddWithValue("@roomno", roomno)
+                cmd.Parameters.AddWithValue("@userid", login_userid)
                 Dim adapter As New SqlDataAdapter(cmd)
 
                 Dim table As New DataTable
@@ -434,8 +437,6 @@ Public Class Home
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
         Dim ct = total.Last - 1
-        Console.WriteLine("Index at beginning: {0}", total)
-        Console.WriteLine("Index at beginning: {0}", ct)
         If ct = -1 Then
             names(0) = Label1.Text
             total(0) = Label2.Text
@@ -455,10 +456,18 @@ Public Class Home
         str(1) = Label3.Text
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
-        Dim ct = total.GetUpperBound(total.Last)
-        total(ct - 1) = Label3.Text
-        names(ct - 1) = Label4.Text
+        Dim ct = total.Last - 1
+        If ct = -1 Then
+            names(0) = Label4.Text
+            total(0) = Label3.Text
+            ct = 0
+        Else
+            names(ct - 1) = Label4.Text
+            total(ct - 1) = Label3.Text
+        End If
+        index = ct + 1
         calcTotal()
+        ListView1.Items.Remove(itm)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -468,9 +477,16 @@ Public Class Home
         str(1) = Label5.Text
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
-        Dim ct = total.GetUpperBound(total.Last)
-        total(ct - 1) = Label5.Text
-        names(ct - 1) = Label6.Text
+        Dim ct = total.Last - 1
+        If ct = -1 Then
+            names(0) = Label6.Text
+            total(0) = Label5.Text
+            ct = 0
+        Else
+            names(ct - 1) = Label6.Text
+            total(ct - 1) = Label5.Text
+        End If
+        index = ct + 1
         calcTotal()
 
     End Sub
@@ -483,9 +499,16 @@ Public Class Home
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
         total.Append(Label7.Text)
-        Dim ct = total.GetUpperBound(total.Last)
-        total(ct - 1) = Label7.Text
-        names(ct - 1) = Label8.Text
+        Dim ct = total.Last - 1
+        If ct = -1 Then
+            names(0) = Label8.Text
+            total(0) = Label7.Text
+            ct = 0
+        Else
+            names(ct - 1) = Label8.Text
+            total(ct - 1) = Label7.Text
+        End If
+        index = ct + 1
         calcTotal()
 
     End Sub
@@ -496,9 +519,16 @@ Public Class Home
         str(0) = Label10.Text
         str(1) = Label9.Text
         itm = New ListViewItem(str)
-        Dim ct = total.GetUpperBound(total.Last)
-        total(ct - 1) = Label9.Text
-        names(ct - 1) = Label10.Text
+        Dim ct = total.Last - 1
+        If ct = -1 Then
+            names(0) = Label10.Text
+            total(0) = Label9.Text
+            ct = 0
+        Else
+            names(ct - 1) = Label10.Text
+            total(ct - 1) = Label9.Text
+        End If
+        index = ct + 1
         calcTotal()
     End Sub
 
@@ -509,9 +539,16 @@ Public Class Home
         str(1) = Label11.Text
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
-        Dim ct = total.GetUpperBound(total.Last)
-        total(ct - 1) = Label11.Text
-        names(ct - 1) = Label12.Text
+        Dim ct = total.Last - 1
+        If ct = -1 Then
+            names(0) = Label12.Text
+            total(0) = Label11.Text
+            ct = 0
+        Else
+            names(ct - 1) = Label12.Text
+            total(ct - 1) = Label11.Text
+        End If
+        index = ct + 1
         calcTotal()
     End Sub
     Private Sub calcTotal()
@@ -541,8 +578,6 @@ Public Class Home
                 Dim sql1 As String = "select id from services where name = '" & names(i) & "'"
                 Dim cmd1 As New SqlCommand(sql1, Conn)
                 id = cmd1.ExecuteScalar()
-                Console.WriteLine(names(i))
-                Console.WriteLine("loop: {0}", i)
             Catch ex As Exception
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try
@@ -555,6 +590,13 @@ Public Class Home
             Catch ex As Exception
                 Console.WriteLine("Exception caught: {0}", ex)
             End Try
+
+            Erase total
+            Erase names
+            sum = 0
+            totalprice = 0
+            ReDim names(7)
+            ReDim total(7)
         Next
 
         Try
@@ -788,6 +830,8 @@ Public Class Home
     End Sub
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Database1DataSet1.service_order' table. You can move, or remove it, as needed.
+        Me.Service_orderTableAdapter.Fill(Me.Database1DataSet1.service_order)
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim isbooked As String
@@ -840,4 +884,23 @@ Public Class Home
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
 
     End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+
+
+
+
+    Private Sub FillByToolStripButton_Click_1(sender As Object, e As EventArgs)
+        Try
+            Me.Service_orderTableAdapter.FillBy(Me.Database1DataSet1.service_order, CType(login_userid, Integer))
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+
 End Class

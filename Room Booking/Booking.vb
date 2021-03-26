@@ -33,7 +33,7 @@ Public Class Booking
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sql As String = "insert into reservation(userid, roomno, ischeckedin, bookingtime) values(@userid,'" & roomno & "',@checkedin,@bookingtime)"
+        Dim sql As String = "insert into reservation(userid, roomno, ischeckedin, bookingtime, ispaid) values(@userid,'" & roomno & "',@checkedin,@bookingtime, @ispaid)"
         Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim theDate As DateTime = System.DateTime.Now
@@ -45,7 +45,25 @@ Public Class Booking
             Dim cmd As New SqlCommand(sql, Conn)
             cmd.Parameters.AddWithValue("@userid", login_userid)
             cmd.Parameters.AddWithValue("@checkedin", "false")
+            cmd.Parameters.AddWithValue("@ispaid", "false")
             cmd.Parameters.AddWithValue("@bookingtime", DateTime.Parse(theDate))
+            cmd.ExecuteNonQuery()
+            Me.Close()
+            Home.Show()
+        Catch ex As Exception
+            Console.WriteLine("Exception caught: {0}", ex)
+        End Try
+
+        Try
+            Dim sql2 As String = "insert into billing values(@userid, @item, @price)"
+            If (Conn.State.Equals(ConnectionState.Closed)) Then
+                Conn.Open()
+            End If
+            Dim cmd As New SqlCommand(sql2, Conn)
+            cmd.Parameters.AddWithValue("@userid", login_userid)
+            cmd.Parameters.AddWithValue("@item", "Room charges")
+            Console.WriteLine("Exception caught: {0}", TextBox5.Text)
+            cmd.Parameters.AddWithValue("@price", roomprice)
             cmd.ExecuteNonQuery()
             Me.Close()
             Home.Show()

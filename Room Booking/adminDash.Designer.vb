@@ -26,6 +26,8 @@ Partial Class adminDash
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -107,7 +109,6 @@ Partial Class adminDash
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
@@ -122,7 +123,6 @@ Partial Class adminDash
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label59 = New System.Windows.Forms.Label()
         Me.Label60 = New System.Windows.Forms.Label()
@@ -259,12 +259,11 @@ Partial Class adminDash
         Me.Label126 = New System.Windows.Forms.Label()
         Me.Label125 = New System.Windows.Forms.Label()
         Me.Label124 = New System.Windows.Forms.Label()
-        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.DotNetBarTabcontrol1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
@@ -327,7 +326,6 @@ Partial Class adminDash
         Me.GroupBox42.SuspendLayout()
         Me.GroupBox39.SuspendLayout()
         Me.GroupBox38.SuspendLayout()
-        Me.GroupBox20.SuspendLayout()
         Me.SuspendLayout()
         '
         'DotNetBarTabcontrol1
@@ -340,6 +338,7 @@ Partial Class adminDash
         Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage4)
         Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage5)
         Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage6)
+        Me.DotNetBarTabcontrol1.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DotNetBarTabcontrol1.ItemSize = New System.Drawing.Size(44, 136)
         Me.DotNetBarTabcontrol1.Location = New System.Drawing.Point(0, 0)
         Me.DotNetBarTabcontrol1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -359,6 +358,7 @@ Partial Class adminDash
         Me.TabPage1.Controls.Add(Me.GroupBox5)
         Me.TabPage1.Controls.Add(Me.GroupBox4)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(140, 4)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage1.Name = "TabPage1"
@@ -373,6 +373,7 @@ Partial Class adminDash
         Me.GroupBox9.Controls.Add(Me.Button2)
         Me.GroupBox9.Controls.Add(Me.Label9)
         Me.GroupBox9.Controls.Add(Me.TextBox1)
+        Me.GroupBox9.ForeColor = System.Drawing.Color.White
         Me.GroupBox9.Location = New System.Drawing.Point(21, 146)
         Me.GroupBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox9.Name = "GroupBox9"
@@ -397,12 +398,32 @@ Partial Class adminDash
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Visible = False
         '
+        'GroupBox20
+        '
+        Me.GroupBox20.Controls.Add(Me.Label37)
+        Me.GroupBox20.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(373, 128)
+        Me.GroupBox20.TabIndex = 4
+        Me.GroupBox20.TabStop = False
+        Me.GroupBox20.Visible = False
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(75, 45)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(180, 29)
+        Me.Label37.TabIndex = 0
+        Me.Label37.Text = "Room is Vacant"
+        '
         'Label74
         '
         Me.Label74.AutoSize = True
         Me.Label74.Location = New System.Drawing.Point(218, 90)
         Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(59, 17)
+        Me.Label74.Size = New System.Drawing.Size(55, 18)
         Me.Label74.TabIndex = 6
         Me.Label74.Text = "Label74"
         '
@@ -411,7 +432,7 @@ Partial Class adminDash
         Me.Label43.AutoSize = True
         Me.Label43.Location = New System.Drawing.Point(218, 55)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(59, 17)
+        Me.Label43.Size = New System.Drawing.Size(56, 18)
         Me.Label43.TabIndex = 5
         Me.Label43.Text = "Label43"
         '
@@ -420,7 +441,7 @@ Partial Class adminDash
         Me.Label42.AutoSize = True
         Me.Label42.Location = New System.Drawing.Point(218, 22)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(59, 17)
+        Me.Label42.Size = New System.Drawing.Size(57, 18)
         Me.Label42.TabIndex = 4
         Me.Label42.Text = "Label42"
         '
@@ -429,7 +450,7 @@ Partial Class adminDash
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(20, 90)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(42, 17)
+        Me.Label19.Size = New System.Drawing.Size(41, 18)
         Me.Label19.TabIndex = 2
         Me.Label19.Text = "Email"
         '
@@ -438,7 +459,7 @@ Partial Class adminDash
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(20, 55)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(49, 17)
+        Me.Label17.Size = New System.Drawing.Size(48, 18)
         Me.Label17.TabIndex = 1
         Me.Label17.Text = "Phone"
         '
@@ -447,25 +468,28 @@ Partial Class adminDash
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(20, 22)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(45, 17)
+        Me.Label16.Size = New System.Drawing.Size(44, 18)
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "Name"
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.Black
+        Me.Button2.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(274, 32)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(120, 35)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Search"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(21, 32)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 17)
+        Me.Label9.Size = New System.Drawing.Size(98, 18)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Room Number"
         '
@@ -473,7 +497,7 @@ Partial Class adminDash
         '
         Me.TextBox1.Location = New System.Drawing.Point(147, 32)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
         Me.TextBox1.TabIndex = 0
         '
         'GroupBox8
@@ -494,7 +518,7 @@ Partial Class adminDash
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(57, 54)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(59, 17)
+        Me.Label12.Size = New System.Drawing.Size(56, 18)
         Me.Label12.TabIndex = 7
         Me.Label12.Text = "Label12"
         '
@@ -503,7 +527,7 @@ Partial Class adminDash
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(57, 22)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(79, 17)
+        Me.Label13.Size = New System.Drawing.Size(78, 18)
         Me.Label13.TabIndex = 4
         Me.Label13.Text = "Occupancy"
         '
@@ -536,7 +560,7 @@ Partial Class adminDash
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(57, 54)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(59, 17)
+        Me.Label10.Size = New System.Drawing.Size(56, 18)
         Me.Label10.TabIndex = 7
         Me.Label10.Text = "Label10"
         '
@@ -545,7 +569,7 @@ Partial Class adminDash
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(57, 22)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(101, 17)
+        Me.Label11.Size = New System.Drawing.Size(97, 18)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Units Available"
         '
@@ -578,7 +602,7 @@ Partial Class adminDash
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(57, 54)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 17)
+        Me.Label5.Size = New System.Drawing.Size(48, 18)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Label5"
         '
@@ -587,7 +611,7 @@ Partial Class adminDash
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(57, 22)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 17)
+        Me.Label3.Size = New System.Drawing.Size(115, 18)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Check-outs today"
         '
@@ -620,7 +644,7 @@ Partial Class adminDash
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(57, 54)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 17)
+        Me.Label6.Size = New System.Drawing.Size(49, 18)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Label6"
         '
@@ -629,7 +653,7 @@ Partial Class adminDash
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(57, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 17)
+        Me.Label2.Size = New System.Drawing.Size(105, 18)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Check-ins today"
         '
@@ -662,7 +686,7 @@ Partial Class adminDash
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(57, 54)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 17)
+        Me.Label4.Size = New System.Drawing.Size(49, 18)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Label4"
         '
@@ -671,7 +695,7 @@ Partial Class adminDash
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(57, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 17)
+        Me.Label1.Size = New System.Drawing.Size(96, 18)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "New Bookings"
         '
@@ -723,26 +747,28 @@ Partial Class adminDash
         Me.GroupBox13.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox13.Size = New System.Drawing.Size(220, 158)
+        Me.GroupBox13.Size = New System.Drawing.Size(225, 158)
         Me.GroupBox13.TabIndex = 2
         Me.GroupBox13.TabStop = False
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(69, 92)
+        Me.Button5.BackColor = System.Drawing.Color.Black
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Location = New System.Drawing.Point(63, 85)
         Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(120, 35)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Submit"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Location = New System.Drawing.Point(17, 55)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(40, 17)
+        Me.Label21.Size = New System.Drawing.Size(39, 18)
         Me.Label21.TabIndex = 3
         Me.Label21.Text = "Price"
         '
@@ -751,7 +777,7 @@ Partial Class adminDash
         Me.Label20.AutoSize = True
         Me.Label20.Location = New System.Drawing.Point(17, 27)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(45, 17)
+        Me.Label20.Size = New System.Drawing.Size(44, 18)
         Me.Label20.TabIndex = 2
         Me.Label20.Text = "Name"
         '
@@ -760,7 +786,7 @@ Partial Class adminDash
         Me.TextBox5.Location = New System.Drawing.Point(83, 55)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(100, 26)
         Me.TextBox5.TabIndex = 1
         '
         'TextBox4
@@ -768,7 +794,7 @@ Partial Class adminDash
         Me.TextBox4.Location = New System.Drawing.Point(83, 27)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(100, 26)
         Me.TextBox4.TabIndex = 0
         '
         'GroupBox2
@@ -809,7 +835,7 @@ Partial Class adminDash
         Me.GroupBox32.Controls.Add(Me.Button25)
         Me.GroupBox32.Controls.Add(Me.TextBox8)
         Me.GroupBox32.Controls.Add(Me.Label32)
-        Me.GroupBox32.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox32.Font = New System.Drawing.Font("Corbel", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox32.Location = New System.Drawing.Point(17, 318)
         Me.GroupBox32.Name = "GroupBox32"
         Me.GroupBox32.Size = New System.Drawing.Size(950, 293)
@@ -840,27 +866,27 @@ Partial Class adminDash
         'Label100
         '
         Me.Label100.AutoSize = True
-        Me.Label100.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label100.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label100.Location = New System.Drawing.Point(6, 124)
         Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(99, 17)
+        Me.Label100.Size = New System.Drawing.Size(98, 18)
         Me.Label100.TabIndex = 24
         Me.Label100.Text = "Room Number"
         '
         'Label90
         '
         Me.Label90.AutoSize = True
-        Me.Label90.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label90.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label90.Location = New System.Drawing.Point(122, 124)
         Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(59, 17)
+        Me.Label90.Size = New System.Drawing.Size(57, 18)
         Me.Label90.TabIndex = 25
         Me.Label90.Text = "Label90"
         '
         'Button24
         '
-        Me.Button24.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button24.Location = New System.Drawing.Point(213, 178)
+        Me.Button24.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button24.Location = New System.Drawing.Point(213, 173)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(146, 31)
         Me.Button24.TabIndex = 4
@@ -870,89 +896,89 @@ Partial Class adminDash
         'Label108
         '
         Me.Label108.AutoSize = True
-        Me.Label108.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label108.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label108.Location = New System.Drawing.Point(8, 32)
         Me.Label108.Name = "Label108"
-        Me.Label108.Size = New System.Drawing.Size(45, 17)
+        Me.Label108.Size = New System.Drawing.Size(44, 18)
         Me.Label108.TabIndex = 16
         Me.Label108.Text = "Name"
         '
         'Label101
         '
         Me.Label101.AutoSize = True
-        Me.Label101.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label101.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label101.Location = New System.Drawing.Point(120, 154)
         Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(67, 17)
+        Me.Label101.Size = New System.Drawing.Size(63, 18)
         Me.Label101.TabIndex = 23
         Me.Label101.Text = "Label101"
         '
         'Label107
         '
         Me.Label107.AutoSize = True
-        Me.Label107.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label107.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label107.Location = New System.Drawing.Point(122, 32)
         Me.Label107.Name = "Label107"
-        Me.Label107.Size = New System.Drawing.Size(67, 17)
+        Me.Label107.Size = New System.Drawing.Size(62, 18)
         Me.Label107.TabIndex = 17
         Me.Label107.Text = "Label107"
         '
         'Label102
         '
         Me.Label102.AutoSize = True
-        Me.Label102.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label102.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label102.Location = New System.Drawing.Point(6, 154)
         Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(40, 17)
+        Me.Label102.Size = New System.Drawing.Size(39, 18)
         Me.Label102.TabIndex = 22
         Me.Label102.Text = "Price"
         '
         'Label106
         '
         Me.Label106.AutoSize = True
-        Me.Label106.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label106.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label106.Location = New System.Drawing.Point(8, 62)
         Me.Label106.Name = "Label106"
-        Me.Label106.Size = New System.Drawing.Size(49, 17)
+        Me.Label106.Size = New System.Drawing.Size(48, 18)
         Me.Label106.TabIndex = 18
         Me.Label106.Text = "Phone"
         '
         'Label103
         '
         Me.Label103.AutoSize = True
-        Me.Label103.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label103.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label103.Location = New System.Drawing.Point(122, 94)
         Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(67, 17)
+        Me.Label103.Size = New System.Drawing.Size(63, 18)
         Me.Label103.TabIndex = 21
         Me.Label103.Text = "Label103"
         '
         'Label105
         '
         Me.Label105.AutoSize = True
-        Me.Label105.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label105.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label105.Location = New System.Drawing.Point(122, 62)
         Me.Label105.Name = "Label105"
-        Me.Label105.Size = New System.Drawing.Size(67, 17)
+        Me.Label105.Size = New System.Drawing.Size(63, 18)
         Me.Label105.TabIndex = 19
         Me.Label105.Text = "Label105"
         '
         'Label104
         '
         Me.Label104.AutoSize = True
-        Me.Label104.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label104.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label104.Location = New System.Drawing.Point(8, 94)
         Me.Label104.Name = "Label104"
-        Me.Label104.Size = New System.Drawing.Size(42, 17)
+        Me.Label104.Size = New System.Drawing.Size(41, 18)
         Me.Label104.TabIndex = 20
         Me.Label104.Text = "Email"
         '
         'Button25
         '
-        Me.Button25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button25.Location = New System.Drawing.Point(256, 36)
+        Me.Button25.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.Location = New System.Drawing.Point(256, 30)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(96, 23)
+        Me.Button25.Size = New System.Drawing.Size(120, 35)
         Me.Button25.TabIndex = 2
         Me.Button25.Text = "Proceed"
         Me.Button25.UseVisualStyleBackColor = True
@@ -968,10 +994,10 @@ Partial Class adminDash
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.Location = New System.Drawing.Point(6, 39)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(99, 17)
+        Me.Label32.Size = New System.Drawing.Size(98, 18)
         Me.Label32.TabIndex = 0
         Me.Label32.Text = "Room Number"
         '
@@ -981,7 +1007,7 @@ Partial Class adminDash
         Me.GroupBox31.Controls.Add(Me.Button22)
         Me.GroupBox31.Controls.Add(Me.TextBox7)
         Me.GroupBox31.Controls.Add(Me.Label31)
-        Me.GroupBox31.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox31.Font = New System.Drawing.Font("Corbel", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox31.Location = New System.Drawing.Point(17, 19)
         Me.GroupBox31.Name = "GroupBox31"
         Me.GroupBox31.Size = New System.Drawing.Size(950, 293)
@@ -1012,26 +1038,26 @@ Partial Class adminDash
         'Label95
         '
         Me.Label95.AutoSize = True
-        Me.Label95.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label95.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label95.Location = New System.Drawing.Point(6, 81)
         Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(42, 17)
+        Me.Label95.Size = New System.Drawing.Size(41, 18)
         Me.Label95.TabIndex = 10
         Me.Label95.Text = "Email"
         '
         'Label98
         '
         Me.Label98.AutoSize = True
-        Me.Label98.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label98.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label98.Location = New System.Drawing.Point(120, 111)
         Me.Label98.Name = "Label98"
-        Me.Label98.Size = New System.Drawing.Size(59, 17)
+        Me.Label98.Size = New System.Drawing.Size(57, 18)
         Me.Label98.TabIndex = 15
         Me.Label98.Text = "Label98"
         '
         'Button23
         '
-        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button23.Location = New System.Drawing.Point(214, 174)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(146, 31)
@@ -1042,89 +1068,89 @@ Partial Class adminDash
         'Label99
         '
         Me.Label99.AutoSize = True
-        Me.Label99.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label99.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label99.Location = New System.Drawing.Point(4, 111)
         Me.Label99.Name = "Label99"
-        Me.Label99.Size = New System.Drawing.Size(99, 17)
+        Me.Label99.Size = New System.Drawing.Size(98, 18)
         Me.Label99.TabIndex = 14
         Me.Label99.Text = "Room Number"
         '
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.Location = New System.Drawing.Point(6, 19)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(45, 17)
+        Me.Label52.Size = New System.Drawing.Size(44, 18)
         Me.Label52.TabIndex = 5
         Me.Label52.Text = "Name"
         '
         'Label96
         '
         Me.Label96.AutoSize = True
-        Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label96.Location = New System.Drawing.Point(118, 141)
         Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(59, 17)
+        Me.Label96.Size = New System.Drawing.Size(57, 18)
         Me.Label96.TabIndex = 13
         Me.Label96.Text = "Label96"
         '
         'Label91
         '
         Me.Label91.AutoSize = True
-        Me.Label91.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label91.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label91.Location = New System.Drawing.Point(120, 19)
         Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(59, 17)
+        Me.Label91.Size = New System.Drawing.Size(56, 18)
         Me.Label91.TabIndex = 7
         Me.Label91.Text = "Label91"
         '
         'Label97
         '
         Me.Label97.AutoSize = True
-        Me.Label97.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label97.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label97.Location = New System.Drawing.Point(4, 141)
         Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(40, 17)
+        Me.Label97.Size = New System.Drawing.Size(39, 18)
         Me.Label97.TabIndex = 12
         Me.Label97.Text = "Price"
         '
         'Label93
         '
         Me.Label93.AutoSize = True
-        Me.Label93.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label93.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label93.Location = New System.Drawing.Point(6, 49)
         Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(49, 17)
+        Me.Label93.Size = New System.Drawing.Size(48, 18)
         Me.Label93.TabIndex = 8
         Me.Label93.Text = "Phone"
         '
         'Label94
         '
         Me.Label94.AutoSize = True
-        Me.Label94.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label94.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label94.Location = New System.Drawing.Point(120, 81)
         Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(59, 17)
+        Me.Label94.Size = New System.Drawing.Size(57, 18)
         Me.Label94.TabIndex = 11
         Me.Label94.Text = "Label94"
         '
         'Label92
         '
         Me.Label92.AutoSize = True
-        Me.Label92.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label92.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label92.Location = New System.Drawing.Point(120, 49)
         Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(59, 17)
+        Me.Label92.Size = New System.Drawing.Size(57, 18)
         Me.Label92.TabIndex = 9
         Me.Label92.Text = "Label92"
         '
         'Button22
         '
-        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button22.Location = New System.Drawing.Point(256, 36)
+        Me.Button22.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.Location = New System.Drawing.Point(256, 30)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(96, 23)
+        Me.Button22.Size = New System.Drawing.Size(120, 35)
         Me.Button22.TabIndex = 2
         Me.Button22.Text = "Proceed"
         Me.Button22.UseVisualStyleBackColor = True
@@ -1166,7 +1192,6 @@ Partial Class adminDash
         Me.GroupBox19.Controls.Add(Me.Label44)
         Me.GroupBox19.Controls.Add(Me.Label45)
         Me.GroupBox19.Controls.Add(Me.Label46)
-        Me.GroupBox19.Controls.Add(Me.Label47)
         Me.GroupBox19.Controls.Add(Me.Label48)
         Me.GroupBox19.Controls.Add(Me.Label49)
         Me.GroupBox19.Controls.Add(Me.Label50)
@@ -1219,7 +1244,7 @@ Partial Class adminDash
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(7, 14)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(147, 17)
+        Me.Label7.Size = New System.Drawing.Size(137, 18)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "UNITS OF THIS TYPE"
         '
@@ -1228,7 +1253,7 @@ Partial Class adminDash
         Me.Label44.AutoSize = True
         Me.Label44.Location = New System.Drawing.Point(249, 101)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(59, 17)
+        Me.Label44.Size = New System.Drawing.Size(57, 18)
         Me.Label44.TabIndex = 10
         Me.Label44.Text = "Label44"
         '
@@ -1237,7 +1262,7 @@ Partial Class adminDash
         Me.Label45.AutoSize = True
         Me.Label45.Location = New System.Drawing.Point(249, 74)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(59, 17)
+        Me.Label45.Size = New System.Drawing.Size(56, 18)
         Me.Label45.TabIndex = 9
         Me.Label45.Text = "Label45"
         '
@@ -1246,25 +1271,16 @@ Partial Class adminDash
         Me.Label46.AutoSize = True
         Me.Label46.Location = New System.Drawing.Point(249, 48)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(59, 17)
+        Me.Label46.Size = New System.Drawing.Size(57, 18)
         Me.Label46.TabIndex = 8
         Me.Label46.Text = "Label46"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(249, 22)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(59, 17)
-        Me.Label47.TabIndex = 7
-        Me.Label47.Text = "Label47"
         '
         'Label48
         '
         Me.Label48.AutoSize = True
         Me.Label48.Location = New System.Drawing.Point(180, 101)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(59, 17)
+        Me.Label48.Size = New System.Drawing.Size(57, 18)
         Me.Label48.TabIndex = 6
         Me.Label48.Text = "Label48"
         '
@@ -1273,7 +1289,7 @@ Partial Class adminDash
         Me.Label49.AutoSize = True
         Me.Label49.Location = New System.Drawing.Point(180, 74)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(59, 17)
+        Me.Label49.Size = New System.Drawing.Size(57, 18)
         Me.Label49.TabIndex = 5
         Me.Label49.Text = "Label49"
         '
@@ -1282,7 +1298,7 @@ Partial Class adminDash
         Me.Label50.AutoSize = True
         Me.Label50.Location = New System.Drawing.Point(180, 48)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(59, 17)
+        Me.Label50.Size = New System.Drawing.Size(56, 18)
         Me.Label50.TabIndex = 4
         Me.Label50.Text = "Label50"
         '
@@ -1291,7 +1307,7 @@ Partial Class adminDash
         Me.Label51.AutoSize = True
         Me.Label51.Location = New System.Drawing.Point(180, 22)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(59, 17)
+        Me.Label51.Size = New System.Drawing.Size(55, 18)
         Me.Label51.TabIndex = 3
         Me.Label51.Text = "Label51"
         '
@@ -1316,7 +1332,6 @@ Partial Class adminDash
         Me.GroupBox14.Size = New System.Drawing.Size(1011, 551)
         Me.GroupBox14.TabIndex = 4
         Me.GroupBox14.TabStop = False
-        Me.GroupBox14.Text = "GroupBox14"
         '
         'GroupBox21
         '
@@ -1324,7 +1339,6 @@ Partial Class adminDash
         Me.GroupBox21.Controls.Add(Me.Label54)
         Me.GroupBox21.Controls.Add(Me.Label55)
         Me.GroupBox21.Controls.Add(Me.Label56)
-        Me.GroupBox21.Controls.Add(Me.Label57)
         Me.GroupBox21.Controls.Add(Me.Label58)
         Me.GroupBox21.Controls.Add(Me.Label59)
         Me.GroupBox21.Controls.Add(Me.Label60)
@@ -1376,7 +1390,7 @@ Partial Class adminDash
         Me.Label53.AutoSize = True
         Me.Label53.Location = New System.Drawing.Point(7, 14)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(147, 17)
+        Me.Label53.Size = New System.Drawing.Size(137, 18)
         Me.Label53.TabIndex = 0
         Me.Label53.Text = "UNITS OF THIS TYPE"
         '
@@ -1385,7 +1399,7 @@ Partial Class adminDash
         Me.Label54.AutoSize = True
         Me.Label54.Location = New System.Drawing.Point(249, 101)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(59, 17)
+        Me.Label54.Size = New System.Drawing.Size(56, 18)
         Me.Label54.TabIndex = 10
         Me.Label54.Text = "Label54"
         '
@@ -1394,7 +1408,7 @@ Partial Class adminDash
         Me.Label55.AutoSize = True
         Me.Label55.Location = New System.Drawing.Point(249, 74)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(59, 17)
+        Me.Label55.Size = New System.Drawing.Size(55, 18)
         Me.Label55.TabIndex = 9
         Me.Label55.Text = "Label55"
         '
@@ -1403,25 +1417,16 @@ Partial Class adminDash
         Me.Label56.AutoSize = True
         Me.Label56.Location = New System.Drawing.Point(249, 48)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(59, 17)
+        Me.Label56.Size = New System.Drawing.Size(56, 18)
         Me.Label56.TabIndex = 8
         Me.Label56.Text = "Label56"
-        '
-        'Label57
-        '
-        Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(249, 22)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(59, 17)
-        Me.Label57.TabIndex = 7
-        Me.Label57.Text = "Label57"
         '
         'Label58
         '
         Me.Label58.AutoSize = True
         Me.Label58.Location = New System.Drawing.Point(180, 101)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(59, 17)
+        Me.Label58.Size = New System.Drawing.Size(56, 18)
         Me.Label58.TabIndex = 6
         Me.Label58.Text = "Label58"
         '
@@ -1430,7 +1435,7 @@ Partial Class adminDash
         Me.Label59.AutoSize = True
         Me.Label59.Location = New System.Drawing.Point(180, 74)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(59, 17)
+        Me.Label59.Size = New System.Drawing.Size(56, 18)
         Me.Label59.TabIndex = 5
         Me.Label59.Text = "Label59"
         '
@@ -1439,7 +1444,7 @@ Partial Class adminDash
         Me.Label60.AutoSize = True
         Me.Label60.Location = New System.Drawing.Point(180, 48)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(59, 17)
+        Me.Label60.Size = New System.Drawing.Size(57, 18)
         Me.Label60.TabIndex = 4
         Me.Label60.Text = "Label60"
         '
@@ -1448,7 +1453,7 @@ Partial Class adminDash
         Me.Label61.AutoSize = True
         Me.Label61.Location = New System.Drawing.Point(180, 22)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(59, 17)
+        Me.Label61.Size = New System.Drawing.Size(56, 18)
         Me.Label61.TabIndex = 3
         Me.Label61.Text = "Label61"
         '
@@ -1518,7 +1523,7 @@ Partial Class adminDash
         Me.Label33.AutoSize = True
         Me.Label33.Location = New System.Drawing.Point(7, 14)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(147, 17)
+        Me.Label33.Size = New System.Drawing.Size(137, 18)
         Me.Label33.TabIndex = 0
         Me.Label33.Text = "UNITS OF THIS TYPE"
         '
@@ -1527,7 +1532,7 @@ Partial Class adminDash
         Me.Label34.AutoSize = True
         Me.Label34.Location = New System.Drawing.Point(249, 101)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(59, 17)
+        Me.Label34.Size = New System.Drawing.Size(56, 18)
         Me.Label34.TabIndex = 10
         Me.Label34.Text = "Label34"
         '
@@ -1536,7 +1541,7 @@ Partial Class adminDash
         Me.Label35.AutoSize = True
         Me.Label35.Location = New System.Drawing.Point(249, 74)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(59, 17)
+        Me.Label35.Size = New System.Drawing.Size(55, 18)
         Me.Label35.TabIndex = 9
         Me.Label35.Text = "Label35"
         '
@@ -1545,7 +1550,7 @@ Partial Class adminDash
         Me.Label36.AutoSize = True
         Me.Label36.Location = New System.Drawing.Point(249, 48)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(59, 17)
+        Me.Label36.Size = New System.Drawing.Size(56, 18)
         Me.Label36.TabIndex = 8
         Me.Label36.Text = "Label36"
         '
@@ -1554,7 +1559,7 @@ Partial Class adminDash
         Me.Label38.AutoSize = True
         Me.Label38.Location = New System.Drawing.Point(180, 101)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(59, 17)
+        Me.Label38.Size = New System.Drawing.Size(56, 18)
         Me.Label38.TabIndex = 6
         Me.Label38.Text = "Label38"
         '
@@ -1563,7 +1568,7 @@ Partial Class adminDash
         Me.Label39.AutoSize = True
         Me.Label39.Location = New System.Drawing.Point(180, 74)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(59, 17)
+        Me.Label39.Size = New System.Drawing.Size(56, 18)
         Me.Label39.TabIndex = 5
         Me.Label39.Text = "Label39"
         '
@@ -1572,7 +1577,7 @@ Partial Class adminDash
         Me.Label40.AutoSize = True
         Me.Label40.Location = New System.Drawing.Point(180, 48)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(59, 17)
+        Me.Label40.Size = New System.Drawing.Size(57, 18)
         Me.Label40.TabIndex = 4
         Me.Label40.Text = "Label40"
         '
@@ -1581,7 +1586,7 @@ Partial Class adminDash
         Me.Label41.AutoSize = True
         Me.Label41.Location = New System.Drawing.Point(180, 22)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(59, 17)
+        Me.Label41.Size = New System.Drawing.Size(56, 18)
         Me.Label41.TabIndex = 3
         Me.Label41.Text = "Label41"
         '
@@ -1631,7 +1636,7 @@ Partial Class adminDash
         Me.Label30.AutoSize = True
         Me.Label30.Location = New System.Drawing.Point(7, 15)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(147, 17)
+        Me.Label30.Size = New System.Drawing.Size(137, 18)
         Me.Label30.TabIndex = 0
         Me.Label30.Text = "UNITS OF THIS TYPE"
         '
@@ -1663,7 +1668,7 @@ Partial Class adminDash
         Me.Label28.AutoSize = True
         Me.Label28.Location = New System.Drawing.Point(229, 97)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(59, 17)
+        Me.Label28.Size = New System.Drawing.Size(57, 18)
         Me.Label28.TabIndex = 9
         Me.Label28.Text = "Label28"
         '
@@ -1672,7 +1677,7 @@ Partial Class adminDash
         Me.Label27.AutoSize = True
         Me.Label27.Location = New System.Drawing.Point(269, 71)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(59, 17)
+        Me.Label27.Size = New System.Drawing.Size(55, 18)
         Me.Label27.TabIndex = 8
         Me.Label27.Text = "Label27"
         '
@@ -1681,7 +1686,7 @@ Partial Class adminDash
         Me.Label26.AutoSize = True
         Me.Label26.Location = New System.Drawing.Point(315, 46)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(59, 17)
+        Me.Label26.Size = New System.Drawing.Size(57, 18)
         Me.Label26.TabIndex = 7
         Me.Label26.Text = "Label26"
         '
@@ -1690,7 +1695,7 @@ Partial Class adminDash
         Me.Label25.AutoSize = True
         Me.Label25.Location = New System.Drawing.Point(184, 22)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(59, 17)
+        Me.Label25.Size = New System.Drawing.Size(56, 18)
         Me.Label25.TabIndex = 6
         Me.Label25.Text = "Label25"
         '
@@ -1699,7 +1704,7 @@ Partial Class adminDash
         Me.Label24.AutoSize = True
         Me.Label24.Location = New System.Drawing.Point(184, 97)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(44, 17)
+        Me.Label24.Size = New System.Drawing.Size(43, 18)
         Me.Label24.TabIndex = 5
         Me.Label24.Text = "Price:"
         '
@@ -1708,7 +1713,7 @@ Partial Class adminDash
         Me.Label23.AutoSize = True
         Me.Label23.Location = New System.Drawing.Point(184, 71)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(84, 17)
+        Me.Label23.Size = New System.Drawing.Size(84, 18)
         Me.Label23.TabIndex = 4
         Me.Label23.Text = "Object type:"
         '
@@ -1717,7 +1722,7 @@ Partial Class adminDash
         Me.Label22.AutoSize = True
         Me.Label22.Location = New System.Drawing.Point(184, 46)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(124, 17)
+        Me.Label22.Size = New System.Drawing.Size(121, 18)
         Me.Label22.TabIndex = 3
         Me.Label22.Text = "Number of guests:"
         '
@@ -1760,7 +1765,7 @@ Partial Class adminDash
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(13, 62)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(835, 17)
+        Me.Label15.Size = New System.Drawing.Size(800, 18)
         Me.Label15.TabIndex = 4
         Me.Label15.Text = "The room type includes information as to the number of beds, price and more. One " &
     "or more units can be added for each room type."
@@ -1781,7 +1786,7 @@ Partial Class adminDash
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(11, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(83, 17)
+        Me.Label14.Size = New System.Drawing.Size(81, 18)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Room types"
         '
@@ -1837,10 +1842,11 @@ Partial Class adminDash
         'ComboBox7
         '
         Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"Request Recieved", "Processed", "Fulfilled"})
         Me.ComboBox7.Location = New System.Drawing.Point(267, 15)
         Me.ComboBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox7.Size = New System.Drawing.Size(121, 26)
         Me.ComboBox7.TabIndex = 2
         '
         'Label71
@@ -1848,7 +1854,7 @@ Partial Class adminDash
         Me.Label71.AutoSize = True
         Me.Label71.Location = New System.Drawing.Point(141, 22)
         Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(59, 17)
+        Me.Label71.Size = New System.Drawing.Size(54, 18)
         Me.Label71.TabIndex = 1
         Me.Label71.Text = "Label71"
         '
@@ -1857,7 +1863,7 @@ Partial Class adminDash
         Me.Label72.AutoSize = True
         Me.Label72.Location = New System.Drawing.Point(11, 22)
         Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(59, 17)
+        Me.Label72.Size = New System.Drawing.Size(55, 18)
         Me.Label72.TabIndex = 0
         Me.Label72.Text = "Label72"
         '
@@ -1877,10 +1883,11 @@ Partial Class adminDash
         'ComboBox6
         '
         Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"Request Recieved", "Processed", "Fulfilled"})
         Me.ComboBox6.Location = New System.Drawing.Point(267, 15)
         Me.ComboBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox6.Size = New System.Drawing.Size(121, 26)
         Me.ComboBox6.TabIndex = 2
         '
         'Label69
@@ -1888,7 +1895,7 @@ Partial Class adminDash
         Me.Label69.AutoSize = True
         Me.Label69.Location = New System.Drawing.Point(141, 22)
         Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(59, 17)
+        Me.Label69.Size = New System.Drawing.Size(57, 18)
         Me.Label69.TabIndex = 1
         Me.Label69.Text = "Label69"
         '
@@ -1897,7 +1904,7 @@ Partial Class adminDash
         Me.Label70.AutoSize = True
         Me.Label70.Location = New System.Drawing.Point(11, 22)
         Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(59, 17)
+        Me.Label70.Size = New System.Drawing.Size(55, 18)
         Me.Label70.TabIndex = 0
         Me.Label70.Text = "Label70"
         '
@@ -1917,10 +1924,11 @@ Partial Class adminDash
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Request Recieved", "Processed", "Fulfilled"})
         Me.ComboBox4.Location = New System.Drawing.Point(267, 15)
         Me.ComboBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 26)
         Me.ComboBox4.TabIndex = 2
         '
         'Label65
@@ -1928,7 +1936,7 @@ Partial Class adminDash
         Me.Label65.AutoSize = True
         Me.Label65.Location = New System.Drawing.Point(141, 22)
         Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(59, 17)
+        Me.Label65.Size = New System.Drawing.Size(56, 18)
         Me.Label65.TabIndex = 1
         Me.Label65.Text = "Label65"
         '
@@ -1937,7 +1945,7 @@ Partial Class adminDash
         Me.Label66.AutoSize = True
         Me.Label66.Location = New System.Drawing.Point(11, 22)
         Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(59, 17)
+        Me.Label66.Size = New System.Drawing.Size(57, 18)
         Me.Label66.TabIndex = 0
         Me.Label66.Text = "Label66"
         '
@@ -1957,10 +1965,11 @@ Partial Class adminDash
         'ComboBox5
         '
         Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"Request Recieved", "Processed", "Fulfilled"})
         Me.ComboBox5.Location = New System.Drawing.Point(267, 15)
         Me.ComboBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox5.Size = New System.Drawing.Size(121, 26)
         Me.ComboBox5.TabIndex = 2
         '
         'Label67
@@ -1968,7 +1977,7 @@ Partial Class adminDash
         Me.Label67.AutoSize = True
         Me.Label67.Location = New System.Drawing.Point(141, 22)
         Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(59, 17)
+        Me.Label67.Size = New System.Drawing.Size(54, 18)
         Me.Label67.TabIndex = 1
         Me.Label67.Text = "Label67"
         '
@@ -1977,7 +1986,7 @@ Partial Class adminDash
         Me.Label68.AutoSize = True
         Me.Label68.Location = New System.Drawing.Point(11, 22)
         Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(59, 17)
+        Me.Label68.Size = New System.Drawing.Size(57, 18)
         Me.Label68.TabIndex = 0
         Me.Label68.Text = "Label68"
         '
@@ -1997,10 +2006,11 @@ Partial Class adminDash
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Request Recieved", "Processed", "Fulfilled"})
         Me.ComboBox3.Location = New System.Drawing.Point(267, 15)
         Me.ComboBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 26)
         Me.ComboBox3.TabIndex = 2
         '
         'Label63
@@ -2008,7 +2018,7 @@ Partial Class adminDash
         Me.Label63.AutoSize = True
         Me.Label63.Location = New System.Drawing.Point(141, 22)
         Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(59, 17)
+        Me.Label63.Size = New System.Drawing.Size(56, 18)
         Me.Label63.TabIndex = 1
         Me.Label63.Text = "Label63"
         '
@@ -2017,7 +2027,7 @@ Partial Class adminDash
         Me.Label64.AutoSize = True
         Me.Label64.Location = New System.Drawing.Point(11, 22)
         Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(59, 17)
+        Me.Label64.Size = New System.Drawing.Size(57, 18)
         Me.Label64.TabIndex = 0
         Me.Label64.Text = "Label64"
         '
@@ -2041,7 +2051,7 @@ Partial Class adminDash
         Me.ComboBox2.Location = New System.Drawing.Point(267, 15)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 26)
         Me.ComboBox2.TabIndex = 2
         '
         'Label62
@@ -2049,7 +2059,7 @@ Partial Class adminDash
         Me.Label62.AutoSize = True
         Me.Label62.Location = New System.Drawing.Point(141, 22)
         Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(59, 17)
+        Me.Label62.Size = New System.Drawing.Size(57, 18)
         Me.Label62.TabIndex = 1
         Me.Label62.Text = "Label62"
         '
@@ -2058,7 +2068,7 @@ Partial Class adminDash
         Me.Label29.AutoSize = True
         Me.Label29.Location = New System.Drawing.Point(11, 22)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(59, 17)
+        Me.Label29.Size = New System.Drawing.Size(57, 18)
         Me.Label29.TabIndex = 0
         Me.Label29.Text = "Label29"
         '
@@ -2117,7 +2127,7 @@ Partial Class adminDash
         '
         Me.TextBox9.Location = New System.Drawing.Point(155, 106)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox9.Size = New System.Drawing.Size(100, 26)
         Me.TextBox9.TabIndex = 5
         '
         'Label123
@@ -2125,7 +2135,7 @@ Partial Class adminDash
         Me.Label123.AutoSize = True
         Me.Label123.Location = New System.Drawing.Point(7, 106)
         Me.Label123.Name = "Label123"
-        Me.Label123.Size = New System.Drawing.Size(94, 17)
+        Me.Label123.Size = New System.Drawing.Size(91, 18)
         Me.Label123.TabIndex = 4
         Me.Label123.Text = "This Payment"
         '
@@ -2134,7 +2144,7 @@ Partial Class adminDash
         Me.Label122.AutoSize = True
         Me.Label122.Location = New System.Drawing.Point(152, 63)
         Me.Label122.Name = "Label122"
-        Me.Label122.Size = New System.Drawing.Size(67, 17)
+        Me.Label122.Size = New System.Drawing.Size(63, 18)
         Me.Label122.TabIndex = 3
         Me.Label122.Text = "Label122"
         '
@@ -2143,7 +2153,7 @@ Partial Class adminDash
         Me.Label121.AutoSize = True
         Me.Label121.Location = New System.Drawing.Point(7, 64)
         Me.Label121.Name = "Label121"
-        Me.Label121.Size = New System.Drawing.Size(89, 17)
+        Me.Label121.Size = New System.Drawing.Size(84, 18)
         Me.Label121.TabIndex = 2
         Me.Label121.Text = "Balance Due"
         '
@@ -2152,7 +2162,7 @@ Partial Class adminDash
         Me.Label120.AutoSize = True
         Me.Label120.Location = New System.Drawing.Point(152, 22)
         Me.Label120.Name = "Label120"
-        Me.Label120.Size = New System.Drawing.Size(67, 17)
+        Me.Label120.Size = New System.Drawing.Size(64, 18)
         Me.Label120.TabIndex = 1
         Me.Label120.Text = "Label120"
         '
@@ -2161,7 +2171,7 @@ Partial Class adminDash
         Me.Label119.AutoSize = True
         Me.Label119.Location = New System.Drawing.Point(7, 22)
         Me.Label119.Name = "Label119"
-        Me.Label119.Size = New System.Drawing.Size(90, 17)
+        Me.Label119.Size = New System.Drawing.Size(84, 18)
         Me.Label119.TabIndex = 0
         Me.Label119.Text = "Total Charge"
         '
@@ -2182,7 +2192,7 @@ Partial Class adminDash
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Location = New System.Drawing.Point(7, 106)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(51, 21)
+        Me.RadioButton4.Size = New System.Drawing.Size(52, 22)
         Me.RadioButton4.TabIndex = 3
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "UPI"
@@ -2193,7 +2203,7 @@ Partial Class adminDash
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Location = New System.Drawing.Point(7, 78)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(68, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(67, 22)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Check"
@@ -2204,7 +2214,7 @@ Partial Class adminDash
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(7, 50)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(59, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(58, 22)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Card"
@@ -2215,7 +2225,7 @@ Partial Class adminDash
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(7, 22)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(61, 21)
+        Me.RadioButton1.Size = New System.Drawing.Size(59, 22)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Cash"
@@ -2264,7 +2274,7 @@ Partial Class adminDash
         Me.Label117.AutoSize = True
         Me.Label117.Location = New System.Drawing.Point(205, 151)
         Me.Label117.Name = "Label117"
-        Me.Label117.Size = New System.Drawing.Size(67, 17)
+        Me.Label117.Size = New System.Drawing.Size(61, 18)
         Me.Label117.TabIndex = 8
         Me.Label117.Text = "Label117"
         '
@@ -2273,7 +2283,7 @@ Partial Class adminDash
         Me.Label116.AutoSize = True
         Me.Label116.Location = New System.Drawing.Point(205, 99)
         Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(67, 17)
+        Me.Label116.Size = New System.Drawing.Size(63, 18)
         Me.Label116.TabIndex = 7
         Me.Label116.Text = "Label116"
         '
@@ -2282,7 +2292,7 @@ Partial Class adminDash
         Me.Label115.AutoSize = True
         Me.Label115.Location = New System.Drawing.Point(205, 64)
         Me.Label115.Name = "Label115"
-        Me.Label115.Size = New System.Drawing.Size(67, 17)
+        Me.Label115.Size = New System.Drawing.Size(62, 18)
         Me.Label115.TabIndex = 6
         Me.Label115.Text = "Label115"
         '
@@ -2291,7 +2301,7 @@ Partial Class adminDash
         Me.Label114.AutoSize = True
         Me.Label114.Location = New System.Drawing.Point(205, 38)
         Me.Label114.Name = "Label114"
-        Me.Label114.Size = New System.Drawing.Size(67, 17)
+        Me.Label114.Size = New System.Drawing.Size(63, 18)
         Me.Label114.TabIndex = 5
         Me.Label114.Text = "Label114"
         '
@@ -2300,7 +2310,7 @@ Partial Class adminDash
         Me.Label113.AutoSize = True
         Me.Label113.Location = New System.Drawing.Point(19, 151)
         Me.Label113.Name = "Label113"
-        Me.Label113.Size = New System.Drawing.Size(63, 17)
+        Me.Label113.Size = New System.Drawing.Size(63, 18)
         Me.Label113.TabIndex = 4
         Me.Label113.Text = "Pay Now"
         '
@@ -2309,7 +2319,7 @@ Partial Class adminDash
         Me.Label112.AutoSize = True
         Me.Label112.Location = New System.Drawing.Point(19, 99)
         Me.Label112.Name = "Label112"
-        Me.Label112.Size = New System.Drawing.Size(85, 17)
+        Me.Label112.Size = New System.Drawing.Size(76, 18)
         Me.Label112.TabIndex = 3
         Me.Label112.Text = "Taxes & Fees"
         '
@@ -2318,7 +2328,7 @@ Partial Class adminDash
         Me.Label111.AutoSize = True
         Me.Label111.Location = New System.Drawing.Point(19, 64)
         Me.Label111.Name = "Label111"
-        Me.Label111.Size = New System.Drawing.Size(138, 17)
+        Me.Label111.Size = New System.Drawing.Size(128, 18)
         Me.Label111.TabIndex = 2
         Me.Label111.Text = "Services and Orders"
         '
@@ -2335,7 +2345,7 @@ Partial Class adminDash
         Me.Label109.AutoSize = True
         Me.Label109.Location = New System.Drawing.Point(19, 38)
         Me.Label109.Name = "Label109"
-        Me.Label109.Size = New System.Drawing.Size(102, 17)
+        Me.Label109.Size = New System.Drawing.Size(97, 18)
         Me.Label109.TabIndex = 0
         Me.Label109.Text = "Room Charges"
         '
@@ -2354,7 +2364,7 @@ Partial Class adminDash
         Me.TextBox3.Location = New System.Drawing.Point(129, 28)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(100, 26)
         Me.TextBox3.TabIndex = 1
         '
         'Label73
@@ -2362,7 +2372,7 @@ Partial Class adminDash
         Me.Label73.AutoSize = True
         Me.Label73.Location = New System.Drawing.Point(51, 31)
         Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(55, 17)
+        Me.Label73.Size = New System.Drawing.Size(55, 18)
         Me.Label73.TabIndex = 0
         Me.Label73.Text = "Unit No"
         '
@@ -2434,7 +2444,7 @@ Partial Class adminDash
         Me.TextBox11.Location = New System.Drawing.Point(16, 50)
         Me.TextBox11.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(328, 22)
+        Me.TextBox11.Size = New System.Drawing.Size(328, 26)
         Me.TextBox11.TabIndex = 4
         '
         'Label138
@@ -2462,7 +2472,7 @@ Partial Class adminDash
         Me.TextBox12.Location = New System.Drawing.Point(16, 50)
         Me.TextBox12.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(328, 22)
+        Me.TextBox12.Size = New System.Drawing.Size(328, 26)
         Me.TextBox12.TabIndex = 4
         '
         'Label139
@@ -2515,7 +2525,7 @@ Partial Class adminDash
         Me.TextBox13.Location = New System.Drawing.Point(16, 50)
         Me.TextBox13.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(328, 22)
+        Me.TextBox13.Size = New System.Drawing.Size(328, 26)
         Me.TextBox13.TabIndex = 4
         '
         'Label140
@@ -2543,7 +2553,7 @@ Partial Class adminDash
         Me.TextBox14.Location = New System.Drawing.Point(16, 50)
         Me.TextBox14.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(328, 22)
+        Me.TextBox14.Size = New System.Drawing.Size(328, 26)
         Me.TextBox14.TabIndex = 4
         '
         'Label141
@@ -2596,7 +2606,7 @@ Partial Class adminDash
         Me.TextBox10.Location = New System.Drawing.Point(16, 50)
         Me.TextBox10.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(328, 22)
+        Me.TextBox10.Size = New System.Drawing.Size(328, 26)
         Me.TextBox10.TabIndex = 4
         '
         'Label137
@@ -2624,7 +2634,7 @@ Partial Class adminDash
         Me.txtPath.Location = New System.Drawing.Point(16, 50)
         Me.txtPath.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPath.Name = "txtPath"
-        Me.txtPath.Size = New System.Drawing.Size(328, 22)
+        Me.txtPath.Size = New System.Drawing.Size(328, 26)
         Me.txtPath.TabIndex = 4
         '
         'Label136
@@ -2814,26 +2824,6 @@ Partial Class adminDash
         Me.Label124.TabIndex = 0
         Me.Label124.Text = "Label124"
         '
-        'GroupBox20
-        '
-        Me.GroupBox20.Controls.Add(Me.Label37)
-        Me.GroupBox20.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(373, 128)
-        Me.GroupBox20.TabIndex = 4
-        Me.GroupBox20.TabStop = False
-        Me.GroupBox20.Visible = False
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(75, 45)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(180, 29)
-        Me.Label37.TabIndex = 0
-        Me.Label37.Text = "Room is Vacant"
-        '
         'adminDash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -2850,6 +2840,8 @@ Partial Class adminDash
         Me.GroupBox9.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
+        Me.GroupBox20.ResumeLayout(False)
+        Me.GroupBox20.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2951,8 +2943,6 @@ Partial Class adminDash
         Me.GroupBox39.PerformLayout()
         Me.GroupBox38.ResumeLayout(False)
         Me.GroupBox38.PerformLayout()
-        Me.GroupBox20.ResumeLayout(False)
-        Me.GroupBox20.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3016,7 +3006,6 @@ Partial Class adminDash
     Friend WithEvents Label44 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label46 As Label
-    Friend WithEvents Label47 As Label
     Friend WithEvents Label48 As Label
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
@@ -3040,7 +3029,6 @@ Partial Class adminDash
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
-    Friend WithEvents Label57 As Label
     Friend WithEvents Label58 As Label
     Friend WithEvents Label59 As Label
     Friend WithEvents Label60 As Label
