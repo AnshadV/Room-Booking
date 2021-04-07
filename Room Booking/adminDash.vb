@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports Excel = Microsoft.Office.Interop.Excel
+Imports Room_Booking.controlModule
 
 Public Class adminDash
     Public count As Integer
@@ -27,7 +28,6 @@ Public Class adminDash
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "insert into services(name, price) values(@name, @price)"
         Dim Conn As New SqlConnection(str)
         Try
@@ -41,9 +41,7 @@ Public Class adminDash
         End Try
     End Sub
 
-
     Private Sub TabPage7_Enter(sender As Object, e As EventArgs) Handles TabPage7.Enter
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "select count(*) from roomType"
         Dim Conn As New SqlConnection(str)
         'ListView1.View = View.Details
@@ -81,6 +79,7 @@ Where RowNum = 1"
                     Label26.Text = reader("maxguest")
                     Label27.Text = reader("objtype")
                     Label28.Text = reader("price")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -146,7 +145,7 @@ Where RowNum = 1"
                     Label26.Text = reader("maxguest")
                     Label27.Text = reader("objtype")
                     Label28.Text = reader("price")
-
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -205,6 +204,7 @@ Where RowNum = 2"
                     Label36.Text = reader2("maxguest")
                     Label35.Text = reader2("objtype")
                     Label34.Text = reader2("price")
+                    reader2.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -269,6 +269,7 @@ Where RowNum = 1"
                     Label26.Text = reader("maxguest")
                     Label27.Text = reader("objtype")
                     Label28.Text = reader("price")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -327,6 +328,7 @@ Where RowNum = 2"
                     Label26.Text = reader("maxguest")
                     Label27.Text = reader("objtype")
                     Label28.Text = reader("price")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -385,6 +387,7 @@ Where RowNum = 3"
                     Label26.Text = reader("maxguest")
                     Label27.Text = reader("objtype")
                     Label28.Text = reader("price")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -431,7 +434,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub TabPage4_Enter(sender As Object, e As EventArgs) Handles TabPage4.Enter
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "select count(*) from service_order where status <> 'Fulfilled'"
         Dim Conn As New SqlConnection(str)
         Try
@@ -471,6 +473,7 @@ Where RowNum = 3"
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -494,6 +497,7 @@ Where RowNum = 3"
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -508,6 +512,7 @@ Where RowNum = 3"
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -531,6 +536,7 @@ Where RowNum = 3"
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -545,6 +551,7 @@ Where RowNum = 3"
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -559,6 +566,7 @@ Where RowNum = 3"
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -582,6 +590,7 @@ Where RowNum = 3"
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -596,6 +605,7 @@ Where RowNum = 3"
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -610,6 +620,7 @@ Where RowNum = 3"
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -625,6 +636,7 @@ Where RowNum = 3"
                     Label72.Text = reader("roomno")
                     Label71.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -649,6 +661,7 @@ Where RowNum = 3"
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -663,6 +676,7 @@ Where RowNum = 3"
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -677,6 +691,7 @@ Where RowNum = 3"
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -691,6 +706,7 @@ Where RowNum = 3"
                     Label72.Text = reader("roomno")
                     Label71.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -705,6 +721,7 @@ Where RowNum = 3"
                     Label66.Text = reader("roomno")
                     Label65.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -728,6 +745,7 @@ Where RowNum = 3"
                     Label29.Text = reader("roomno")
                     Label62.Text = reader("name")
                     ComboBox2.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -742,6 +760,7 @@ Where RowNum = 3"
                     Label64.Text = reader("roomno")
                     Label63.Text = reader("name")
                     ComboBox3.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -756,6 +775,7 @@ Where RowNum = 3"
                     Label68.Text = reader("roomno")
                     Label67.Text = reader("name")
                     ComboBox5.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -770,6 +790,7 @@ Where RowNum = 3"
                     Label72.Text = reader("roomno")
                     Label71.Text = reader("name")
                     ComboBox7.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -784,6 +805,7 @@ Where RowNum = 3"
                     Label66.Text = reader("roomno")
                     Label65.Text = reader("name")
                     ComboBox4.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -798,6 +820,7 @@ Where RowNum = 3"
                     Label70.Text = reader("roomno")
                     Label69.Text = reader("name")
                     ComboBox6.SelectedItem = reader("status")
+                    reader.Close()
                 Catch ex As Exception
                     MessageBox.Show(String.Format("Error: {0}", ex.Message))
                 End Try
@@ -808,7 +831,6 @@ Where RowNum = 3"
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "insert into service_order(status) values(@status)"
         Dim Conn As New SqlConnection(str)
         Try
@@ -827,7 +849,6 @@ Where RowNum = 3"
     Dim citem As String
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         citem = ComboBox2.SelectedItem
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "update service_order set status=@status where Id= @id"
         Dim Conn As New SqlConnection(str)
         Try
@@ -894,7 +915,6 @@ Where RowNum = 3"
     '    End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label25.Text & "'),(select minguest from roomType where name='" & Label25.Text & "'),(select maxguest from roomType where name='" & Label25.Text & "'),@false)"
         Dim Conn As New SqlConnection(str)
         Try
@@ -930,7 +950,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label61.Text & "'),(select minguest from roomType where name='" & Label61.Text & "'),(select maxguest from roomType where name='" & Label61.Text & "'),@false)"
         Dim Conn As New SqlConnection(str)
         Try
@@ -948,7 +967,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "insert into units(roomtype,minguest, maxguest, isoccuppied)values((select Id from roomType where name = '" & Label51.Text & "'),(select minguest from roomType where name='" & Label51.Text & "'),(select maxguest from roomType where name='" & Label51.Text & "'),@false)"
         Dim Conn As New SqlConnection(str)
         Try
@@ -988,6 +1006,7 @@ Where RowNum = 3"
             Label92.Text = TextBox7.Text
             Label94.Text = reader("Email")
             userId = reader("Id")
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1004,7 +1023,7 @@ Where RowNum = 3"
             reader.Read()
             Label98.Text = reader("roomno")
             roomno = Label98.Text
-
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1017,7 +1036,7 @@ Where RowNum = 3"
             reader = cmd.ExecuteReader
             reader.Read()
             Label96.Text = reader("price")
-
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1084,7 +1103,6 @@ Where RowNum = 3"
 #End Region
 #Region "Checkout"
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim checkin As DateTime
         Dim currenttime As DateTime = System.DateTime.Now
@@ -1102,7 +1120,7 @@ Where RowNum = 3"
 
             reader.Read()
             userId = reader("userid")
-
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1121,6 +1139,7 @@ Where RowNum = 3"
             Label103.Text = reader("Email")
             Label90.Text = TextBox8.Text
             roomno = Label90.Text
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1136,7 +1155,7 @@ Where RowNum = 3"
             reader.Read()
             dailyrent = reader("price")
             Label101.Text = dailyrent
-
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1166,7 +1185,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim theDate As DateTime = System.DateTime.Now
         Dim checkin As DateTime
@@ -1219,7 +1237,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub TabPage1_Enter(sender As Object, e As EventArgs) Handles TabPage1.Enter
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim newbookings As Integer
         Dim theDate As DateTime = System.DateTime.Now
@@ -1299,7 +1316,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim roomcharge As Integer
         Dim services As Integer
@@ -1313,7 +1329,7 @@ Where RowNum = 3"
             Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@roomno", TextBox3.Text)
             userId = cmd.ExecuteScalar
-
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1338,7 +1354,6 @@ Where RowNum = 3"
 
 
             Dim cmd As New SqlCommand(sql, Conn)
-            Dim reader As SqlDataReader
             cmd.Parameters.AddWithValue("@userid", userId)
             cmd.Parameters.AddWithValue("@services", "Services")
             services = cmd.ExecuteScalar
@@ -1355,7 +1370,6 @@ Where RowNum = 3"
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim Conn As New SqlConnection(str)
         Dim theDate As DateTime = System.DateTime.Now
         Try
@@ -1386,6 +1400,7 @@ Where RowNum = 3"
 
             'success message
             'update ispaid in reservation
+            reader.Close()
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
@@ -1428,8 +1443,6 @@ Where RowNum = 3"
 
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
         Try
-
-            Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
             Dim sql As String = "select name, price from services"
             Dim Conn As New SqlConnection(str)
             Dim cmd As New SqlCommand(sql, Conn)
@@ -1444,10 +1457,6 @@ Where RowNum = 3"
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
     End Sub
-
-
-
-
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
         Dim dataAdapter As New SqlClient.SqlDataAdapter()
         Dim dataSet As New DataSet
@@ -1871,7 +1880,7 @@ Where RowNum = 3"
                 Label42.Text = reader("Name")
                 Label43.Text = reader("Phone")
                 Label74.Text = reader("Email")
-
+                reader.Close()
                 Dim sql3 As String = "select price where "
 
 
@@ -1884,7 +1893,6 @@ Where RowNum = 3"
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
         citem = ComboBox5.SelectedItem
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "update service_order set status=@status where Id= @id"
         Dim Conn As New SqlConnection(str)
         Try
@@ -1900,7 +1908,6 @@ Where RowNum = 3"
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
         citem = ComboBox3.SelectedItem
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "update service_order set status=@status where Id= @id"
         Dim Conn As New SqlConnection(str)
         Try
@@ -1916,7 +1923,6 @@ Where RowNum = 3"
 
     Private Sub ComboBox7_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox7.SelectedIndexChanged
         citem = ComboBox7.SelectedItem
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "update service_order set status=@status where Id= @id"
         Dim Conn As New SqlConnection(str)
         Try
@@ -1932,7 +1938,6 @@ Where RowNum = 3"
 
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
         citem = ComboBox4.SelectedItem
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "update service_order set status=@status where Id= @id and "
         Dim Conn As New SqlConnection(str)
         Try
@@ -1948,7 +1953,6 @@ Where RowNum = 3"
 
     Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
         citem = ComboBox6.SelectedItem
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim sql As String = "update service_order set status=@status where Id= @id"
         Dim Conn As New SqlConnection(str)
         Try
@@ -1961,13 +1965,5 @@ Where RowNum = 3"
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
     End Sub
-
-
-
-
-
-
-
-
 #End Region
 End Class

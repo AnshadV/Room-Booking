@@ -26,8 +26,6 @@ Partial Class adminDash
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -37,6 +35,8 @@ Partial Class adminDash
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -373,6 +373,7 @@ Partial Class adminDash
         Me.GroupBox9.Controls.Add(Me.Button2)
         Me.GroupBox9.Controls.Add(Me.Label9)
         Me.GroupBox9.Controls.Add(Me.TextBox1)
+        Me.GroupBox9.Controls.Add(Me.GroupBox20)
         Me.GroupBox9.ForeColor = System.Drawing.Color.White
         Me.GroupBox9.Location = New System.Drawing.Point(21, 146)
         Me.GroupBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -384,7 +385,6 @@ Partial Class adminDash
         '
         'GroupBox11
         '
-        Me.GroupBox11.Controls.Add(Me.GroupBox20)
         Me.GroupBox11.Controls.Add(Me.Label74)
         Me.GroupBox11.Controls.Add(Me.Label43)
         Me.GroupBox11.Controls.Add(Me.Label42)
@@ -393,34 +393,15 @@ Partial Class adminDash
         Me.GroupBox11.Controls.Add(Me.Label16)
         Me.GroupBox11.Location = New System.Drawing.Point(24, 67)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(373, 128)
+        Me.GroupBox11.Size = New System.Drawing.Size(373, 150)
         Me.GroupBox11.TabIndex = 3
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Visible = False
         '
-        'GroupBox20
-        '
-        Me.GroupBox20.Controls.Add(Me.Label37)
-        Me.GroupBox20.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(373, 128)
-        Me.GroupBox20.TabIndex = 4
-        Me.GroupBox20.TabStop = False
-        Me.GroupBox20.Visible = False
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(75, 45)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(180, 29)
-        Me.Label37.TabIndex = 0
-        Me.Label37.Text = "Room is Vacant"
-        '
         'Label74
         '
         Me.Label74.AutoSize = True
+        Me.Label74.ForeColor = System.Drawing.Color.Black
         Me.Label74.Location = New System.Drawing.Point(218, 90)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(55, 18)
@@ -430,6 +411,7 @@ Partial Class adminDash
         'Label43
         '
         Me.Label43.AutoSize = True
+        Me.Label43.ForeColor = System.Drawing.Color.Black
         Me.Label43.Location = New System.Drawing.Point(218, 55)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(56, 18)
@@ -439,6 +421,7 @@ Partial Class adminDash
         'Label42
         '
         Me.Label42.AutoSize = True
+        Me.Label42.ForeColor = System.Drawing.Color.Black
         Me.Label42.Location = New System.Drawing.Point(218, 22)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(57, 18)
@@ -448,6 +431,7 @@ Partial Class adminDash
         'Label19
         '
         Me.Label19.AutoSize = True
+        Me.Label19.ForeColor = System.Drawing.Color.Black
         Me.Label19.Location = New System.Drawing.Point(20, 90)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(41, 18)
@@ -457,6 +441,7 @@ Partial Class adminDash
         'Label17
         '
         Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.Black
         Me.Label17.Location = New System.Drawing.Point(20, 55)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(48, 18)
@@ -466,6 +451,7 @@ Partial Class adminDash
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Black
         Me.Label16.Location = New System.Drawing.Point(20, 22)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(44, 18)
@@ -499,6 +485,27 @@ Partial Class adminDash
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 26)
         Me.TextBox1.TabIndex = 0
+        '
+        'GroupBox20
+        '
+        Me.GroupBox20.Controls.Add(Me.Label37)
+        Me.GroupBox20.Location = New System.Drawing.Point(21, 83)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(373, 128)
+        Me.GroupBox20.TabIndex = 4
+        Me.GroupBox20.TabStop = False
+        Me.GroupBox20.Visible = False
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.Black
+        Me.Label37.Location = New System.Drawing.Point(75, 45)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(180, 29)
+        Me.Label37.TabIndex = 0
+        Me.Label37.Text = "Room is Vacant"
         '
         'GroupBox8
         '
@@ -885,13 +892,15 @@ Partial Class adminDash
         '
         'Button24
         '
+        Me.Button24.BackColor = System.Drawing.Color.Black
         Me.Button24.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button24.ForeColor = System.Drawing.Color.White
         Me.Button24.Location = New System.Drawing.Point(213, 173)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(146, 31)
         Me.Button24.TabIndex = 4
         Me.Button24.Text = "Check-Out Now"
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.Button24.UseVisualStyleBackColor = False
         '
         'Label108
         '
@@ -975,13 +984,15 @@ Partial Class adminDash
         '
         'Button25
         '
+        Me.Button25.BackColor = System.Drawing.Color.Black
         Me.Button25.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.ForeColor = System.Drawing.Color.White
         Me.Button25.Location = New System.Drawing.Point(256, 30)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(120, 35)
         Me.Button25.TabIndex = 2
         Me.Button25.Text = "Proceed"
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.Button25.UseVisualStyleBackColor = False
         '
         'TextBox8
         '
@@ -1057,13 +1068,15 @@ Partial Class adminDash
         '
         'Button23
         '
+        Me.Button23.BackColor = System.Drawing.Color.Black
         Me.Button23.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.ForeColor = System.Drawing.Color.White
         Me.Button23.Location = New System.Drawing.Point(214, 174)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(146, 31)
         Me.Button23.TabIndex = 4
         Me.Button23.Text = "Check-In Now"
-        Me.Button23.UseVisualStyleBackColor = True
+        Me.Button23.UseVisualStyleBackColor = False
         '
         'Label99
         '
@@ -1147,13 +1160,15 @@ Partial Class adminDash
         '
         'Button22
         '
+        Me.Button22.BackColor = System.Drawing.Color.Black
         Me.Button22.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.ForeColor = System.Drawing.Color.White
         Me.Button22.Location = New System.Drawing.Point(256, 30)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(120, 35)
         Me.Button22.TabIndex = 2
         Me.Button22.Text = "Proceed"
-        Me.Button22.UseVisualStyleBackColor = True
+        Me.Button22.UseVisualStyleBackColor = False
         '
         'TextBox7
         '
@@ -1231,13 +1246,15 @@ Partial Class adminDash
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Black
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(5, 100)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(123, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "ADD NEW UNIT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -1251,7 +1268,7 @@ Partial Class adminDash
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(249, 101)
+        Me.Label44.Location = New System.Drawing.Point(241, 101)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(57, 18)
         Me.Label44.TabIndex = 10
@@ -1260,7 +1277,7 @@ Partial Class adminDash
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(249, 74)
+        Me.Label45.Location = New System.Drawing.Point(282, 74)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(56, 18)
         Me.Label45.TabIndex = 9
@@ -1269,7 +1286,7 @@ Partial Class adminDash
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(249, 48)
+        Me.Label46.Location = New System.Drawing.Point(328, 48)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(57, 18)
         Me.Label46.TabIndex = 8
@@ -1280,27 +1297,27 @@ Partial Class adminDash
         Me.Label48.AutoSize = True
         Me.Label48.Location = New System.Drawing.Point(180, 101)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(57, 18)
+        Me.Label48.Size = New System.Drawing.Size(39, 18)
         Me.Label48.TabIndex = 6
-        Me.Label48.Text = "Label48"
+        Me.Label48.Text = "Price"
         '
         'Label49
         '
         Me.Label49.AutoSize = True
         Me.Label49.Location = New System.Drawing.Point(180, 74)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(57, 18)
+        Me.Label49.Size = New System.Drawing.Size(87, 18)
         Me.Label49.TabIndex = 5
-        Me.Label49.Text = "Label49"
+        Me.Label49.Text = "Object type: "
         '
         'Label50
         '
         Me.Label50.AutoSize = True
         Me.Label50.Location = New System.Drawing.Point(180, 48)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(56, 18)
+        Me.Label50.Size = New System.Drawing.Size(124, 18)
         Me.Label50.TabIndex = 4
-        Me.Label50.Text = "Label50"
+        Me.Label50.Text = "Number of guests: "
         '
         'Label51
         '
@@ -1377,13 +1394,15 @@ Partial Class adminDash
         '
         'Button15
         '
+        Me.Button15.BackColor = System.Drawing.Color.Black
+        Me.Button15.ForeColor = System.Drawing.Color.White
         Me.Button15.Location = New System.Drawing.Point(5, 100)
         Me.Button15.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(123, 23)
         Me.Button15.TabIndex = 2
         Me.Button15.Text = "ADD NEW UNIT"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.Button15.UseVisualStyleBackColor = False
         '
         'Label53
         '
@@ -1397,7 +1416,7 @@ Partial Class adminDash
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(249, 101)
+        Me.Label54.Location = New System.Drawing.Point(229, 101)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(56, 18)
         Me.Label54.TabIndex = 10
@@ -1406,7 +1425,7 @@ Partial Class adminDash
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(249, 74)
+        Me.Label55.Location = New System.Drawing.Point(269, 74)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(55, 18)
         Me.Label55.TabIndex = 9
@@ -1415,7 +1434,7 @@ Partial Class adminDash
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(249, 48)
+        Me.Label56.Location = New System.Drawing.Point(315, 48)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(56, 18)
         Me.Label56.TabIndex = 8
@@ -1426,27 +1445,27 @@ Partial Class adminDash
         Me.Label58.AutoSize = True
         Me.Label58.Location = New System.Drawing.Point(180, 101)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(56, 18)
+        Me.Label58.Size = New System.Drawing.Size(46, 18)
         Me.Label58.TabIndex = 6
-        Me.Label58.Text = "Label58"
+        Me.Label58.Text = "Price: "
         '
         'Label59
         '
         Me.Label59.AutoSize = True
         Me.Label59.Location = New System.Drawing.Point(180, 74)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(56, 18)
+        Me.Label59.Size = New System.Drawing.Size(87, 18)
         Me.Label59.TabIndex = 5
-        Me.Label59.Text = "Label59"
+        Me.Label59.Text = "Object type: "
         '
         'Label60
         '
         Me.Label60.AutoSize = True
         Me.Label60.Location = New System.Drawing.Point(180, 48)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(57, 18)
+        Me.Label60.Size = New System.Drawing.Size(124, 18)
         Me.Label60.TabIndex = 4
-        Me.Label60.Text = "Label60"
+        Me.Label60.Text = "Number of guests: "
         '
         'Label61
         '
@@ -1510,13 +1529,15 @@ Partial Class adminDash
         '
         'Button9
         '
+        Me.Button9.BackColor = System.Drawing.Color.Black
+        Me.Button9.ForeColor = System.Drawing.Color.White
         Me.Button9.Location = New System.Drawing.Point(5, 100)
         Me.Button9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(123, 23)
         Me.Button9.TabIndex = 2
         Me.Button9.Text = "ADD NEW UNIT"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.Button9.UseVisualStyleBackColor = False
         '
         'Label33
         '
@@ -1530,7 +1551,7 @@ Partial Class adminDash
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(249, 101)
+        Me.Label34.Location = New System.Drawing.Point(229, 101)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(56, 18)
         Me.Label34.TabIndex = 10
@@ -1539,7 +1560,7 @@ Partial Class adminDash
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(249, 74)
+        Me.Label35.Location = New System.Drawing.Point(269, 74)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(55, 18)
         Me.Label35.TabIndex = 9
@@ -1548,7 +1569,7 @@ Partial Class adminDash
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(249, 48)
+        Me.Label36.Location = New System.Drawing.Point(315, 48)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(56, 18)
         Me.Label36.TabIndex = 8
@@ -1559,27 +1580,27 @@ Partial Class adminDash
         Me.Label38.AutoSize = True
         Me.Label38.Location = New System.Drawing.Point(180, 101)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(56, 18)
+        Me.Label38.Size = New System.Drawing.Size(46, 18)
         Me.Label38.TabIndex = 6
-        Me.Label38.Text = "Label38"
+        Me.Label38.Text = "Price: "
         '
         'Label39
         '
         Me.Label39.AutoSize = True
         Me.Label39.Location = New System.Drawing.Point(180, 74)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(56, 18)
+        Me.Label39.Size = New System.Drawing.Size(87, 18)
         Me.Label39.TabIndex = 5
-        Me.Label39.Text = "Label39"
+        Me.Label39.Text = "Object type: "
         '
         'Label40
         '
         Me.Label40.AutoSize = True
         Me.Label40.Location = New System.Drawing.Point(180, 48)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(57, 18)
+        Me.Label40.Size = New System.Drawing.Size(124, 18)
         Me.Label40.TabIndex = 4
-        Me.Label40.Text = "Label40"
+        Me.Label40.Text = "Number of guests: "
         '
         'Label41
         '
@@ -1655,13 +1676,15 @@ Partial Class adminDash
         '
         'Button8
         '
+        Me.Button8.BackColor = System.Drawing.Color.Black
+        Me.Button8.ForeColor = System.Drawing.Color.White
         Me.Button8.Location = New System.Drawing.Point(5, 101)
         Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(123, 23)
         Me.Button8.TabIndex = 2
         Me.Button8.Text = "ADD NEW UNIT"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Label28
         '
@@ -1752,13 +1775,15 @@ Partial Class adminDash
         '
         'Button4
         '
+        Me.Button4.BackColor = System.Drawing.Color.Black
+        Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Location = New System.Drawing.Point(893, 23)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(101, 30)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "ADD NEW"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Label15
         '
@@ -2116,12 +2141,14 @@ Partial Class adminDash
         '
         'Button10
         '
+        Me.Button10.BackColor = System.Drawing.Color.Black
+        Me.Button10.ForeColor = System.Drawing.Color.White
         Me.Button10.Location = New System.Drawing.Point(110, 155)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(75, 23)
         Me.Button10.TabIndex = 6
         Me.Button10.Text = "Save"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.Button10.UseVisualStyleBackColor = False
         '
         'TextBox9
         '
@@ -2254,12 +2281,14 @@ Partial Class adminDash
         '
         'Button7
         '
+        Me.Button7.BackColor = System.Drawing.Color.Black
+        Me.Button7.ForeColor = System.Drawing.Color.White
         Me.Button7.Location = New System.Drawing.Point(22, 192)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(252, 28)
         Me.Button7.TabIndex = 10
         Me.Button7.Text = "Register Payment"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button7.UseVisualStyleBackColor = False
         '
         'Label118
         '
@@ -2351,13 +2380,15 @@ Partial Class adminDash
         '
         'Button18
         '
+        Me.Button18.BackColor = System.Drawing.Color.Black
+        Me.Button18.ForeColor = System.Drawing.Color.White
         Me.Button18.Location = New System.Drawing.Point(257, 28)
         Me.Button18.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(75, 23)
         Me.Button18.TabIndex = 2
         Me.Button18.Text = "Search"
-        Me.Button18.UseVisualStyleBackColor = True
+        Me.Button18.UseVisualStyleBackColor = False
         '
         'TextBox3
         '
@@ -2649,30 +2680,36 @@ Partial Class adminDash
         '
         'Button16
         '
+        Me.Button16.BackColor = System.Drawing.Color.Black
+        Me.Button16.ForeColor = System.Drawing.Color.White
         Me.Button16.Location = New System.Drawing.Point(452, 49)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(153, 48)
+        Me.Button16.Size = New System.Drawing.Size(153, 35)
         Me.Button16.TabIndex = 2
         Me.Button16.Text = "Service Orders"
-        Me.Button16.UseVisualStyleBackColor = True
+        Me.Button16.UseVisualStyleBackColor = False
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(848, 40)
+        Me.Button11.BackColor = System.Drawing.Color.Black
+        Me.Button11.ForeColor = System.Drawing.Color.White
+        Me.Button11.Location = New System.Drawing.Point(847, 49)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(153, 48)
+        Me.Button11.Size = New System.Drawing.Size(153, 35)
         Me.Button11.TabIndex = 1
         Me.Button11.Text = "Payments"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.Button11.UseVisualStyleBackColor = False
         '
         'Button6
         '
+        Me.Button6.BackColor = System.Drawing.Color.Black
+        Me.Button6.ForeColor = System.Drawing.Color.White
         Me.Button6.Location = New System.Drawing.Point(34, 49)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(153, 48)
+        Me.Button6.Size = New System.Drawing.Size(153, 35)
         Me.Button6.TabIndex = 0
         Me.Button6.Text = "Reservations"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'GroupBox39
         '

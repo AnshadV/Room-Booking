@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports Room_Booking.loginstate
+Imports Room_Booking.controlModule
 Public Class Home
     Public indate As New DateTime
     Public outdate As New DateTime
@@ -22,7 +23,6 @@ Public Class Home
         ListView1.Columns.Add("Service", 150, HorizontalAlignment.Left)
         ListView1.Columns.Add("Price", 150, HorizontalAlignment.Left)
         ListView1.View = View.Details
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=true"
         Dim sql As String = "select count(*) from services"
         Dim Conn As New SqlConnection(str)
         Dim count
@@ -66,6 +66,9 @@ Public Class Home
             Catch ex As Exception
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
             End Try
+
+        Else
+            DataGridView2.Visible = False
         End If
 
 
@@ -175,16 +178,20 @@ Public Class Home
                 Label2.Visible = True
                 Label6.Visible = True
                 Label5.Visible = True
-                Label11.Visible = True
+                Label8.Visible = False
+                Label7.Visible = False
+                Label9.Visible = False
+                Label11.Visible = False
                 Label10.Visible = False
                 Label13.Visible = False
                 Label12.Visible = False
                 Label15.Visible = False
                 Label14.Visible = False
 
+                Button1.Visible = True
                 Button2.Visible = True
                 Button3.Visible = True
-                Button4.Visible = True
+                Button4.Visible = False
                 Button5.Visible = False
                 Button6.Visible = False
                 Button7.Visible = False
@@ -498,7 +505,6 @@ Public Class Home
         str(1) = Label7.Text
         itm = New ListViewItem(str)
         ListView1.Items.Add(itm)
-        total.Append(Label7.Text)
         Dim ct = total.Last - 1
         If ct = -1 Then
             names(0) = Label8.Text
@@ -563,7 +569,6 @@ Public Class Home
 
 #End Region
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Dim str As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anshad V\source\repos\Room Booking\Room Booking\Database1.mdf;Integrated Security=True"
         Dim Conn As New SqlConnection(str)
         Dim id As Integer
         Dim status As String = "Request recieved"
@@ -597,6 +602,8 @@ Public Class Home
             totalprice = 0
             ReDim names(7)
             ReDim total(7)
+
+
         Next
 
         Try
@@ -624,10 +631,8 @@ Public Class Home
         DateTimePicker4.ShowUpDown = True
         ListView1.View = View.Details
         ListView1.GridLines = True
+        Button7.Visible = True
     End Sub
-
-
-
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         DateTimePicker2.Format = DateTimePickerFormat.Time
         DateTimePicker2.ShowUpDown = True
@@ -753,7 +758,7 @@ Public Class Home
     End Sub
 
     Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
-
+        DataGridView1.Visible = True
 
         Try
 
@@ -848,7 +853,7 @@ Public Class Home
             If isbooked.Equals("false") Then
                 Panel1.Visible = True
                 Panel2.Visible = True
-                GroupBox28.SendToBack()
+                GroupBox28.Visible = False
                 GroupBox1.SendToBack()
                 GroupBox2.SendToBack()
 
@@ -874,11 +879,6 @@ Public Class Home
         Catch ex As Exception
             Console.WriteLine("Exception caught: {0}", ex)
         End Try
-
-
-
-
-
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
@@ -888,11 +888,6 @@ Public Class Home
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
     End Sub
-
-
-
-
-
     Private Sub FillByToolStripButton_Click_1(sender As Object, e As EventArgs)
         Try
             Me.Service_orderTableAdapter.FillBy(Me.Database1DataSet1.service_order, CType(login_userid, Integer))
