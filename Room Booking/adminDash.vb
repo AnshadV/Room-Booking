@@ -1965,5 +1965,9 @@ Where RowNum = 3"
             MessageBox.Show(String.Format("Error: {0}", ex.Message))
         End Try
     End Sub
+
+    Private Sub adminDash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 #End Region
 End Class

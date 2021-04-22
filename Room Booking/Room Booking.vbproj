@@ -171,12 +171,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="loginstate.vb" />
-    <Compile Include="MetroForm1.Designer.vb">
-      <DependentUpon>MetroForm1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MetroForm1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="payment.vb">
       <DependentUpon>dbmodel.tt</DependentUpon>
     </Compile>
@@ -207,23 +201,11 @@
     <Compile Include="roomAdder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test.Designer.vb">
-      <DependentUpon>test.vb</DependentUpon>
-    </Compile>
-    <Compile Include="test.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="unit.vb">
       <DependentUpon>dbmodel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.vb">
       <DependentUpon>dbmodel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="userHome.Designer.vb">
-      <DependentUpon>userHome.vb</DependentUpon>
-    </Compile>
-    <Compile Include="userHome.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="tabcontrol.Designer.vb">
       <DependentUpon>tabcontrol.vb</DependentUpon>
@@ -267,9 +249,6 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MetroForm1.resx">
-      <DependentUpon>MetroForm1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -281,12 +260,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userHome.resx">
-      <DependentUpon>userHome.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
